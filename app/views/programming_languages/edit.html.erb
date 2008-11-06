@@ -1,0 +1,16 @@
+<h1>Editing programming_language</h1>
+
+<% form_for(@programming_language) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @programming_language %> |
+<%= link_to 'Back', programming_languages_path %>

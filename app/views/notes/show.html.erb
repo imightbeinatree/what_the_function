@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%=h @note.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @note.description %>
+</p>
+
+<p>
+  <b>Programming language:</b>
+  <%=h @note.programming_language_id %>
+</p>
+
+<p>
+  <b>What function:</b>
+  <%=h @note.what_function_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>

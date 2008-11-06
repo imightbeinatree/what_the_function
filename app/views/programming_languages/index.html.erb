@@ -1,0 +1,20 @@
+<h1>Listing programming_languages</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% for programming_language in @programming_languages %>
+  <tr>
+    <td><%=h programming_language.name %></td>
+    <td><%= link_to 'Show', programming_language %></td>
+    <td><%= link_to 'Edit', edit_programming_language_path(programming_language) %></td>
+    <td><%= link_to 'Destroy', programming_language, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New programming_language', new_programming_language_path %>

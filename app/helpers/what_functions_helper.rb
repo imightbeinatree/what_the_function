@@ -1,0 +1,2 @@
+module WhatFunctionsHelper
+end

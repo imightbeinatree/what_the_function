@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  description: MyString
+  programming_language_id: 1
+  what_function_id: 1
+
+two:
+  title: MyString
+  description: MyString
+  programming_language_id: 1
+  what_function_id: 1
