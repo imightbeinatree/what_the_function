@@ -34,7 +34,7 @@ class ProgrammingLanguagesController < ApplicationController
 
   # GET /programming_languages/1/edit
   def edit
-    @programming_language = ProgrammingLanguage.find(params[:id])
+    @programming_language = ProgrammingLanguage.find_by_name(params[:id])
   end
 
   # POST /programming_languages
@@ -57,7 +57,7 @@ class ProgrammingLanguagesController < ApplicationController
   # PUT /programming_languages/1
   # PUT /programming_languages/1.xml
   def update
-    @programming_language = ProgrammingLanguage.find(params[:id])
+    @programming_language = ProgrammingLanguage.find_by_name(params[:id])
 
     respond_to do |format|
       if @programming_language.update_attributes(params[:programming_language])
@@ -74,7 +74,7 @@ class ProgrammingLanguagesController < ApplicationController
   # DELETE /programming_languages/1
   # DELETE /programming_languages/1.xml
   def destroy
-    @programming_language = ProgrammingLanguage.find(params[:id])
+    @programming_language = ProgrammingLanguage.find_by_name(params[:id])
     @programming_language.destroy
 
     respond_to do |format|

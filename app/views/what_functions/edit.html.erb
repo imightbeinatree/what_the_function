@@ -9,11 +9,11 @@
   </p>
   <p>
     <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <%= f.text_area(:description, :size => "26x5") %>
   </p>
   <p>
     <%= f.label :programming_language_id %><br />
-    <%= select (:what_function, :programming_language_id, @programming_languages.map {|u| [u.name,u.id]}) %>
+    <%= select (:what_function, :programming_language_id, @programming_language.map {|u| [u.name,u.id]}) %>
   </p>
   <p>
     <%= f.submit "Update" %>

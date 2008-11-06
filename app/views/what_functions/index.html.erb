@@ -1,22 +1,12 @@
-<h1>Listing what_functions for <%=h @programming_language.name %></h1>
+<h1>Functions for <%=h @programming_language.name %></h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
+<ul>
 
 <% for what_function in @what_functions %>
-  <tr>
-    <td><%=h what_function.name %></td>
-    <td><%=h what_function.description %></td>
-    <td><%= link_to 'Show', programming_language_what_function_path(@programming_language, what_function) %></td>
-    <td><%= link_to 'Edit', edit_programming_language_what_function_path(@programming_language, what_function) %></td>
-    <td><%= link_to 'Destroy', programming_language_what_function_path(@programming_language, what_function), :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    <li><%= link_to what_function.name, programming_language_what_function_path(@programming_language, what_function) %></li>
 <% end %>
-</table>
+</ul>
 
 <br />
 
-<%= link_to 'New what_function', new_programming_language_what_function_path(@programming_language) %>
+<%= link_to "New #{@programming_language.name} Function", new_programming_language_what_function_path(@programming_language) %>

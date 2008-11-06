@@ -1,8 +1,11 @@
-<p>
-  <b>Name:</b>
-  <%=h @programming_language.name %>
-</p>
+<h2>Language: <%=h @programming_language.name %></h2>
 
+<h3>Functions</h3>
+<% unless function_list.blank? %>
+  <p><%= function_list %></p>
+<% else %>
+  <p><em>No functions found, why don't you add one?</em></p>
+<% end %>
 
-<%= link_to 'Edit', edit_programming_language_path(@programming_language) %> |
-<%= link_to 'Back', programming_languages_path %>
+<%= link_to "Edit #{@programming_language.name}", edit_programming_language_path(@programming_language) %> |
+<%= link_to 'Back to All Programming Languages', programming_languages_path %>

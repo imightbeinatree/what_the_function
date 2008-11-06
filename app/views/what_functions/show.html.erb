@@ -1,18 +1,17 @@
-<p>
-  <b>Name:</b>
-  <%=h @what_function.name %>
-</p>
+<h2>Function: <%=h @what_function.name %> (<%= @what_function.programming_language.name %>)</h2>
+<% unless @what_function.description.blank? %>
+  <p>
+    <b>Description:</b>
+    <%=h @what_function.description %>
+  </p>
+<% end %>
+<h3>Twins</h3>
+<% unless twin_list.blank? %>
+  <p><%= twin_list %></p>
+<% else %>
+  <p><em>No twins found, why don't you add one</em></p>
+<% end %>
 
-<p>
-  <b>Description:</b>
-  <%=h @what_function.description %>
-</p>
 
-<p>
-  <b>Programming language:</b>
-  <%=h @what_function.programming_language_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_programming_language_what_function_path(@programming_language, @what_function) %> |
-<%= link_to 'Back', programming_language_what_functions_path(@programming_language) %>
+<%= link_to "Edit #{@what_function.name}", edit_programming_language_what_function_path(@programming_language, @what_function) %> |
+<%= link_to "Back to All #{@programming_language.name} Functions", programming_language_what_functions_path(@programming_language) %>

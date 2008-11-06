@@ -20,7 +20,6 @@ class WhatFunctionsController < ApplicationController
   # GET /what_functions/1.xml
   def show
     @what_function = @programming_language.what_functions.find_by_name(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @what_function }
@@ -31,7 +30,7 @@ class WhatFunctionsController < ApplicationController
   # GET /what_functions/new.xml
   def new
     @what_function = WhatFunction.new
-    @programming_languages = ProgrammingLanguage.find(:all)
+    @programming_language = ProgrammingLanguage.find(:all)
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @what_function }
@@ -40,8 +39,8 @@ class WhatFunctionsController < ApplicationController
 
   # GET /what_functions/1/edit
   def edit
-    @what_function = WhatFunction.find(params[:id])
-    @programming_languages = ProgrammingLanguage.find(:all)
+    @what_function = WhatFunction.find_by_name(params[:id])
+    @programming_language = ProgrammingLanguage.find(:all)
   end
 
   # POST /what_functions
@@ -64,7 +63,7 @@ class WhatFunctionsController < ApplicationController
   # PUT /what_functions/1
   # PUT /what_functions/1.xml
   def update
-    @what_function = WhatFunction.find(params[:id])
+    @what_function = WhatFunction.find_by_name(params[:id])
 
     respond_to do |format|
       if @what_function.update_attributes(params[:what_function])
@@ -72,7 +71,7 @@ class WhatFunctionsController < ApplicationController
         format.html { redirect_to(@what_function) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html { redirect_to edit_programming_language_what_function_path(@programming_language, @what_function)  }
         format.xml  { render :xml => @what_function.errors, :status => :unprocessable_entity }
       end
     end

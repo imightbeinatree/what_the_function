@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  left_function_id: 1
+  right_function_id: 1
+
+two:
+  left_function_id: 1
+  right_function_id: 1
