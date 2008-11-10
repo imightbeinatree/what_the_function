@@ -5,6 +5,17 @@ class WhatFunctionsController < ApplicationController
     @programming_language = ProgrammingLanguage.find_by_name params[:programming_language_id]
   end
   
+  def equiv_info
+    @language_1 = ProgrammingLanguage.find_by_name params[:id]
+    @language_2 = ProgrammingLanguage.find_by_name params[:language_id2]
+    @function_1 = WhatFunction.find_by_name params[:function_id]
+    @function_2 = WhatFunction.find_by_name params[:function_id2]
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @what_functions }
+    end
+  end
+  
   # GET /what_functions
   # GET /what_functions.xml
   def index
