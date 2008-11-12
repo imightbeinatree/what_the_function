@@ -10,6 +10,7 @@ class WhatFunctionsController < ApplicationController
     @language_2 = ProgrammingLanguage.find_by_name params[:language_id2]
     @function_1 = WhatFunction.find_by_name params[:function_id]
     @function_2 = WhatFunction.find_by_name params[:function_id2]
+    @twin = Twin.get_twin_by_function_ids @function_1.id, @function_2.id
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @what_functions }
