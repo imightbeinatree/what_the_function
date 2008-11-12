@@ -1,0 +1,1321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'><head><title>/Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/helpers/date_helper.rb - C0 code coverage information</title>
+    <style type='text/css'>body { background-color: rgb(240, 240, 245); }</style>
+    <style type='text/css'>span.cross-ref-title {
+ font-size: 140%;
+}
+span.cross-ref a {
+ text-decoration: none;
+}
+span.cross-ref {
+ background-color:#f3f7fa;
+ border: 1px dashed #333;
+ margin: 1em;
+ padding: 0.5em;
+ overflow: hidden;
+}
+a.crossref-toggle {
+ text-decoration: none;
+}
+span.marked0 {
+ background-color: rgb(185, 210, 200);
+ display: block;
+}
+span.marked1 {
+ background-color: rgb(190, 215, 205);
+ display: block;
+}
+span.inferred0 {
+ background-color: rgb(175, 200, 200);
+ display: block;
+}
+span.inferred1 {
+ background-color: rgb(180, 205, 205);
+ display: block;
+}
+span.uncovered0 {
+ background-color: rgb(225, 110, 110);
+ display: block;
+}
+span.uncovered1 {
+ background-color: rgb(235, 120, 120);
+ display: block;
+}
+span.overview {
+ border-bottom: 8px solid black;
+}
+div.overview {
+ border-bottom: 8px solid black;
+}
+body {
+ font-family: verdana, arial, helvetica;
+}
+div.footer {
+ font-size: 68%;
+ margin-top: 1.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+ margin-bottom: 0.5em;
+}
+h5 {
+ margin-top: 0.5em;
+}
+.hidden {
+ display: none;
+}
+div.separator {
+ height: 10px;
+}
+/* Commented out for better readability, esp. on IE */
+/*
+table tr td, table tr th {
+ font-size: 68%;
+}
+td.value table tr td {
+ font-size: 11px;
+}
+*/
+table.percent_graph {
+ height: 12px;
+ border: #808080 1px solid;
+ empty-cells: show;
+}
+table.percent_graph td.covered {
+ height: 10px;
+ background: #00f000;
+}
+table.percent_graph td.uncovered {
+ height: 10px;
+ background: #e00000;
+}
+table.percent_graph td.NA {
+ height: 10px;
+ background: #eaeaea;
+}
+table.report {
+ border-collapse: collapse;
+ width: 100%;
+}
+table.report td.heading {
+ background: #dcecff;
+ border: #d0d0d0 1px solid;
+ font-weight: bold;
+ text-align: center;
+}
+table.report td.heading:hover {
+ background: #c0ffc0;
+}
+table.report td.text {
+ border: #d0d0d0 1px solid;
+}
+table.report td.value,
+table.report td.lines_total,
+table.report td.lines_code {
+ text-align: right;
+ border: #d0d0d0 1px solid;
+}
+table.report tr.light {
+ background-color: rgb(240, 240, 245);
+}
+table.report tr.dark {
+ background-color: rgb(230, 230, 235);
+}
+</style>
+    <script type='text/javascript'>
+// <![CDATA[
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make cross-references hidden by default
+  document.writeln( "<style type=\"text/css\">span.cross-ref { display: none }</style>" )
+  // ]]>
+</script>
+    <style type='text/css'>span.run0 {
+  background-color: rgb(178, 204, 255);
+  display: block;
+}
+span.run1 {
+  background-color: rgb(178, 206, 255);
+  display: block;
+}
+span.run2 {
+  background-color: rgb(178, 209, 255);
+  display: block;
+}
+span.run3 {
+  background-color: rgb(178, 211, 255);
+  display: block;
+}
+span.run4 {
+  background-color: rgb(178, 214, 255);
+  display: block;
+}
+span.run5 {
+  background-color: rgb(178, 218, 255);
+  display: block;
+}
+span.run6 {
+  background-color: rgb(178, 220, 255);
+  display: block;
+}
+span.run7 {
+  background-color: rgb(178, 223, 255);
+  display: block;
+}
+span.run8 {
+  background-color: rgb(178, 225, 255);
+  display: block;
+}
+span.run9 {
+  background-color: rgb(178, 228, 255);
+  display: block;
+}
+span.run10 {
+  background-color: rgb(178, 232, 255);
+  display: block;
+}
+span.run11 {
+  background-color: rgb(178, 234, 255);
+  display: block;
+}
+span.run12 {
+  background-color: rgb(178, 237, 255);
+  display: block;
+}
+span.run13 {
+  background-color: rgb(178, 239, 255);
+  display: block;
+}
+span.run14 {
+  background-color: rgb(178, 242, 255);
+  display: block;
+}
+span.run15 {
+  background-color: rgb(178, 246, 255);
+  display: block;
+}
+span.run16 {
+  background-color: rgb(178, 248, 255);
+  display: block;
+}
+span.run17 {
+  background-color: rgb(178, 251, 255);
+  display: block;
+}
+span.run18 {
+  background-color: rgb(178, 253, 255);
+  display: block;
+}
+span.run19 {
+  background-color: rgb(178, 255, 253);
+  display: block;
+}
+span.run20 {
+  background-color: rgb(178, 255, 249);
+  display: block;
+}
+span.run21 {
+  background-color: rgb(178, 255, 247);
+  display: block;
+}
+span.run22 {
+  background-color: rgb(178, 255, 244);
+  display: block;
+}
+span.run23 {
+  background-color: rgb(178, 255, 242);
+  display: block;
+}
+span.run24 {
+  background-color: rgb(178, 255, 239);
+  display: block;
+}
+span.run25 {
+  background-color: rgb(178, 255, 235);
+  display: block;
+}
+span.run26 {
+  background-color: rgb(178, 255, 233);
+  display: block;
+}
+span.run27 {
+  background-color: rgb(178, 255, 230);
+  display: block;
+}
+span.run28 {
+  background-color: rgb(178, 255, 228);
+  display: block;
+}
+span.run29 {
+  background-color: rgb(178, 255, 225);
+  display: block;
+}
+span.run30 {
+  background-color: rgb(178, 255, 221);
+  display: block;
+}
+span.run31 {
+  background-color: rgb(178, 255, 219);
+  display: block;
+}
+span.run32 {
+  background-color: rgb(178, 255, 216);
+  display: block;
+}
+span.run33 {
+  background-color: rgb(178, 255, 214);
+  display: block;
+}
+span.run34 {
+  background-color: rgb(178, 255, 211);
+  display: block;
+}
+span.run35 {
+  background-color: rgb(178, 255, 207);
+  display: block;
+}
+span.run36 {
+  background-color: rgb(178, 255, 205);
+  display: block;
+}
+span.run37 {
+  background-color: rgb(178, 255, 202);
+  display: block;
+}
+span.run38 {
+  background-color: rgb(178, 255, 200);
+  display: block;
+}
+span.run39 {
+  background-color: rgb(178, 255, 197);
+  display: block;
+}
+span.run40 {
+  background-color: rgb(178, 255, 193);
+  display: block;
+}
+span.run41 {
+  background-color: rgb(178, 255, 191);
+  display: block;
+}
+span.run42 {
+  background-color: rgb(178, 255, 188);
+  display: block;
+}
+span.run43 {
+  background-color: rgb(178, 255, 186);
+  display: block;
+}
+span.run44 {
+  background-color: rgb(178, 255, 183);
+  display: block;
+}
+span.run45 {
+  background-color: rgb(178, 255, 179);
+  display: block;
+}
+span.run46 {
+  background-color: rgb(179, 255, 178);
+  display: block;
+}
+span.run47 {
+  background-color: rgb(182, 255, 178);
+  display: block;
+}
+span.run48 {
+  background-color: rgb(184, 255, 178);
+  display: block;
+}
+span.run49 {
+  background-color: rgb(187, 255, 178);
+  display: block;
+}
+span.run50 {
+  background-color: rgb(191, 255, 178);
+  display: block;
+}
+span.run51 {
+  background-color: rgb(193, 255, 178);
+  display: block;
+}
+span.run52 {
+  background-color: rgb(196, 255, 178);
+  display: block;
+}
+span.run53 {
+  background-color: rgb(198, 255, 178);
+  display: block;
+}
+span.run54 {
+  background-color: rgb(201, 255, 178);
+  display: block;
+}
+span.run55 {
+  background-color: rgb(205, 255, 178);
+  display: block;
+}
+span.run56 {
+  background-color: rgb(207, 255, 178);
+  display: block;
+}
+span.run57 {
+  background-color: rgb(210, 255, 178);
+  display: block;
+}
+span.run58 {
+  background-color: rgb(212, 255, 178);
+  display: block;
+}
+span.run59 {
+  background-color: rgb(215, 255, 178);
+  display: block;
+}
+span.run60 {
+  background-color: rgb(219, 255, 178);
+  display: block;
+}
+span.run61 {
+  background-color: rgb(221, 255, 178);
+  display: block;
+}
+span.run62 {
+  background-color: rgb(224, 255, 178);
+  display: block;
+}
+span.run63 {
+  background-color: rgb(226, 255, 178);
+  display: block;
+}
+span.run64 {
+  background-color: rgb(229, 255, 178);
+  display: block;
+}
+span.run65 {
+  background-color: rgb(233, 255, 178);
+  display: block;
+}
+span.run66 {
+  background-color: rgb(235, 255, 178);
+  display: block;
+}
+span.run67 {
+  background-color: rgb(238, 255, 178);
+  display: block;
+}
+span.run68 {
+  background-color: rgb(240, 255, 178);
+  display: block;
+}
+span.run69 {
+  background-color: rgb(243, 255, 178);
+  display: block;
+}
+span.run70 {
+  background-color: rgb(247, 255, 178);
+  display: block;
+}
+span.run71 {
+  background-color: rgb(249, 255, 178);
+  display: block;
+}
+span.run72 {
+  background-color: rgb(252, 255, 178);
+  display: block;
+}
+span.run73 {
+  background-color: rgb(255, 255, 178);
+  display: block;
+}
+span.run74 {
+  background-color: rgb(255, 252, 178);
+  display: block;
+}
+span.run75 {
+  background-color: rgb(255, 248, 178);
+  display: block;
+}
+span.run76 {
+  background-color: rgb(255, 246, 178);
+  display: block;
+}
+span.run77 {
+  background-color: rgb(255, 243, 178);
+  display: block;
+}
+span.run78 {
+  background-color: rgb(255, 240, 178);
+  display: block;
+}
+span.run79 {
+  background-color: rgb(255, 238, 178);
+  display: block;
+}
+span.run80 {
+  background-color: rgb(255, 234, 178);
+  display: block;
+}
+span.run81 {
+  background-color: rgb(255, 232, 178);
+  display: block;
+}
+span.run82 {
+  background-color: rgb(255, 229, 178);
+  display: block;
+}
+span.run83 {
+  background-color: rgb(255, 226, 178);
+  display: block;
+}
+span.run84 {
+  background-color: rgb(255, 224, 178);
+  display: block;
+}
+span.run85 {
+  background-color: rgb(255, 220, 178);
+  display: block;
+}
+span.run86 {
+  background-color: rgb(255, 218, 178);
+  display: block;
+}
+span.run87 {
+  background-color: rgb(255, 215, 178);
+  display: block;
+}
+span.run88 {
+  background-color: rgb(255, 212, 178);
+  display: block;
+}
+span.run89 {
+  background-color: rgb(255, 210, 178);
+  display: block;
+}
+span.run90 {
+  background-color: rgb(255, 206, 178);
+  display: block;
+}
+span.run91 {
+  background-color: rgb(255, 204, 178);
+  display: block;
+}
+span.run92 {
+  background-color: rgb(255, 201, 178);
+  display: block;
+}
+span.run93 {
+  background-color: rgb(255, 198, 178);
+  display: block;
+}
+span.run94 {
+  background-color: rgb(255, 196, 178);
+  display: block;
+}
+span.run95 {
+  background-color: rgb(255, 192, 178);
+  display: block;
+}
+span.run96 {
+  background-color: rgb(255, 189, 178);
+  display: block;
+}
+span.run97 {
+  background-color: rgb(255, 187, 178);
+  display: block;
+}
+span.run98 {
+  background-color: rgb(255, 184, 178);
+  display: block;
+}
+span.run99 {
+  background-color: rgb(255, 182, 178);
+  display: block;
+}
+span.run100 {
+  background-color: rgb(255, 178, 178);
+  display: block;
+}
+</style>
+    </head>
+  <body><h3>C0 code coverage information</h3>
+    <p>Generated on Tue Nov 11 15:29:56 -0500 2008 with <a href='http://eigenclass.org/hiki/rcov'>rcov 0.8.1.2</a>
+      </p>
+    <hr/>
+    <pre><span class='marked0'>Code reported as executed by Ruby looks like this...
+</span><span class='marked1'>and this: this line is also marked as covered.
+</span><span class='inferred0'>Lines considered as run by rcov, but not reported by Ruby, look like this,
+</span><span class='inferred1'>and this: these lines were inferred by rcov (using simple heuristics).
+</span><span class='uncovered0'>Finally, here&apos;s a line marked as not executed.
+</span></pre>                       
+<table class='report'><thead><tr><td class='heading'>Name</td>
+      <td class='heading'>Total lines</td>
+      <td class='heading'>Lines of code</td>
+      <td class='heading'>Total coverage</td>
+      <td class='heading'>Code coverage</td>
+      </tr>
+    </thead>
+  <tbody><tr class='light'><td><a href='-Library-Ruby-Gems-1_8-gems-actionpack-2_1_1-lib-action_view-helpers-date_helper_rb.html'>/Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/helpers/date_helper.rb</a>
+        </td>
+      <td class='lines_total'><tt>711</tt>
+        </td>
+      <td class='lines_code'><tt>279</tt>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_total'>62.7%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='63'/>
+                  <td class='uncovered' width='37'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_code'>14.3%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='14'/>
+                  <td class='uncovered' width='86'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<pre><span class="marked0"><a name="line1"></a>  1 require &quot;date&quot;
+</span><span class="marked1"><a name="line2"></a>  2 require 'action_view/helpers/tag_helper'
+</span><span class="inferred0"><a name="line3"></a>  3 
+</span><span class="marked1"><a name="line4"></a>  4 module ActionView
+</span><span class="marked0"><a name="line5"></a>  5   module Helpers
+</span><span class="inferred1"><a name="line6"></a>  6     # The Date Helper primarily creates select/option tags for different kinds of dates and date elements. All of the select-type methods
+</span><span class="inferred0"><a name="line7"></a>  7     # share a number of common options that are as follows:
+</span><span class="inferred1"><a name="line8"></a>  8     #
+</span><span class="inferred0"><a name="line9"></a>  9     # * &lt;tt&gt;:prefix&lt;/tt&gt; - overwrites the default prefix of &quot;date&quot; used for the select names. So specifying &quot;birthday&quot; would give
+</span><span class="inferred1"><a name="line10"></a> 10     #   birthday[month] instead of date[month] if passed to the select_month method.
+</span><span class="inferred0"><a name="line11"></a> 11     # * &lt;tt&gt;:include_blank&lt;/tt&gt; - set to true if it should be possible to set an empty date.
+</span><span class="inferred1"><a name="line12"></a> 12     # * &lt;tt&gt;:discard_type&lt;/tt&gt; - set to true if you want to discard the type part of the select name. If set to true, the select_month
+</span><span class="inferred0"><a name="line13"></a> 13     #   method would use simply &quot;date&quot; (which can be overwritten using &lt;tt&gt;:prefix&lt;/tt&gt;) instead of &quot;date[month]&quot;.
+</span><span class="marked1"><a name="line14"></a> 14     module DateHelper
+</span><span class="marked0"><a name="line15"></a> 15       include ActionView::Helpers::TagHelper
+</span><span class="marked1"><a name="line16"></a> 16       DEFAULT_PREFIX = 'date' unless const_defined?('DEFAULT_PREFIX')
+</span><span class="inferred0"><a name="line17"></a> 17 
+</span><span class="inferred1"><a name="line18"></a> 18       # Reports the approximate distance in time between two Time or Date objects or integers as seconds.
+</span><span class="inferred0"><a name="line19"></a> 19       # Set &lt;tt&gt;include_seconds&lt;/tt&gt; to true if you want more detailed approximations when distance &lt; 1 min, 29 secs
+</span><span class="inferred1"><a name="line20"></a> 20       # Distances are reported based on the following table:
+</span><span class="inferred0"><a name="line21"></a> 21       #
+</span><span class="inferred1"><a name="line22"></a> 22       #   0 &lt;-&gt; 29 secs                                                             # =&gt; less than a minute
+</span><span class="inferred0"><a name="line23"></a> 23       #   30 secs &lt;-&gt; 1 min, 29 secs                                                # =&gt; 1 minute
+</span><span class="inferred1"><a name="line24"></a> 24       #   1 min, 30 secs &lt;-&gt; 44 mins, 29 secs                                       # =&gt; [2..44] minutes
+</span><span class="inferred0"><a name="line25"></a> 25       #   44 mins, 30 secs &lt;-&gt; 89 mins, 29 secs                                     # =&gt; about 1 hour
+</span><span class="inferred1"><a name="line26"></a> 26       #   89 mins, 29 secs &lt;-&gt; 23 hrs, 59 mins, 29 secs                             # =&gt; about [2..24] hours
+</span><span class="inferred0"><a name="line27"></a> 27       #   23 hrs, 59 mins, 29 secs &lt;-&gt; 47 hrs, 59 mins, 29 secs                     # =&gt; 1 day
+</span><span class="inferred1"><a name="line28"></a> 28       #   47 hrs, 59 mins, 29 secs &lt;-&gt; 29 days, 23 hrs, 59 mins, 29 secs            # =&gt; [2..29] days
+</span><span class="inferred0"><a name="line29"></a> 29       #   29 days, 23 hrs, 59 mins, 30 secs &lt;-&gt; 59 days, 23 hrs, 59 mins, 29 secs   # =&gt; about 1 month
+</span><span class="inferred1"><a name="line30"></a> 30       #   59 days, 23 hrs, 59 mins, 30 secs &lt;-&gt; 1 yr minus 1 sec                    # =&gt; [2..12] months
+</span><span class="inferred0"><a name="line31"></a> 31       #   1 yr &lt;-&gt; 2 yrs minus 1 secs                                               # =&gt; about 1 year
+</span><span class="inferred1"><a name="line32"></a> 32       #   2 yrs &lt;-&gt; max time or date                                                # =&gt; over [2..X] years
+</span><span class="inferred0"><a name="line33"></a> 33       #
+</span><span class="inferred1"><a name="line34"></a> 34       # With &lt;tt&gt;include_seconds&lt;/tt&gt; = true and the difference &lt; 1 minute 29 seconds:
+</span><span class="inferred0"><a name="line35"></a> 35       #   0-4   secs      # =&gt; less than 5 seconds
+</span><span class="inferred1"><a name="line36"></a> 36       #   5-9   secs      # =&gt; less than 10 seconds
+</span><span class="inferred0"><a name="line37"></a> 37       #   10-19 secs      # =&gt; less than 20 seconds
+</span><span class="inferred1"><a name="line38"></a> 38       #   20-39 secs      # =&gt; half a minute
+</span><span class="inferred0"><a name="line39"></a> 39       #   40-59 secs      # =&gt; less than a minute
+</span><span class="inferred1"><a name="line40"></a> 40       #   60-89 secs      # =&gt; 1 minute
+</span><span class="inferred0"><a name="line41"></a> 41       #
+</span><span class="inferred1"><a name="line42"></a> 42       # ==== Examples
+</span><span class="inferred0"><a name="line43"></a> 43       #   from_time = Time.now
+</span><span class="inferred1"><a name="line44"></a> 44       #   distance_of_time_in_words(from_time, from_time + 50.minutes)        # =&gt; about 1 hour
+</span><span class="inferred0"><a name="line45"></a> 45       #   distance_of_time_in_words(from_time, 50.minutes.from_now)           # =&gt; about 1 hour
+</span><span class="inferred1"><a name="line46"></a> 46       #   distance_of_time_in_words(from_time, from_time + 15.seconds)        # =&gt; less than a minute
+</span><span class="inferred0"><a name="line47"></a> 47       #   distance_of_time_in_words(from_time, from_time + 15.seconds, true)  # =&gt; less than 20 seconds
+</span><span class="inferred1"><a name="line48"></a> 48       #   distance_of_time_in_words(from_time, 3.years.from_now)              # =&gt; over 3 years
+</span><span class="inferred0"><a name="line49"></a> 49       #   distance_of_time_in_words(from_time, from_time + 60.hours)          # =&gt; about 3 days
+</span><span class="inferred1"><a name="line50"></a> 50       #   distance_of_time_in_words(from_time, from_time + 45.seconds, true)  # =&gt; less than a minute
+</span><span class="inferred0"><a name="line51"></a> 51       #   distance_of_time_in_words(from_time, from_time - 45.seconds, true)  # =&gt; less than a minute
+</span><span class="inferred1"><a name="line52"></a> 52       #   distance_of_time_in_words(from_time, 76.seconds.from_now)           # =&gt; 1 minute
+</span><span class="inferred0"><a name="line53"></a> 53       #   distance_of_time_in_words(from_time, from_time + 1.year + 3.days)   # =&gt; about 1 year
+</span><span class="inferred1"><a name="line54"></a> 54       #   distance_of_time_in_words(from_time, from_time + 4.years + 15.days + 30.minutes + 5.seconds) # =&gt; over 4 years
+</span><span class="inferred0"><a name="line55"></a> 55       #
+</span><span class="inferred1"><a name="line56"></a> 56       #   to_time = Time.now + 6.years + 19.days
+</span><span class="inferred0"><a name="line57"></a> 57       #   distance_of_time_in_words(from_time, to_time, true)     # =&gt; over 6 years
+</span><span class="inferred1"><a name="line58"></a> 58       #   distance_of_time_in_words(to_time, from_time, true)     # =&gt; over 6 years
+</span><span class="inferred0"><a name="line59"></a> 59       #   distance_of_time_in_words(Time.now, Time.now)           # =&gt; less than a minute
+</span><span class="inferred1"><a name="line60"></a> 60       #
+</span><span class="marked0"><a name="line61"></a> 61       def distance_of_time_in_words(from_time, to_time = 0, include_seconds = false)
+</span><span class="uncovered1"><a name="line62"></a> 62         from_time = from_time.to_time if from_time.respond_to?(:to_time)
+</span><span class="uncovered0"><a name="line63"></a> 63         to_time = to_time.to_time if to_time.respond_to?(:to_time)
+</span><span class="uncovered1"><a name="line64"></a> 64         distance_in_minutes = (((to_time - from_time).abs)/60).round
+</span><span class="uncovered0"><a name="line65"></a> 65         distance_in_seconds = ((to_time - from_time).abs).round
+</span><span class="uncovered1"><a name="line66"></a> 66 
+</span><span class="uncovered0"><a name="line67"></a> 67         case distance_in_minutes
+</span><span class="uncovered1"><a name="line68"></a> 68           when 0..1
+</span><span class="uncovered0"><a name="line69"></a> 69             return (distance_in_minutes == 0) ? 'less than a minute' : '1 minute' unless include_seconds
+</span><span class="uncovered1"><a name="line70"></a> 70             case distance_in_seconds
+</span><span class="uncovered0"><a name="line71"></a> 71               when 0..4   then 'less than 5 seconds'
+</span><span class="uncovered1"><a name="line72"></a> 72               when 5..9   then 'less than 10 seconds'
+</span><span class="uncovered0"><a name="line73"></a> 73               when 10..19 then 'less than 20 seconds'
+</span><span class="uncovered1"><a name="line74"></a> 74               when 20..39 then 'half a minute'
+</span><span class="uncovered0"><a name="line75"></a> 75               when 40..59 then 'less than a minute'
+</span><span class="uncovered1"><a name="line76"></a> 76               else             '1 minute'
+</span><span class="uncovered0"><a name="line77"></a> 77             end
+</span><span class="uncovered1"><a name="line78"></a> 78 
+</span><span class="uncovered0"><a name="line79"></a> 79           when 2..44           then &quot;#{distance_in_minutes} minutes&quot;
+</span><span class="uncovered1"><a name="line80"></a> 80           when 45..89          then 'about 1 hour'
+</span><span class="uncovered0"><a name="line81"></a> 81           when 90..1439        then &quot;about #{(distance_in_minutes.to_f / 60.0).round} hours&quot;
+</span><span class="uncovered1"><a name="line82"></a> 82           when 1440..2879      then '1 day'
+</span><span class="uncovered0"><a name="line83"></a> 83           when 2880..43199     then &quot;#{(distance_in_minutes / 1440).round} days&quot;
+</span><span class="uncovered1"><a name="line84"></a> 84           when 43200..86399    then 'about 1 month'
+</span><span class="uncovered0"><a name="line85"></a> 85           when 86400..525599   then &quot;#{(distance_in_minutes / 43200).round} months&quot;
+</span><span class="uncovered1"><a name="line86"></a> 86           when 525600..1051199 then 'about 1 year'
+</span><span class="uncovered0"><a name="line87"></a> 87           else                      &quot;over #{(distance_in_minutes / 525600).round} years&quot;
+</span><span class="uncovered1"><a name="line88"></a> 88         end
+</span><span class="uncovered0"><a name="line89"></a> 89       end
+</span><span class="inferred1"><a name="line90"></a> 90 
+</span><span class="inferred0"><a name="line91"></a> 91       # Like distance_of_time_in_words, but where &lt;tt&gt;to_time&lt;/tt&gt; is fixed to &lt;tt&gt;Time.now&lt;/tt&gt;.
+</span><span class="inferred1"><a name="line92"></a> 92       #
+</span><span class="inferred0"><a name="line93"></a> 93       # ==== Examples
+</span><span class="inferred1"><a name="line94"></a> 94       #   time_ago_in_words(3.minutes.from_now)       # =&gt; 3 minutes
+</span><span class="inferred0"><a name="line95"></a> 95       #   time_ago_in_words(Time.now - 15.hours)      # =&gt; 15 hours
+</span><span class="inferred1"><a name="line96"></a> 96       #   time_ago_in_words(Time.now)                 # =&gt; less than a minute
+</span><span class="inferred0"><a name="line97"></a> 97       #
+</span><span class="inferred1"><a name="line98"></a> 98       #   from_time = Time.now - 3.days - 14.minutes - 25.seconds     # =&gt; 3 days
+</span><span class="marked0"><a name="line99"></a> 99       def time_ago_in_words(from_time, include_seconds = false)
+</span><span class="uncovered1"><a name="line100"></a>100         distance_of_time_in_words(from_time, Time.now, include_seconds)
+</span><span class="uncovered0"><a name="line101"></a>101       end
+</span><span class="inferred1"><a name="line102"></a>102 
+</span><span class="marked0"><a name="line103"></a>103       alias_method :distance_of_time_in_words_to_now, :time_ago_in_words
+</span><span class="inferred1"><a name="line104"></a>104 
+</span><span class="inferred0"><a name="line105"></a>105       # Returns a set of select tags (one for year, month, and day) pre-selected for accessing a specified date-based attribute (identified by
+</span><span class="inferred1"><a name="line106"></a>106       # +method+) on an object assigned to the template (identified by +object+). It's possible to tailor the selects through the +options+ hash,
+</span><span class="inferred0"><a name="line107"></a>107       # which accepts all the keys that each of the individual select builders do (like &lt;tt&gt;:use_month_numbers&lt;/tt&gt; for select_month) as well as a range of
+</span><span class="inferred1"><a name="line108"></a>108       # discard options. The discard options are &lt;tt&gt;:discard_year&lt;/tt&gt;, &lt;tt&gt;:discard_month&lt;/tt&gt; and &lt;tt&gt;:discard_day&lt;/tt&gt;. Set to true, they'll
+</span><span class="inferred0"><a name="line109"></a>109       # drop the respective select. Discarding the month select will also automatically discard the day select. It's also possible to explicitly
+</span><span class="inferred1"><a name="line110"></a>110       # set the order of the tags using the &lt;tt&gt;:order&lt;/tt&gt; option with an array of symbols &lt;tt&gt;:year&lt;/tt&gt;, &lt;tt&gt;:month&lt;/tt&gt; and &lt;tt&gt;:day&lt;/tt&gt; in
+</span><span class="inferred0"><a name="line111"></a>111       # the desired order. Symbols may be omitted and the respective select is not included.
+</span><span class="inferred1"><a name="line112"></a>112       #
+</span><span class="inferred0"><a name="line113"></a>113       # Pass the &lt;tt&gt;:default&lt;/tt&gt; option to set the default date. Use a Time object or a Hash of &lt;tt&gt;:year&lt;/tt&gt;, &lt;tt&gt;:month&lt;/tt&gt;, &lt;tt&gt;:day&lt;/tt&gt;, &lt;tt&gt;:hour&lt;/tt&gt;, &lt;tt&gt;:minute&lt;/tt&gt;, and &lt;tt&gt;:second&lt;/tt&gt;.
+</span><span class="inferred1"><a name="line114"></a>114       #
+</span><span class="inferred0"><a name="line115"></a>115       # Passing &lt;tt&gt;:disabled =&gt; true&lt;/tt&gt; as part of the +options+ will make elements inaccessible for change.
+</span><span class="inferred1"><a name="line116"></a>116       #
+</span><span class="inferred0"><a name="line117"></a>117       # If anything is passed in the +html_options+ hash it will be applied to every select tag in the set.
+</span><span class="inferred1"><a name="line118"></a>118       #
+</span><span class="inferred0"><a name="line119"></a>119       # NOTE: Discarded selects will default to 1. So if no month select is available, January will be assumed.
+</span><span class="inferred1"><a name="line120"></a>120       #
+</span><span class="inferred0"><a name="line121"></a>121       # ==== Examples
+</span><span class="inferred1"><a name="line122"></a>122       #   # Generates a date select that when POSTed is stored in the post variable, in the written_on attribute
+</span><span class="inferred0"><a name="line123"></a>123       #   date_select(&quot;post&quot;, &quot;written_on&quot;)
+</span><span class="inferred1"><a name="line124"></a>124       #
+</span><span class="inferred0"><a name="line125"></a>125       #   # Generates a date select that when POSTed is stored in the post variable, in the written_on attribute,
+</span><span class="inferred1"><a name="line126"></a>126       #   # with the year in the year drop down box starting at 1995.
+</span><span class="inferred0"><a name="line127"></a>127       #   date_select(&quot;post&quot;, &quot;written_on&quot;, :start_year =&gt; 1995)
+</span><span class="inferred1"><a name="line128"></a>128       #
+</span><span class="inferred0"><a name="line129"></a>129       #   # Generates a date select that when POSTed is stored in the post variable, in the written_on attribute,
+</span><span class="inferred1"><a name="line130"></a>130       #   # with the year in the year drop down box starting at 1995, numbers used for months instead of words,
+</span><span class="inferred0"><a name="line131"></a>131       #   # and without a day select box. 
+</span><span class="inferred1"><a name="line132"></a>132       #   date_select(&quot;post&quot;, &quot;written_on&quot;, :start_year =&gt; 1995, :use_month_numbers =&gt; true,
+</span><span class="inferred0"><a name="line133"></a>133       #                                     :discard_day =&gt; true, :include_blank =&gt; true)
+</span><span class="inferred1"><a name="line134"></a>134       #
+</span><span class="inferred0"><a name="line135"></a>135       #   # Generates a date select that when POSTed is stored in the post variable, in the written_on attribute
+</span><span class="inferred1"><a name="line136"></a>136       #   # with the fields ordered as day, month, year rather than month, day, year.
+</span><span class="inferred0"><a name="line137"></a>137       #   date_select(&quot;post&quot;, &quot;written_on&quot;, :order =&gt; [:day, :month, :year])
+</span><span class="inferred1"><a name="line138"></a>138       #
+</span><span class="inferred0"><a name="line139"></a>139       #   # Generates a date select that when POSTed is stored in the user variable, in the birthday attribute
+</span><span class="inferred1"><a name="line140"></a>140       #   # lacking a year field.
+</span><span class="inferred0"><a name="line141"></a>141       #   date_select(&quot;user&quot;, &quot;birthday&quot;, :order =&gt; [:month, :day])
+</span><span class="inferred1"><a name="line142"></a>142       #
+</span><span class="inferred0"><a name="line143"></a>143       #   # Generates a date select that when POSTed is stored in the user variable, in the birthday attribute
+</span><span class="inferred1"><a name="line144"></a>144       #   # which is initially set to the date 3 days from the current date
+</span><span class="inferred0"><a name="line145"></a>145       #   date_select(&quot;post&quot;, &quot;written_on&quot;, :default =&gt; 3.days.from_now)
+</span><span class="inferred1"><a name="line146"></a>146       #
+</span><span class="inferred0"><a name="line147"></a>147       #   # Generates a date select that when POSTed is stored in the credit_card variable, in the bill_due attribute
+</span><span class="inferred1"><a name="line148"></a>148       #   # that will have a default day of 20.
+</span><span class="inferred0"><a name="line149"></a>149       #   date_select(&quot;credit_card&quot;, &quot;bill_due&quot;, :default =&gt; { :day =&gt; 20 })
+</span><span class="inferred1"><a name="line150"></a>150       #
+</span><span class="inferred0"><a name="line151"></a>151       # The selects are prepared for multi-parameter assignment to an Active Record object.
+</span><span class="inferred1"><a name="line152"></a>152       #
+</span><span class="inferred0"><a name="line153"></a>153       # Note: If the day is not included as an option but the month is, the day will be set to the 1st to ensure that all month
+</span><span class="inferred1"><a name="line154"></a>154       # choices are valid.
+</span><span class="marked0"><a name="line155"></a>155       def date_select(object_name, method, options = {}, html_options = {})
+</span><span class="uncovered1"><a name="line156"></a>156         InstanceTag.new(object_name, method, self, nil, options.delete(:object)).to_date_select_tag(options, html_options)
+</span><span class="uncovered0"><a name="line157"></a>157       end
+</span><span class="inferred1"><a name="line158"></a>158 
+</span><span class="inferred0"><a name="line159"></a>159       # Returns a set of select tags (one for hour, minute and optionally second) pre-selected for accessing a specified
+</span><span class="inferred1"><a name="line160"></a>160       # time-based attribute (identified by +method+) on an object assigned to the template (identified by +object+).
+</span><span class="inferred0"><a name="line161"></a>161       # You can include the seconds with &lt;tt&gt;:include_seconds&lt;/tt&gt;.
+</span><span class="inferred1"><a name="line162"></a>162       # 
+</span><span class="inferred0"><a name="line163"></a>163       # If anything is passed in the html_options hash it will be applied to every select tag in the set.
+</span><span class="inferred1"><a name="line164"></a>164       #
+</span><span class="inferred0"><a name="line165"></a>165       # ==== Examples
+</span><span class="inferred1"><a name="line166"></a>166       #   # Creates a time select tag that, when POSTed, will be stored in the post variable in the sunrise attribute
+</span><span class="inferred0"><a name="line167"></a>167       #   time_select(&quot;post&quot;, &quot;sunrise&quot;)
+</span><span class="inferred1"><a name="line168"></a>168       #
+</span><span class="inferred0"><a name="line169"></a>169       #   # Creates a time select tag that, when POSTed, will be stored in the order variable in the submitted attribute
+</span><span class="inferred1"><a name="line170"></a>170       #   time_select(&quot;order&quot;, &quot;submitted&quot;)
+</span><span class="inferred0"><a name="line171"></a>171       #
+</span><span class="inferred1"><a name="line172"></a>172       #   # Creates a time select tag that, when POSTed, will be stored in the mail variable in the sent_at attribute
+</span><span class="inferred0"><a name="line173"></a>173       #   time_select(&quot;mail&quot;, &quot;sent_at&quot;)
+</span><span class="inferred1"><a name="line174"></a>174       #
+</span><span class="inferred0"><a name="line175"></a>175       #   # Creates a time select tag with a seconds field that, when POSTed, will be stored in the post variables in 
+</span><span class="inferred1"><a name="line176"></a>176       #   # the sunrise attribute. 
+</span><span class="inferred0"><a name="line177"></a>177       #   time_select(&quot;post&quot;, &quot;start_time&quot;, :include_seconds =&gt; true)
+</span><span class="inferred1"><a name="line178"></a>178       #
+</span><span class="inferred0"><a name="line179"></a>179       #   # Creates a time select tag with a seconds field that, when POSTed, will be stored in the entry variables in 
+</span><span class="inferred1"><a name="line180"></a>180       #   # the submission_time attribute. 
+</span><span class="inferred0"><a name="line181"></a>181       #   time_select(&quot;entry&quot;, &quot;submission_time&quot;, :include_seconds =&gt; true)
+</span><span class="inferred1"><a name="line182"></a>182       #
+</span><span class="inferred0"><a name="line183"></a>183       #   # You can set the :minute_step to 15 which will give you: 00, 15, 30 and 45.
+</span><span class="inferred1"><a name="line184"></a>184       #   time_select 'game', 'game_time', {:minute_step =&gt; 15}
+</span><span class="inferred0"><a name="line185"></a>185       #
+</span><span class="inferred1"><a name="line186"></a>186       # The selects are prepared for multi-parameter assignment to an Active Record object.
+</span><span class="inferred0"><a name="line187"></a>187       #
+</span><span class="inferred1"><a name="line188"></a>188       # Note: If the day is not included as an option but the month is, the day will be set to the 1st to ensure that all month
+</span><span class="inferred0"><a name="line189"></a>189       # choices are valid.
+</span><span class="marked1"><a name="line190"></a>190       def time_select(object_name, method, options = {}, html_options = {})
+</span><span class="uncovered0"><a name="line191"></a>191         InstanceTag.new(object_name, method, self, nil, options.delete(:object)).to_time_select_tag(options, html_options)
+</span><span class="uncovered1"><a name="line192"></a>192       end
+</span><span class="inferred0"><a name="line193"></a>193 
+</span><span class="inferred1"><a name="line194"></a>194       # Returns a set of select tags (one for year, month, day, hour, and minute) pre-selected for accessing a specified datetime-based
+</span><span class="inferred0"><a name="line195"></a>195       # attribute (identified by +method+) on an object assigned to the template (identified by +object+). Examples:
+</span><span class="inferred1"><a name="line196"></a>196       #
+</span><span class="inferred0"><a name="line197"></a>197       # If anything is passed in the html_options hash it will be applied to every select tag in the set.
+</span><span class="inferred1"><a name="line198"></a>198       #
+</span><span class="inferred0"><a name="line199"></a>199       # ==== Examples
+</span><span class="inferred1"><a name="line200"></a>200       #   # Generates a datetime select that, when POSTed, will be stored in the post variable in the written_on attribute
+</span><span class="inferred0"><a name="line201"></a>201       #   datetime_select(&quot;post&quot;, &quot;written_on&quot;)
+</span><span class="inferred1"><a name="line202"></a>202       #
+</span><span class="inferred0"><a name="line203"></a>203       #   # Generates a datetime select with a year select that starts at 1995 that, when POSTed, will be stored in the 
+</span><span class="inferred1"><a name="line204"></a>204       #   # post variable in the written_on attribute.
+</span><span class="inferred0"><a name="line205"></a>205       #   datetime_select(&quot;post&quot;, &quot;written_on&quot;, :start_year =&gt; 1995)
+</span><span class="inferred1"><a name="line206"></a>206       #
+</span><span class="inferred0"><a name="line207"></a>207       #   # Generates a datetime select with a default value of 3 days from the current time that, when POSTed, will be stored in the 
+</span><span class="inferred1"><a name="line208"></a>208       #   # trip variable in the departing attribute.
+</span><span class="inferred0"><a name="line209"></a>209       #   datetime_select(&quot;trip&quot;, &quot;departing&quot;, :default =&gt; 3.days.from_now)
+</span><span class="inferred1"><a name="line210"></a>210       #
+</span><span class="inferred0"><a name="line211"></a>211       #   # Generates a datetime select that discards the type that, when POSTed, will be stored in the post variable as the written_on
+</span><span class="inferred1"><a name="line212"></a>212       #   # attribute.
+</span><span class="inferred0"><a name="line213"></a>213       #   datetime_select(&quot;post&quot;, &quot;written_on&quot;, :discard_type =&gt; true)
+</span><span class="inferred1"><a name="line214"></a>214       #
+</span><span class="inferred0"><a name="line215"></a>215       # The selects are prepared for multi-parameter assignment to an Active Record object.
+</span><span class="marked1"><a name="line216"></a>216       def datetime_select(object_name, method, options = {}, html_options = {})
+</span><span class="uncovered0"><a name="line217"></a>217         InstanceTag.new(object_name, method, self, nil, options.delete(:object)).to_datetime_select_tag(options, html_options)
+</span><span class="uncovered1"><a name="line218"></a>218       end
+</span><span class="inferred0"><a name="line219"></a>219 
+</span><span class="inferred1"><a name="line220"></a>220       # Returns a set of html select-tags (one for year, month, day, hour, and minute) pre-selected with the +datetime+.
+</span><span class="inferred0"><a name="line221"></a>221       # It's also possible to explicitly set the order of the tags using the &lt;tt&gt;:order&lt;/tt&gt; option with an array of
+</span><span class="inferred1"><a name="line222"></a>222       # symbols &lt;tt&gt;:year&lt;/tt&gt;, &lt;tt&gt;:month&lt;/tt&gt; and &lt;tt&gt;:day&lt;/tt&gt; in the desired order. If you do not supply a Symbol, it
+</span><span class="inferred0"><a name="line223"></a>223       # will be appended onto the &lt;tt&gt;:order&lt;/tt&gt; passed in. You can also add &lt;tt&gt;:date_separator&lt;/tt&gt; and &lt;tt&gt;:time_separator&lt;/tt&gt;
+</span><span class="inferred1"><a name="line224"></a>224       # keys to the +options+ to control visual display of the elements.
+</span><span class="inferred0"><a name="line225"></a>225       #
+</span><span class="inferred1"><a name="line226"></a>226       # If anything is passed in the html_options hash it will be applied to every select tag in the set.
+</span><span class="inferred0"><a name="line227"></a>227       #
+</span><span class="inferred1"><a name="line228"></a>228       # ==== Examples
+</span><span class="inferred0"><a name="line229"></a>229       #   my_date_time = Time.now + 4.days
+</span><span class="inferred1"><a name="line230"></a>230       #
+</span><span class="inferred0"><a name="line231"></a>231       #   # Generates a datetime select that defaults to the datetime in my_date_time (four days after today)
+</span><span class="inferred1"><a name="line232"></a>232       #   select_datetime(my_date_time)
+</span><span class="inferred0"><a name="line233"></a>233       #
+</span><span class="inferred1"><a name="line234"></a>234       #   # Generates a datetime select that defaults to today (no specified datetime)
+</span><span class="inferred0"><a name="line235"></a>235       #   select_datetime()
+</span><span class="inferred1"><a name="line236"></a>236       #
+</span><span class="inferred0"><a name="line237"></a>237       #   # Generates a datetime select that defaults to the datetime in my_date_time (four days after today)
+</span><span class="inferred1"><a name="line238"></a>238       #   # with the fields ordered year, month, day rather than month, day, year.
+</span><span class="inferred0"><a name="line239"></a>239       #   select_datetime(my_date_time, :order =&gt; [:year, :month, :day])
+</span><span class="inferred1"><a name="line240"></a>240       #
+</span><span class="inferred0"><a name="line241"></a>241       #   # Generates a datetime select that defaults to the datetime in my_date_time (four days after today)
+</span><span class="inferred1"><a name="line242"></a>242       #   # with a '/' between each date field.
+</span><span class="inferred0"><a name="line243"></a>243       #   select_datetime(my_date_time, :date_separator =&gt; '/')
+</span><span class="inferred1"><a name="line244"></a>244       #
+</span><span class="inferred0"><a name="line245"></a>245       #   # Generates a datetime select that discards the type of the field and defaults to the datetime in 
+</span><span class="inferred1"><a name="line246"></a>246       #   # my_date_time (four days after today)
+</span><span class="inferred0"><a name="line247"></a>247       #   select_datetime(my_date_time, :discard_type =&gt; true)
+</span><span class="inferred1"><a name="line248"></a>248       #
+</span><span class="inferred0"><a name="line249"></a>249       #   # Generates a datetime select that defaults to the datetime in my_date_time (four days after today)
+</span><span class="inferred1"><a name="line250"></a>250       #   # prefixed with 'payday' rather than 'date'
+</span><span class="inferred0"><a name="line251"></a>251       #   select_datetime(my_date_time, :prefix =&gt; 'payday')
+</span><span class="inferred1"><a name="line252"></a>252       #
+</span><span class="marked0"><a name="line253"></a>253       def select_datetime(datetime = Time.current, options = {}, html_options = {})
+</span><span class="uncovered1"><a name="line254"></a>254         separator = options[:datetime_separator] || ''
+</span><span class="uncovered0"><a name="line255"></a>255         select_date(datetime, options, html_options) + separator + select_time(datetime, options, html_options)
+</span><span class="uncovered1"><a name="line256"></a>256        end
+</span><span class="inferred0"><a name="line257"></a>257 
+</span><span class="inferred1"><a name="line258"></a>258       # Returns a set of html select-tags (one for year, month, and day) pre-selected with the +date+.
+</span><span class="inferred0"><a name="line259"></a>259       # It's possible to explicitly set the order of the tags using the &lt;tt&gt;:order&lt;/tt&gt; option with an array of
+</span><span class="inferred1"><a name="line260"></a>260       # symbols &lt;tt&gt;:year&lt;/tt&gt;, &lt;tt&gt;:month&lt;/tt&gt; and &lt;tt&gt;:day&lt;/tt&gt; in the desired order. If you do not supply a Symbol, it
+</span><span class="inferred0"><a name="line261"></a>261       # will be appended onto the &lt;tt&gt;:order&lt;/tt&gt; passed in.
+</span><span class="inferred1"><a name="line262"></a>262       #
+</span><span class="inferred0"><a name="line263"></a>263       # If anything is passed in the html_options hash it will be applied to every select tag in the set.
+</span><span class="inferred1"><a name="line264"></a>264       #
+</span><span class="inferred0"><a name="line265"></a>265       # ==== Examples
+</span><span class="inferred1"><a name="line266"></a>266       #   my_date = Time.today + 6.days
+</span><span class="inferred0"><a name="line267"></a>267       #
+</span><span class="inferred1"><a name="line268"></a>268       #   # Generates a date select that defaults to the date in my_date (six days after today)
+</span><span class="inferred0"><a name="line269"></a>269       #   select_date(my_date)
+</span><span class="inferred1"><a name="line270"></a>270       #
+</span><span class="inferred0"><a name="line271"></a>271       #   # Generates a date select that defaults to today (no specified date)
+</span><span class="inferred1"><a name="line272"></a>272       #   select_date()
+</span><span class="inferred0"><a name="line273"></a>273       #
+</span><span class="inferred1"><a name="line274"></a>274       #   # Generates a date select that defaults to the date in my_date (six days after today)
+</span><span class="inferred0"><a name="line275"></a>275       #   # with the fields ordered year, month, day rather than month, day, year.
+</span><span class="inferred1"><a name="line276"></a>276       #   select_date(my_date, :order =&gt; [:year, :month, :day])
+</span><span class="inferred0"><a name="line277"></a>277       #
+</span><span class="inferred1"><a name="line278"></a>278       #   # Generates a date select that discards the type of the field and defaults to the date in 
+</span><span class="inferred0"><a name="line279"></a>279       #   # my_date (six days after today)
+</span><span class="inferred1"><a name="line280"></a>280       #   select_datetime(my_date_time, :discard_type =&gt; true)
+</span><span class="inferred0"><a name="line281"></a>281       #
+</span><span class="inferred1"><a name="line282"></a>282       #   # Generates a date select that defaults to the datetime in my_date (six days after today)
+</span><span class="inferred0"><a name="line283"></a>283       #   # prefixed with 'payday' rather than 'date'
+</span><span class="inferred1"><a name="line284"></a>284       #   select_datetime(my_date_time, :prefix =&gt; 'payday')
+</span><span class="inferred0"><a name="line285"></a>285       #
+</span><span class="marked1"><a name="line286"></a>286       def select_date(date = Date.current, options = {}, html_options = {})
+</span><span class="uncovered0"><a name="line287"></a>287         options[:order] ||= []
+</span><span class="uncovered1"><a name="line288"></a>288         [:year, :month, :day].each { |o| options[:order].push(o) unless options[:order].include?(o) }
+</span><span class="uncovered0"><a name="line289"></a>289 
+</span><span class="uncovered1"><a name="line290"></a>290         select_date = ''
+</span><span class="uncovered0"><a name="line291"></a>291         options[:order].each do |o|
+</span><span class="uncovered1"><a name="line292"></a>292           select_date &lt;&lt; self.send(&quot;select_#{o}&quot;, date, options, html_options)
+</span><span class="uncovered0"><a name="line293"></a>293         end
+</span><span class="uncovered1"><a name="line294"></a>294         select_date
+</span><span class="uncovered0"><a name="line295"></a>295       end
+</span><span class="inferred1"><a name="line296"></a>296 
+</span><span class="inferred0"><a name="line297"></a>297       # Returns a set of html select-tags (one for hour and minute)
+</span><span class="inferred1"><a name="line298"></a>298       # You can set &lt;tt&gt;:time_separator&lt;/tt&gt; key to format the output, and 
+</span><span class="inferred0"><a name="line299"></a>299       # the &lt;tt&gt;:include_seconds&lt;/tt&gt; option to include an input for seconds.
+</span><span class="inferred1"><a name="line300"></a>300       #
+</span><span class="inferred0"><a name="line301"></a>301       # If anything is passed in the html_options hash it will be applied to every select tag in the set.
+</span><span class="inferred1"><a name="line302"></a>302       #
+</span><span class="inferred0"><a name="line303"></a>303       # ==== Examples
+</span><span class="inferred1"><a name="line304"></a>304       #   my_time = Time.now + 5.days + 7.hours + 3.minutes + 14.seconds
+</span><span class="inferred0"><a name="line305"></a>305       #
+</span><span class="inferred1"><a name="line306"></a>306       #   # Generates a time select that defaults to the time in my_time
+</span><span class="inferred0"><a name="line307"></a>307       #   select_time(my_time)
+</span><span class="inferred1"><a name="line308"></a>308       #
+</span><span class="inferred0"><a name="line309"></a>309       #   # Generates a time select that defaults to the current time (no specified time)
+</span><span class="inferred1"><a name="line310"></a>310       #   select_time()
+</span><span class="inferred0"><a name="line311"></a>311       #
+</span><span class="inferred1"><a name="line312"></a>312       #   # Generates a time select that defaults to the time in my_time,
+</span><span class="inferred0"><a name="line313"></a>313       #   # which has fields separated by ':' 
+</span><span class="inferred1"><a name="line314"></a>314       #   select_time(my_time, :time_separator =&gt; ':')
+</span><span class="inferred0"><a name="line315"></a>315       #
+</span><span class="inferred1"><a name="line316"></a>316       #   # Generates a time select that defaults to the time in my_time,
+</span><span class="inferred0"><a name="line317"></a>317       #   # that also includes an input for seconds
+</span><span class="inferred1"><a name="line318"></a>318       #   select_time(my_time, :include_seconds =&gt; true)
+</span><span class="inferred0"><a name="line319"></a>319       #
+</span><span class="inferred1"><a name="line320"></a>320       #   # Generates a time select that defaults to the time in my_time, that has fields
+</span><span class="inferred0"><a name="line321"></a>321       #   # separated by ':' and includes an input for seconds
+</span><span class="inferred1"><a name="line322"></a>322       #   select_time(my_time, :time_separator =&gt; ':', :include_seconds =&gt; true)
+</span><span class="inferred0"><a name="line323"></a>323       #
+</span><span class="marked1"><a name="line324"></a>324       def select_time(datetime = Time.current, options = {}, html_options = {})
+</span><span class="uncovered0"><a name="line325"></a>325         separator = options[:time_separator] || ''
+</span><span class="uncovered1"><a name="line326"></a>326         select_hour(datetime, options, html_options) + separator + select_minute(datetime, options, html_options) + (options[:include_seconds] ? separator + select_second(datetime, options, html_options) : '')
+</span><span class="uncovered0"><a name="line327"></a>327       end
+</span><span class="inferred1"><a name="line328"></a>328 
+</span><span class="inferred0"><a name="line329"></a>329       # Returns a select tag with options for each of the seconds 0 through 59 with the current second selected.
+</span><span class="inferred1"><a name="line330"></a>330       # The &lt;tt&gt;second&lt;/tt&gt; can also be substituted for a second number.
+</span><span class="inferred0"><a name="line331"></a>331       # Override the field name using the &lt;tt&gt;:field_name&lt;/tt&gt; option, 'second' by default.
+</span><span class="inferred1"><a name="line332"></a>332       #
+</span><span class="inferred0"><a name="line333"></a>333       # ==== Examples
+</span><span class="inferred1"><a name="line334"></a>334       #   my_time = Time.now + 16.minutes
+</span><span class="inferred0"><a name="line335"></a>335       #
+</span><span class="inferred1"><a name="line336"></a>336       #   # Generates a select field for seconds that defaults to the seconds for the time in my_time
+</span><span class="inferred0"><a name="line337"></a>337       #   select_second(my_time)
+</span><span class="inferred1"><a name="line338"></a>338       #
+</span><span class="inferred0"><a name="line339"></a>339       #   # Generates a select field for seconds that defaults to the number given
+</span><span class="inferred1"><a name="line340"></a>340       #   select_second(33)
+</span><span class="inferred0"><a name="line341"></a>341       # 
+</span><span class="inferred1"><a name="line342"></a>342       #   # Generates a select field for seconds that defaults to the seconds for the time in my_time
+</span><span class="inferred0"><a name="line343"></a>343       #   # that is named 'interval' rather than 'second'
+</span><span class="inferred1"><a name="line344"></a>344       #   select_second(my_time, :field_name =&gt; 'interval')
+</span><span class="inferred0"><a name="line345"></a>345       #
+</span><span class="marked1"><a name="line346"></a>346       def select_second(datetime, options = {}, html_options = {})
+</span><span class="uncovered0"><a name="line347"></a>347         val = datetime ? (datetime.kind_of?(Fixnum) ? datetime : datetime.sec) : ''
+</span><span class="uncovered1"><a name="line348"></a>348         if options[:use_hidden]
+</span><span class="uncovered0"><a name="line349"></a>349           options[:include_seconds] ? hidden_html(options[:field_name] || 'second', val, options) : ''
+</span><span class="uncovered1"><a name="line350"></a>350         else
+</span><span class="uncovered0"><a name="line351"></a>351           second_options = []
+</span><span class="uncovered1"><a name="line352"></a>352           0.upto(59) do |second|
+</span><span class="uncovered0"><a name="line353"></a>353             second_options &lt;&lt; ((val == second) ?
+</span><span class="uncovered1"><a name="line354"></a>354               content_tag(:option, leading_zero_on_single_digits(second), :value =&gt; leading_zero_on_single_digits(second), :selected =&gt; &quot;selected&quot;) :
+</span><span class="uncovered0"><a name="line355"></a>355               content_tag(:option, leading_zero_on_single_digits(second), :value =&gt; leading_zero_on_single_digits(second))
+</span><span class="uncovered1"><a name="line356"></a>356             )
+</span><span class="uncovered0"><a name="line357"></a>357             second_options &lt;&lt; &quot;\n&quot;
+</span><span class="uncovered1"><a name="line358"></a>358           end
+</span><span class="uncovered0"><a name="line359"></a>359           select_html(options[:field_name] || 'second', second_options.join, options, html_options)
+</span><span class="uncovered1"><a name="line360"></a>360         end
+</span><span class="uncovered0"><a name="line361"></a>361       end
+</span><span class="inferred1"><a name="line362"></a>362 
+</span><span class="inferred0"><a name="line363"></a>363       # Returns a select tag with options for each of the minutes 0 through 59 with the current minute selected.
+</span><span class="inferred1"><a name="line364"></a>364       # Also can return a select tag with options by &lt;tt&gt;minute_step&lt;/tt&gt; from 0 through 59 with the 00 minute selected
+</span><span class="inferred0"><a name="line365"></a>365       # The &lt;tt&gt;minute&lt;/tt&gt; can also be substituted for a minute number.
+</span><span class="inferred1"><a name="line366"></a>366       # Override the field name using the &lt;tt&gt;:field_name&lt;/tt&gt; option, 'minute' by default.
+</span><span class="inferred0"><a name="line367"></a>367       #
+</span><span class="inferred1"><a name="line368"></a>368       # ==== Examples
+</span><span class="inferred0"><a name="line369"></a>369       #   my_time = Time.now + 6.hours
+</span><span class="inferred1"><a name="line370"></a>370       #
+</span><span class="inferred0"><a name="line371"></a>371       #   # Generates a select field for minutes that defaults to the minutes for the time in my_time
+</span><span class="inferred1"><a name="line372"></a>372       #   select_minute(my_time)
+</span><span class="inferred0"><a name="line373"></a>373       #
+</span><span class="inferred1"><a name="line374"></a>374       #   # Generates a select field for minutes that defaults to the number given
+</span><span class="inferred0"><a name="line375"></a>375       #   select_minute(14)
+</span><span class="inferred1"><a name="line376"></a>376       # 
+</span><span class="inferred0"><a name="line377"></a>377       #   # Generates a select field for minutes that defaults to the minutes for the time in my_time
+</span><span class="inferred1"><a name="line378"></a>378       #   # that is named 'stride' rather than 'second'
+</span><span class="inferred0"><a name="line379"></a>379       #   select_minute(my_time, :field_name =&gt; 'stride')
+</span><span class="inferred1"><a name="line380"></a>380       #
+</span><span class="marked0"><a name="line381"></a>381       def select_minute(datetime, options = {}, html_options = {})
+</span><span class="uncovered1"><a name="line382"></a>382         val = datetime ? (datetime.kind_of?(Fixnum) ? datetime : datetime.min) : ''
+</span><span class="uncovered0"><a name="line383"></a>383         if options[:use_hidden]
+</span><span class="uncovered1"><a name="line384"></a>384           hidden_html(options[:field_name] || 'minute', val, options)
+</span><span class="uncovered0"><a name="line385"></a>385         else
+</span><span class="uncovered1"><a name="line386"></a>386           minute_options = []
+</span><span class="uncovered0"><a name="line387"></a>387           0.step(59, options[:minute_step] || 1) do |minute|
+</span><span class="uncovered1"><a name="line388"></a>388             minute_options &lt;&lt; ((val == minute) ?
+</span><span class="uncovered0"><a name="line389"></a>389               content_tag(:option, leading_zero_on_single_digits(minute), :value =&gt; leading_zero_on_single_digits(minute), :selected =&gt; &quot;selected&quot;) :
+</span><span class="uncovered1"><a name="line390"></a>390               content_tag(:option, leading_zero_on_single_digits(minute), :value =&gt; leading_zero_on_single_digits(minute))
+</span><span class="uncovered0"><a name="line391"></a>391             )
+</span><span class="uncovered1"><a name="line392"></a>392             minute_options &lt;&lt; &quot;\n&quot;
+</span><span class="uncovered0"><a name="line393"></a>393           end
+</span><span class="uncovered1"><a name="line394"></a>394           select_html(options[:field_name] || 'minute', minute_options.join, options, html_options)
+</span><span class="uncovered0"><a name="line395"></a>395          end
+</span><span class="uncovered1"><a name="line396"></a>396       end
+</span><span class="inferred0"><a name="line397"></a>397 
+</span><span class="inferred1"><a name="line398"></a>398       # Returns a select tag with options for each of the hours 0 through 23 with the current hour selected.
+</span><span class="inferred0"><a name="line399"></a>399       # The &lt;tt&gt;hour&lt;/tt&gt; can also be substituted for a hour number.
+</span><span class="inferred1"><a name="line400"></a>400       # Override the field name using the &lt;tt&gt;:field_name&lt;/tt&gt; option, 'hour' by default.
+</span><span class="inferred0"><a name="line401"></a>401       #
+</span><span class="inferred1"><a name="line402"></a>402       # ==== Examples
+</span><span class="inferred0"><a name="line403"></a>403       #   my_time = Time.now + 6.hours
+</span><span class="inferred1"><a name="line404"></a>404       #
+</span><span class="inferred0"><a name="line405"></a>405       #   # Generates a select field for minutes that defaults to the minutes for the time in my_time
+</span><span class="inferred1"><a name="line406"></a>406       #   select_minute(my_time)
+</span><span class="inferred0"><a name="line407"></a>407       #
+</span><span class="inferred1"><a name="line408"></a>408       #   # Generates a select field for minutes that defaults to the number given
+</span><span class="inferred0"><a name="line409"></a>409       #   select_minute(14)
+</span><span class="inferred1"><a name="line410"></a>410       # 
+</span><span class="inferred0"><a name="line411"></a>411       #   # Generates a select field for minutes that defaults to the minutes for the time in my_time
+</span><span class="inferred1"><a name="line412"></a>412       #   # that is named 'stride' rather than 'second'
+</span><span class="inferred0"><a name="line413"></a>413       #   select_minute(my_time, :field_name =&gt; 'stride')
+</span><span class="inferred1"><a name="line414"></a>414       #
+</span><span class="marked0"><a name="line415"></a>415       def select_hour(datetime, options = {}, html_options = {})
+</span><span class="uncovered1"><a name="line416"></a>416         val = datetime ? (datetime.kind_of?(Fixnum) ? datetime : datetime.hour) : ''
+</span><span class="uncovered0"><a name="line417"></a>417         if options[:use_hidden]
+</span><span class="uncovered1"><a name="line418"></a>418           hidden_html(options[:field_name] || 'hour', val, options)
+</span><span class="uncovered0"><a name="line419"></a>419         else
+</span><span class="uncovered1"><a name="line420"></a>420           hour_options = []
+</span><span class="uncovered0"><a name="line421"></a>421           0.upto(23) do |hour|
+</span><span class="uncovered1"><a name="line422"></a>422             hour_options &lt;&lt; ((val == hour) ?
+</span><span class="uncovered0"><a name="line423"></a>423               content_tag(:option, leading_zero_on_single_digits(hour), :value =&gt; leading_zero_on_single_digits(hour), :selected =&gt; &quot;selected&quot;) :
+</span><span class="uncovered1"><a name="line424"></a>424               content_tag(:option, leading_zero_on_single_digits(hour), :value =&gt; leading_zero_on_single_digits(hour))
+</span><span class="uncovered0"><a name="line425"></a>425             )
+</span><span class="uncovered1"><a name="line426"></a>426             hour_options &lt;&lt; &quot;\n&quot;
+</span><span class="uncovered0"><a name="line427"></a>427           end
+</span><span class="uncovered1"><a name="line428"></a>428           select_html(options[:field_name] || 'hour', hour_options.join, options, html_options)
+</span><span class="uncovered0"><a name="line429"></a>429         end
+</span><span class="uncovered1"><a name="line430"></a>430       end
+</span><span class="inferred0"><a name="line431"></a>431 
+</span><span class="inferred1"><a name="line432"></a>432       # Returns a select tag with options for each of the days 1 through 31 with the current day selected.
+</span><span class="inferred0"><a name="line433"></a>433       # The &lt;tt&gt;date&lt;/tt&gt; can also be substituted for a hour number.
+</span><span class="inferred1"><a name="line434"></a>434       # Override the field name using the &lt;tt&gt;:field_name&lt;/tt&gt; option, 'day' by default.
+</span><span class="inferred0"><a name="line435"></a>435       #
+</span><span class="inferred1"><a name="line436"></a>436       # ==== Examples
+</span><span class="inferred0"><a name="line437"></a>437       #   my_date = Time.today + 2.days
+</span><span class="inferred1"><a name="line438"></a>438       #
+</span><span class="inferred0"><a name="line439"></a>439       #   # Generates a select field for days that defaults to the day for the date in my_date
+</span><span class="inferred1"><a name="line440"></a>440       #   select_day(my_time)
+</span><span class="inferred0"><a name="line441"></a>441       #
+</span><span class="inferred1"><a name="line442"></a>442       #   # Generates a select field for days that defaults to the number given
+</span><span class="inferred0"><a name="line443"></a>443       #   select_day(5)
+</span><span class="inferred1"><a name="line444"></a>444       # 
+</span><span class="inferred0"><a name="line445"></a>445       #   # Generates a select field for days that defaults to the day for the date in my_date
+</span><span class="inferred1"><a name="line446"></a>446       #   # that is named 'due' rather than 'day'
+</span><span class="inferred0"><a name="line447"></a>447       #   select_day(my_time, :field_name =&gt; 'due')
+</span><span class="inferred1"><a name="line448"></a>448       #
+</span><span class="marked0"><a name="line449"></a>449       def select_day(date, options = {}, html_options = {})
+</span><span class="uncovered1"><a name="line450"></a>450         val = date ? (date.kind_of?(Fixnum) ? date : date.day) : ''
+</span><span class="uncovered0"><a name="line451"></a>451         if options[:use_hidden]
+</span><span class="uncovered1"><a name="line452"></a>452           hidden_html(options[:field_name] || 'day', val, options)
+</span><span class="uncovered0"><a name="line453"></a>453         else
+</span><span class="uncovered1"><a name="line454"></a>454           day_options = []
+</span><span class="uncovered0"><a name="line455"></a>455           1.upto(31) do |day|
+</span><span class="uncovered1"><a name="line456"></a>456             day_options &lt;&lt; ((val == day) ?
+</span><span class="uncovered0"><a name="line457"></a>457               content_tag(:option, day, :value =&gt; day, :selected =&gt; &quot;selected&quot;) :
+</span><span class="uncovered1"><a name="line458"></a>458               content_tag(:option, day, :value =&gt; day)
+</span><span class="uncovered0"><a name="line459"></a>459             )
+</span><span class="uncovered1"><a name="line460"></a>460             day_options &lt;&lt; &quot;\n&quot;
+</span><span class="uncovered0"><a name="line461"></a>461           end
+</span><span class="uncovered1"><a name="line462"></a>462           select_html(options[:field_name] || 'day', day_options.join, options, html_options)
+</span><span class="uncovered0"><a name="line463"></a>463         end
+</span><span class="uncovered1"><a name="line464"></a>464       end
+</span><span class="inferred0"><a name="line465"></a>465 
+</span><span class="inferred1"><a name="line466"></a>466       # Returns a select tag with options for each of the months January through December with the current month selected.
+</span><span class="inferred0"><a name="line467"></a>467       # The month names are presented as keys (what's shown to the user) and the month numbers (1-12) are used as values
+</span><span class="inferred1"><a name="line468"></a>468       # (what's submitted to the server). It's also possible to use month numbers for the presentation instead of names --
+</span><span class="inferred0"><a name="line469"></a>469       # set the &lt;tt&gt;:use_month_numbers&lt;/tt&gt; key in +options+ to true for this to happen. If you want both numbers and names,
+</span><span class="inferred1"><a name="line470"></a>470       # set the &lt;tt&gt;:add_month_numbers&lt;/tt&gt; key in +options+ to true. If you would prefer to show month names as abbreviations,
+</span><span class="inferred0"><a name="line471"></a>471       # set the &lt;tt&gt;:use_short_month&lt;/tt&gt; key in +options+ to true. If you want to use your own month names, set the
+</span><span class="inferred1"><a name="line472"></a>472       # &lt;tt&gt;:use_month_names&lt;/tt&gt; key in +options+ to an array of 12 month names. Override the field name using the 
+</span><span class="inferred0"><a name="line473"></a>473       # &lt;tt&gt;:field_name&lt;/tt&gt; option, 'month' by default.
+</span><span class="inferred1"><a name="line474"></a>474       #
+</span><span class="inferred0"><a name="line475"></a>475       # ==== Examples
+</span><span class="inferred1"><a name="line476"></a>476       #   # Generates a select field for months that defaults to the current month that
+</span><span class="inferred0"><a name="line477"></a>477       #   # will use keys like &quot;January&quot;, &quot;March&quot;.
+</span><span class="inferred1"><a name="line478"></a>478       #   select_month(Date.today)
+</span><span class="inferred0"><a name="line479"></a>479       #
+</span><span class="inferred1"><a name="line480"></a>480       #   # Generates a select field for months that defaults to the current month that
+</span><span class="inferred0"><a name="line481"></a>481       #   # is named &quot;start&quot; rather than &quot;month&quot;
+</span><span class="inferred1"><a name="line482"></a>482       #   select_month(Date.today, :field_name =&gt; 'start')
+</span><span class="inferred0"><a name="line483"></a>483       #
+</span><span class="inferred1"><a name="line484"></a>484       #   # Generates a select field for months that defaults to the current month that
+</span><span class="inferred0"><a name="line485"></a>485       #   # will use keys like &quot;1&quot;, &quot;3&quot;.       
+</span><span class="inferred1"><a name="line486"></a>486       #   select_month(Date.today, :use_month_numbers =&gt; true)
+</span><span class="inferred0"><a name="line487"></a>487       #
+</span><span class="inferred1"><a name="line488"></a>488       #   # Generates a select field for months that defaults to the current month that
+</span><span class="inferred0"><a name="line489"></a>489       #   # will use keys like &quot;1 - January&quot;, &quot;3 - March&quot;.
+</span><span class="inferred1"><a name="line490"></a>490       #   select_month(Date.today, :add_month_numbers =&gt; true)
+</span><span class="inferred0"><a name="line491"></a>491       #
+</span><span class="inferred1"><a name="line492"></a>492       #   # Generates a select field for months that defaults to the current month that
+</span><span class="inferred0"><a name="line493"></a>493       #   # will use keys like &quot;Jan&quot;, &quot;Mar&quot;.
+</span><span class="inferred1"><a name="line494"></a>494       #   select_month(Date.today, :use_short_month =&gt; true)
+</span><span class="inferred0"><a name="line495"></a>495       #
+</span><span class="inferred1"><a name="line496"></a>496       #   # Generates a select field for months that defaults to the current month that
+</span><span class="inferred0"><a name="line497"></a>497       #   # will use keys like &quot;Januar&quot;, &quot;Marts.&quot;
+</span><span class="inferred1"><a name="line498"></a>498       #   select_month(Date.today, :use_month_names =&gt; %w(Januar Februar Marts ...))
+</span><span class="inferred0"><a name="line499"></a>499       #
+</span><span class="marked1"><a name="line500"></a>500       def select_month(date, options = {}, html_options = {})
+</span><span class="uncovered0"><a name="line501"></a>501         val = date ? (date.kind_of?(Fixnum) ? date : date.month) : ''
+</span><span class="uncovered1"><a name="line502"></a>502         if options[:use_hidden]
+</span><span class="uncovered0"><a name="line503"></a>503           hidden_html(options[:field_name] || 'month', val, options)
+</span><span class="uncovered1"><a name="line504"></a>504         else
+</span><span class="uncovered0"><a name="line505"></a>505           month_options = []
+</span><span class="uncovered1"><a name="line506"></a>506           month_names = options[:use_month_names] || (options[:use_short_month] ? Date::ABBR_MONTHNAMES : Date::MONTHNAMES)
+</span><span class="uncovered0"><a name="line507"></a>507           month_names.unshift(nil) if month_names.size &lt; 13
+</span><span class="uncovered1"><a name="line508"></a>508           1.upto(12) do |month_number|
+</span><span class="uncovered0"><a name="line509"></a>509             month_name = if options[:use_month_numbers]
+</span><span class="uncovered1"><a name="line510"></a>510               month_number
+</span><span class="uncovered0"><a name="line511"></a>511             elsif options[:add_month_numbers]
+</span><span class="uncovered1"><a name="line512"></a>512               month_number.to_s + ' - ' + month_names[month_number]
+</span><span class="uncovered0"><a name="line513"></a>513             else
+</span><span class="uncovered1"><a name="line514"></a>514               month_names[month_number]
+</span><span class="uncovered0"><a name="line515"></a>515             end
+</span><span class="uncovered1"><a name="line516"></a>516 
+</span><span class="uncovered0"><a name="line517"></a>517             month_options &lt;&lt; ((val == month_number) ?
+</span><span class="uncovered1"><a name="line518"></a>518               content_tag(:option, month_name, :value =&gt; month_number, :selected =&gt; &quot;selected&quot;) :
+</span><span class="uncovered0"><a name="line519"></a>519               content_tag(:option, month_name, :value =&gt; month_number)
+</span><span class="uncovered1"><a name="line520"></a>520             )
+</span><span class="uncovered0"><a name="line521"></a>521             month_options &lt;&lt; &quot;\n&quot;
+</span><span class="uncovered1"><a name="line522"></a>522           end
+</span><span class="uncovered0"><a name="line523"></a>523           select_html(options[:field_name] || 'month', month_options.join, options, html_options)
+</span><span class="uncovered1"><a name="line524"></a>524         end
+</span><span class="uncovered0"><a name="line525"></a>525       end
+</span><span class="inferred1"><a name="line526"></a>526 
+</span><span class="inferred0"><a name="line527"></a>527       # Returns a select tag with options for each of the five years on each side of the current, which is selected. The five year radius
+</span><span class="inferred1"><a name="line528"></a>528       # can be changed using the &lt;tt&gt;:start_year&lt;/tt&gt; and &lt;tt&gt;:end_year&lt;/tt&gt; keys in the +options+. Both ascending and descending year
+</span><span class="inferred0"><a name="line529"></a>529       # lists are supported by making &lt;tt&gt;:start_year&lt;/tt&gt; less than or greater than &lt;tt&gt;:end_year&lt;/tt&gt;. The &lt;tt&gt;date&lt;/tt&gt; can also be
+</span><span class="inferred1"><a name="line530"></a>530       # substituted for a year given as a number.  Override the field name using the &lt;tt&gt;:field_name&lt;/tt&gt; option, 'year' by default.
+</span><span class="inferred0"><a name="line531"></a>531       #
+</span><span class="inferred1"><a name="line532"></a>532       # ==== Examples
+</span><span class="inferred0"><a name="line533"></a>533       #   # Generates a select field for years that defaults to the current year that
+</span><span class="inferred1"><a name="line534"></a>534       #   # has ascending year values
+</span><span class="inferred0"><a name="line535"></a>535       #   select_year(Date.today, :start_year =&gt; 1992, :end_year =&gt; 2007)
+</span><span class="inferred1"><a name="line536"></a>536       #
+</span><span class="inferred0"><a name="line537"></a>537       #   # Generates a select field for years that defaults to the current year that
+</span><span class="inferred1"><a name="line538"></a>538       #   # is named 'birth' rather than 'year'
+</span><span class="inferred0"><a name="line539"></a>539       #   select_year(Date.today, :field_name =&gt; 'birth')
+</span><span class="inferred1"><a name="line540"></a>540       #
+</span><span class="inferred0"><a name="line541"></a>541       #   # Generates a select field for years that defaults to the current year that
+</span><span class="inferred1"><a name="line542"></a>542       #   # has descending year values
+</span><span class="inferred0"><a name="line543"></a>543       #   select_year(Date.today, :start_year =&gt; 2005, :end_year =&gt; 1900)
+</span><span class="inferred1"><a name="line544"></a>544       #
+</span><span class="inferred0"><a name="line545"></a>545       #   # Generates a select field for years that defaults to the year 2006 that
+</span><span class="inferred1"><a name="line546"></a>546       #   # has ascending year values
+</span><span class="inferred0"><a name="line547"></a>547       #   select_year(2006, :start_year =&gt; 2000, :end_year =&gt; 2010)
+</span><span class="inferred1"><a name="line548"></a>548       #
+</span><span class="marked0"><a name="line549"></a>549       def select_year(date, options = {}, html_options = {})
+</span><span class="uncovered1"><a name="line550"></a>550         val = date ? (date.kind_of?(Fixnum) ? date : date.year) : ''
+</span><span class="uncovered0"><a name="line551"></a>551         if options[:use_hidden]
+</span><span class="uncovered1"><a name="line552"></a>552           hidden_html(options[:field_name] || 'year', val, options)
+</span><span class="uncovered0"><a name="line553"></a>553         else
+</span><span class="uncovered1"><a name="line554"></a>554           year_options = []
+</span><span class="uncovered0"><a name="line555"></a>555           y = date ? (date.kind_of?(Fixnum) ? (y = (date == 0) ? Date.today.year : date) : date.year) : Date.today.year
+</span><span class="uncovered1"><a name="line556"></a>556 
+</span><span class="uncovered0"><a name="line557"></a>557           start_year, end_year = (options[:start_year] || y-5), (options[:end_year] || y+5)
+</span><span class="uncovered1"><a name="line558"></a>558           step_val = start_year &lt; end_year ? 1 : -1
+</span><span class="uncovered0"><a name="line559"></a>559           start_year.step(end_year, step_val) do |year|
+</span><span class="uncovered1"><a name="line560"></a>560             year_options &lt;&lt; ((val == year) ?
+</span><span class="uncovered0"><a name="line561"></a>561               content_tag(:option, year, :value =&gt; year, :selected =&gt; &quot;selected&quot;) :
+</span><span class="uncovered1"><a name="line562"></a>562               content_tag(:option, year, :value =&gt; year)
+</span><span class="uncovered0"><a name="line563"></a>563             )
+</span><span class="uncovered1"><a name="line564"></a>564             year_options &lt;&lt; &quot;\n&quot;
+</span><span class="uncovered0"><a name="line565"></a>565           end
+</span><span class="uncovered1"><a name="line566"></a>566           select_html(options[:field_name] || 'year', year_options.join, options, html_options)
+</span><span class="uncovered0"><a name="line567"></a>567         end
+</span><span class="uncovered1"><a name="line568"></a>568       end
+</span><span class="inferred0"><a name="line569"></a>569 
+</span><span class="marked1"><a name="line570"></a>570       private
+</span><span class="inferred0"><a name="line571"></a>571 
+</span><span class="marked1"><a name="line572"></a>572         def select_html(type, html_options, options, select_tag_options = {})
+</span><span class="uncovered0"><a name="line573"></a>573           name_and_id_from_options(options, type)
+</span><span class="uncovered1"><a name="line574"></a>574           select_options = {:id =&gt; options[:id], :name =&gt; options[:name]}
+</span><span class="uncovered0"><a name="line575"></a>575           select_options.merge!(:disabled =&gt; 'disabled') if options[:disabled]
+</span><span class="uncovered1"><a name="line576"></a>576           select_options.merge!(select_tag_options) unless select_tag_options.empty?
+</span><span class="uncovered0"><a name="line577"></a>577           select_html = &quot;\n&quot;
+</span><span class="uncovered1"><a name="line578"></a>578           select_html &lt;&lt; content_tag(:option, '', :value =&gt; '') + &quot;\n&quot; if options[:include_blank]
+</span><span class="uncovered0"><a name="line579"></a>579           select_html &lt;&lt; html_options.to_s
+</span><span class="uncovered1"><a name="line580"></a>580           content_tag(:select, select_html, select_options) + &quot;\n&quot;
+</span><span class="uncovered0"><a name="line581"></a>581         end
+</span><span class="inferred1"><a name="line582"></a>582 
+</span><span class="marked0"><a name="line583"></a>583         def hidden_html(type, value, options)
+</span><span class="uncovered1"><a name="line584"></a>584           name_and_id_from_options(options, type)
+</span><span class="uncovered0"><a name="line585"></a>585           hidden_html = tag(:input, :type =&gt; &quot;hidden&quot;, :id =&gt; options[:id], :name =&gt; options[:name], :value =&gt; value) + &quot;\n&quot;
+</span><span class="uncovered1"><a name="line586"></a>586         end
+</span><span class="inferred0"><a name="line587"></a>587 
+</span><span class="marked1"><a name="line588"></a>588         def name_and_id_from_options(options, type)
+</span><span class="uncovered0"><a name="line589"></a>589           options[:name] = (options[:prefix] || DEFAULT_PREFIX) + (options[:discard_type] ? '' : &quot;[#{type}]&quot;)
+</span><span class="uncovered1"><a name="line590"></a>590           options[:id] = options[:name].gsub(/([\[\(])|(\]\[)/, '_').gsub(/[\]\)]/, '')
+</span><span class="uncovered0"><a name="line591"></a>591         end
+</span><span class="inferred1"><a name="line592"></a>592 
+</span><span class="marked0"><a name="line593"></a>593         def leading_zero_on_single_digits(number)
+</span><span class="uncovered1"><a name="line594"></a>594           number &gt; 9 ? number : &quot;0#{number}&quot;
+</span><span class="uncovered0"><a name="line595"></a>595         end
+</span><span class="uncovered1"><a name="line596"></a>596     end
+</span><span class="inferred0"><a name="line597"></a>597 
+</span><span class="marked1"><a name="line598"></a>598     class InstanceTag #:nodoc:
+</span><span class="marked0"><a name="line599"></a>599       include DateHelper
+</span><span class="inferred1"><a name="line600"></a>600 
+</span><span class="marked0"><a name="line601"></a>601       def to_date_select_tag(options = {}, html_options = {})
+</span><span class="uncovered1"><a name="line602"></a>602         date_or_time_select(options.merge(:discard_hour =&gt; true), html_options)
+</span><span class="uncovered0"><a name="line603"></a>603       end
+</span><span class="inferred1"><a name="line604"></a>604 
+</span><span class="marked0"><a name="line605"></a>605       def to_time_select_tag(options = {}, html_options = {})
+</span><span class="uncovered1"><a name="line606"></a>606         date_or_time_select(options.merge(:discard_year =&gt; true, :discard_month =&gt; true), html_options)
+</span><span class="uncovered0"><a name="line607"></a>607       end
+</span><span class="inferred1"><a name="line608"></a>608 
+</span><span class="marked0"><a name="line609"></a>609       def to_datetime_select_tag(options = {}, html_options = {})
+</span><span class="uncovered1"><a name="line610"></a>610         date_or_time_select(options, html_options)
+</span><span class="uncovered0"><a name="line611"></a>611       end
+</span><span class="inferred1"><a name="line612"></a>612 
+</span><span class="marked0"><a name="line613"></a>613       private
+</span><span class="marked1"><a name="line614"></a>614         def date_or_time_select(options, html_options = {})
+</span><span class="uncovered0"><a name="line615"></a>615           defaults = { :discard_type =&gt; true }
+</span><span class="uncovered1"><a name="line616"></a>616           options  = defaults.merge(options)
+</span><span class="uncovered0"><a name="line617"></a>617           datetime = value(object)
+</span><span class="uncovered1"><a name="line618"></a>618           datetime ||= default_time_from_options(options[:default]) unless options[:include_blank]
+</span><span class="uncovered0"><a name="line619"></a>619 
+</span><span class="uncovered1"><a name="line620"></a>620           position = { :year =&gt; 1, :month =&gt; 2, :day =&gt; 3, :hour =&gt; 4, :minute =&gt; 5, :second =&gt; 6 }
+</span><span class="uncovered0"><a name="line621"></a>621 
+</span><span class="uncovered1"><a name="line622"></a>622           order = (options[:order] ||= [:year, :month, :day])
+</span><span class="uncovered0"><a name="line623"></a>623 
+</span><span class="uncovered1"><a name="line624"></a>624           # Discard explicit and implicit by not being included in the :order
+</span><span class="uncovered0"><a name="line625"></a>625           discard = {}
+</span><span class="uncovered1"><a name="line626"></a>626           discard[:year]   = true if options[:discard_year] or !order.include?(:year)
+</span><span class="uncovered0"><a name="line627"></a>627           discard[:month]  = true if options[:discard_month] or !order.include?(:month)
+</span><span class="uncovered1"><a name="line628"></a>628           discard[:day]    = true if options[:discard_day] or discard[:month] or !order.include?(:day)
+</span><span class="uncovered0"><a name="line629"></a>629           discard[:hour]   = true if options[:discard_hour]
+</span><span class="uncovered1"><a name="line630"></a>630           discard[:minute] = true if options[:discard_minute] or discard[:hour]
+</span><span class="uncovered0"><a name="line631"></a>631           discard[:second] = true unless options[:include_seconds] &amp;&amp; !discard[:minute]
+</span><span class="uncovered1"><a name="line632"></a>632 
+</span><span class="uncovered0"><a name="line633"></a>633           # If the day is hidden and the month is visible, the day should be set to the 1st so all month choices are valid
+</span><span class="uncovered1"><a name="line634"></a>634           # (otherwise it could be 31 and february wouldn't be a valid date)
+</span><span class="uncovered0"><a name="line635"></a>635           if datetime &amp;&amp; discard[:day] &amp;&amp; !discard[:month]
+</span><span class="uncovered1"><a name="line636"></a>636             datetime = datetime.change(:day =&gt; 1)
+</span><span class="uncovered0"><a name="line637"></a>637           end
+</span><span class="uncovered1"><a name="line638"></a>638 
+</span><span class="uncovered0"><a name="line639"></a>639           # Maintain valid dates by including hidden fields for discarded elements
+</span><span class="uncovered1"><a name="line640"></a>640           [:day, :month, :year].each { |o| order.unshift(o) unless order.include?(o) }
+</span><span class="uncovered0"><a name="line641"></a>641 
+</span><span class="uncovered1"><a name="line642"></a>642           # Ensure proper ordering of :hour, :minute and :second
+</span><span class="uncovered0"><a name="line643"></a>643           [:hour, :minute, :second].each { |o| order.delete(o); order.push(o) }
+</span><span class="uncovered1"><a name="line644"></a>644 
+</span><span class="uncovered0"><a name="line645"></a>645           date_or_time_select = ''
+</span><span class="uncovered1"><a name="line646"></a>646           order.reverse.each do |param|
+</span><span class="uncovered0"><a name="line647"></a>647             # Send hidden fields for discarded elements once output has started
+</span><span class="uncovered1"><a name="line648"></a>648             # This ensures AR can reconstruct valid dates using ParseDate
+</span><span class="uncovered0"><a name="line649"></a>649             next if discard[param] &amp;&amp; date_or_time_select.empty?
+</span><span class="uncovered1"><a name="line650"></a>650 
+</span><span class="uncovered0"><a name="line651"></a>651             date_or_time_select.insert(0, self.send(&quot;select_#{param}&quot;, datetime, options_with_prefix(position[param], options.merge(:use_hidden =&gt; discard[param])), html_options))
+</span><span class="uncovered1"><a name="line652"></a>652             date_or_time_select.insert(0,
+</span><span class="uncovered0"><a name="line653"></a>653               case param
+</span><span class="uncovered1"><a name="line654"></a>654                 when :hour then (discard[:year] &amp;&amp; discard[:day] ? &quot;&quot; : &quot; &amp;mdash; &quot;)
+</span><span class="uncovered0"><a name="line655"></a>655                 when :minute then &quot; : &quot;
+</span><span class="uncovered1"><a name="line656"></a>656                 when :second then options[:include_seconds] ? &quot; : &quot; : &quot;&quot;
+</span><span class="uncovered0"><a name="line657"></a>657                 else &quot;&quot;
+</span><span class="uncovered1"><a name="line658"></a>658               end)
+</span><span class="uncovered0"><a name="line659"></a>659 
+</span><span class="uncovered1"><a name="line660"></a>660           end
+</span><span class="uncovered0"><a name="line661"></a>661 
+</span><span class="uncovered1"><a name="line662"></a>662           date_or_time_select
+</span><span class="uncovered0"><a name="line663"></a>663         end
+</span><span class="inferred1"><a name="line664"></a>664 
+</span><span class="marked0"><a name="line665"></a>665         def options_with_prefix(position, options)
+</span><span class="uncovered1"><a name="line666"></a>666           prefix = &quot;#{@object_name}&quot;
+</span><span class="uncovered0"><a name="line667"></a>667           if options[:index]
+</span><span class="uncovered1"><a name="line668"></a>668             prefix &lt;&lt; &quot;[#{options[:index]}]&quot;
+</span><span class="uncovered0"><a name="line669"></a>669           elsif @auto_index
+</span><span class="uncovered1"><a name="line670"></a>670             prefix &lt;&lt; &quot;[#{@auto_index}]&quot;
+</span><span class="uncovered0"><a name="line671"></a>671           end
+</span><span class="uncovered1"><a name="line672"></a>672           options.merge(:prefix =&gt; &quot;#{prefix}[#{@method_name}(#{position}i)]&quot;)
+</span><span class="uncovered0"><a name="line673"></a>673         end
+</span><span class="inferred1"><a name="line674"></a>674 
+</span><span class="marked0"><a name="line675"></a>675         def default_time_from_options(default)
+</span><span class="uncovered1"><a name="line676"></a>676           case default
+</span><span class="uncovered0"><a name="line677"></a>677             when nil
+</span><span class="uncovered1"><a name="line678"></a>678               Time.current
+</span><span class="uncovered0"><a name="line679"></a>679             when Date, Time
+</span><span class="uncovered1"><a name="line680"></a>680               default
+</span><span class="uncovered0"><a name="line681"></a>681             else
+</span><span class="uncovered1"><a name="line682"></a>682               # Rename :minute and :second to :min and :sec
+</span><span class="uncovered0"><a name="line683"></a>683               default[:min] ||= default[:minute]
+</span><span class="uncovered1"><a name="line684"></a>684               default[:sec] ||= default[:second]
+</span><span class="uncovered0"><a name="line685"></a>685 
+</span><span class="uncovered1"><a name="line686"></a>686               time = Time.current
+</span><span class="uncovered0"><a name="line687"></a>687                 
+</span><span class="uncovered1"><a name="line688"></a>688               [:year, :month, :day, :hour, :min, :sec].each do |key|
+</span><span class="uncovered0"><a name="line689"></a>689                 default[key] ||= time.send(key)
+</span><span class="uncovered1"><a name="line690"></a>690               end
+</span><span class="uncovered0"><a name="line691"></a>691 
+</span><span class="uncovered1"><a name="line692"></a>692               Time.utc_time(default[:year], default[:month], default[:day], default[:hour], default[:min], default[:sec])
+</span><span class="uncovered0"><a name="line693"></a>693             end
+</span><span class="uncovered1"><a name="line694"></a>694         end
+</span><span class="uncovered0"><a name="line695"></a>695     end
+</span><span class="inferred1"><a name="line696"></a>696 
+</span><span class="marked0"><a name="line697"></a>697     class FormBuilder
+</span><span class="marked1"><a name="line698"></a>698       def date_select(method, options = {}, html_options = {})
+</span><span class="uncovered0"><a name="line699"></a>699         @template.date_select(@object_name, method, options.merge(:object =&gt; @object), html_options)
+</span><span class="uncovered1"><a name="line700"></a>700       end
+</span><span class="inferred0"><a name="line701"></a>701 
+</span><span class="marked1"><a name="line702"></a>702       def time_select(method, options = {}, html_options = {})
+</span><span class="uncovered0"><a name="line703"></a>703         @template.time_select(@object_name, method, options.merge(:object =&gt; @object), html_options)
+</span><span class="uncovered1"><a name="line704"></a>704       end
+</span><span class="inferred0"><a name="line705"></a>705 
+</span><span class="marked1"><a name="line706"></a>706       def datetime_select(method, options = {}, html_options = {})
+</span><span class="uncovered0"><a name="line707"></a>707         @template.datetime_select(@object_name, method, options.merge(:object =&gt; @object), html_options)
+</span><span class="uncovered1"><a name="line708"></a>708       end
+</span><span class="uncovered0"><a name="line709"></a>709     end
+</span><span class="uncovered1"><a name="line710"></a>710   end
+</span><span class="uncovered0"><a name="line711"></a>711 end
+</span></pre><hr/>
+    <p>Generated using the <a href='http://eigenclass.org/hiki.rb?rcov'>rcov code coverage analysis tool for Ruby</a>
+   version 0.8.1.2.</p>
+<p><a href='http://validator.w3.org/check/referer'><img src='http://www.w3.org/Icons/valid-xhtml10' height='31' alt='Valid XHTML 1.0!' width='88'/>
+        </a>
+      <a href='http://jigsaw.w3.org/css-validator/check/referer'><img src='http://jigsaw.w3.org/css-validator/images/vcss' alt='Valid CSS!' style='border:0;width:88px;height:31px'/>
+        </a>
+      </p>
+    </body>
+  </html>

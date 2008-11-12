@@ -1,0 +1,1525 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'><head><title>/Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/initializer.rb - C0 code coverage information</title>
+    <style type='text/css'>body { background-color: rgb(240, 240, 245); }</style>
+    <style type='text/css'>span.cross-ref-title {
+ font-size: 140%;
+}
+span.cross-ref a {
+ text-decoration: none;
+}
+span.cross-ref {
+ background-color:#f3f7fa;
+ border: 1px dashed #333;
+ margin: 1em;
+ padding: 0.5em;
+ overflow: hidden;
+}
+a.crossref-toggle {
+ text-decoration: none;
+}
+span.marked0 {
+ background-color: rgb(185, 210, 200);
+ display: block;
+}
+span.marked1 {
+ background-color: rgb(190, 215, 205);
+ display: block;
+}
+span.inferred0 {
+ background-color: rgb(175, 200, 200);
+ display: block;
+}
+span.inferred1 {
+ background-color: rgb(180, 205, 205);
+ display: block;
+}
+span.uncovered0 {
+ background-color: rgb(225, 110, 110);
+ display: block;
+}
+span.uncovered1 {
+ background-color: rgb(235, 120, 120);
+ display: block;
+}
+span.overview {
+ border-bottom: 8px solid black;
+}
+div.overview {
+ border-bottom: 8px solid black;
+}
+body {
+ font-family: verdana, arial, helvetica;
+}
+div.footer {
+ font-size: 68%;
+ margin-top: 1.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+ margin-bottom: 0.5em;
+}
+h5 {
+ margin-top: 0.5em;
+}
+.hidden {
+ display: none;
+}
+div.separator {
+ height: 10px;
+}
+/* Commented out for better readability, esp. on IE */
+/*
+table tr td, table tr th {
+ font-size: 68%;
+}
+td.value table tr td {
+ font-size: 11px;
+}
+*/
+table.percent_graph {
+ height: 12px;
+ border: #808080 1px solid;
+ empty-cells: show;
+}
+table.percent_graph td.covered {
+ height: 10px;
+ background: #00f000;
+}
+table.percent_graph td.uncovered {
+ height: 10px;
+ background: #e00000;
+}
+table.percent_graph td.NA {
+ height: 10px;
+ background: #eaeaea;
+}
+table.report {
+ border-collapse: collapse;
+ width: 100%;
+}
+table.report td.heading {
+ background: #dcecff;
+ border: #d0d0d0 1px solid;
+ font-weight: bold;
+ text-align: center;
+}
+table.report td.heading:hover {
+ background: #c0ffc0;
+}
+table.report td.text {
+ border: #d0d0d0 1px solid;
+}
+table.report td.value,
+table.report td.lines_total,
+table.report td.lines_code {
+ text-align: right;
+ border: #d0d0d0 1px solid;
+}
+table.report tr.light {
+ background-color: rgb(240, 240, 245);
+}
+table.report tr.dark {
+ background-color: rgb(230, 230, 235);
+}
+</style>
+    <script type='text/javascript'>
+// <![CDATA[
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make cross-references hidden by default
+  document.writeln( "<style type=\"text/css\">span.cross-ref { display: none }</style>" )
+  // ]]>
+</script>
+    <style type='text/css'>span.run0 {
+  background-color: rgb(178, 204, 255);
+  display: block;
+}
+span.run1 {
+  background-color: rgb(178, 206, 255);
+  display: block;
+}
+span.run2 {
+  background-color: rgb(178, 209, 255);
+  display: block;
+}
+span.run3 {
+  background-color: rgb(178, 211, 255);
+  display: block;
+}
+span.run4 {
+  background-color: rgb(178, 214, 255);
+  display: block;
+}
+span.run5 {
+  background-color: rgb(178, 218, 255);
+  display: block;
+}
+span.run6 {
+  background-color: rgb(178, 220, 255);
+  display: block;
+}
+span.run7 {
+  background-color: rgb(178, 223, 255);
+  display: block;
+}
+span.run8 {
+  background-color: rgb(178, 225, 255);
+  display: block;
+}
+span.run9 {
+  background-color: rgb(178, 228, 255);
+  display: block;
+}
+span.run10 {
+  background-color: rgb(178, 232, 255);
+  display: block;
+}
+span.run11 {
+  background-color: rgb(178, 234, 255);
+  display: block;
+}
+span.run12 {
+  background-color: rgb(178, 237, 255);
+  display: block;
+}
+span.run13 {
+  background-color: rgb(178, 239, 255);
+  display: block;
+}
+span.run14 {
+  background-color: rgb(178, 242, 255);
+  display: block;
+}
+span.run15 {
+  background-color: rgb(178, 246, 255);
+  display: block;
+}
+span.run16 {
+  background-color: rgb(178, 248, 255);
+  display: block;
+}
+span.run17 {
+  background-color: rgb(178, 251, 255);
+  display: block;
+}
+span.run18 {
+  background-color: rgb(178, 253, 255);
+  display: block;
+}
+span.run19 {
+  background-color: rgb(178, 255, 253);
+  display: block;
+}
+span.run20 {
+  background-color: rgb(178, 255, 249);
+  display: block;
+}
+span.run21 {
+  background-color: rgb(178, 255, 247);
+  display: block;
+}
+span.run22 {
+  background-color: rgb(178, 255, 244);
+  display: block;
+}
+span.run23 {
+  background-color: rgb(178, 255, 242);
+  display: block;
+}
+span.run24 {
+  background-color: rgb(178, 255, 239);
+  display: block;
+}
+span.run25 {
+  background-color: rgb(178, 255, 235);
+  display: block;
+}
+span.run26 {
+  background-color: rgb(178, 255, 233);
+  display: block;
+}
+span.run27 {
+  background-color: rgb(178, 255, 230);
+  display: block;
+}
+span.run28 {
+  background-color: rgb(178, 255, 228);
+  display: block;
+}
+span.run29 {
+  background-color: rgb(178, 255, 225);
+  display: block;
+}
+span.run30 {
+  background-color: rgb(178, 255, 221);
+  display: block;
+}
+span.run31 {
+  background-color: rgb(178, 255, 219);
+  display: block;
+}
+span.run32 {
+  background-color: rgb(178, 255, 216);
+  display: block;
+}
+span.run33 {
+  background-color: rgb(178, 255, 214);
+  display: block;
+}
+span.run34 {
+  background-color: rgb(178, 255, 211);
+  display: block;
+}
+span.run35 {
+  background-color: rgb(178, 255, 207);
+  display: block;
+}
+span.run36 {
+  background-color: rgb(178, 255, 205);
+  display: block;
+}
+span.run37 {
+  background-color: rgb(178, 255, 202);
+  display: block;
+}
+span.run38 {
+  background-color: rgb(178, 255, 200);
+  display: block;
+}
+span.run39 {
+  background-color: rgb(178, 255, 197);
+  display: block;
+}
+span.run40 {
+  background-color: rgb(178, 255, 193);
+  display: block;
+}
+span.run41 {
+  background-color: rgb(178, 255, 191);
+  display: block;
+}
+span.run42 {
+  background-color: rgb(178, 255, 188);
+  display: block;
+}
+span.run43 {
+  background-color: rgb(178, 255, 186);
+  display: block;
+}
+span.run44 {
+  background-color: rgb(178, 255, 183);
+  display: block;
+}
+span.run45 {
+  background-color: rgb(178, 255, 179);
+  display: block;
+}
+span.run46 {
+  background-color: rgb(179, 255, 178);
+  display: block;
+}
+span.run47 {
+  background-color: rgb(182, 255, 178);
+  display: block;
+}
+span.run48 {
+  background-color: rgb(184, 255, 178);
+  display: block;
+}
+span.run49 {
+  background-color: rgb(187, 255, 178);
+  display: block;
+}
+span.run50 {
+  background-color: rgb(191, 255, 178);
+  display: block;
+}
+span.run51 {
+  background-color: rgb(193, 255, 178);
+  display: block;
+}
+span.run52 {
+  background-color: rgb(196, 255, 178);
+  display: block;
+}
+span.run53 {
+  background-color: rgb(198, 255, 178);
+  display: block;
+}
+span.run54 {
+  background-color: rgb(201, 255, 178);
+  display: block;
+}
+span.run55 {
+  background-color: rgb(205, 255, 178);
+  display: block;
+}
+span.run56 {
+  background-color: rgb(207, 255, 178);
+  display: block;
+}
+span.run57 {
+  background-color: rgb(210, 255, 178);
+  display: block;
+}
+span.run58 {
+  background-color: rgb(212, 255, 178);
+  display: block;
+}
+span.run59 {
+  background-color: rgb(215, 255, 178);
+  display: block;
+}
+span.run60 {
+  background-color: rgb(219, 255, 178);
+  display: block;
+}
+span.run61 {
+  background-color: rgb(221, 255, 178);
+  display: block;
+}
+span.run62 {
+  background-color: rgb(224, 255, 178);
+  display: block;
+}
+span.run63 {
+  background-color: rgb(226, 255, 178);
+  display: block;
+}
+span.run64 {
+  background-color: rgb(229, 255, 178);
+  display: block;
+}
+span.run65 {
+  background-color: rgb(233, 255, 178);
+  display: block;
+}
+span.run66 {
+  background-color: rgb(235, 255, 178);
+  display: block;
+}
+span.run67 {
+  background-color: rgb(238, 255, 178);
+  display: block;
+}
+span.run68 {
+  background-color: rgb(240, 255, 178);
+  display: block;
+}
+span.run69 {
+  background-color: rgb(243, 255, 178);
+  display: block;
+}
+span.run70 {
+  background-color: rgb(247, 255, 178);
+  display: block;
+}
+span.run71 {
+  background-color: rgb(249, 255, 178);
+  display: block;
+}
+span.run72 {
+  background-color: rgb(252, 255, 178);
+  display: block;
+}
+span.run73 {
+  background-color: rgb(255, 255, 178);
+  display: block;
+}
+span.run74 {
+  background-color: rgb(255, 252, 178);
+  display: block;
+}
+span.run75 {
+  background-color: rgb(255, 248, 178);
+  display: block;
+}
+span.run76 {
+  background-color: rgb(255, 246, 178);
+  display: block;
+}
+span.run77 {
+  background-color: rgb(255, 243, 178);
+  display: block;
+}
+span.run78 {
+  background-color: rgb(255, 240, 178);
+  display: block;
+}
+span.run79 {
+  background-color: rgb(255, 238, 178);
+  display: block;
+}
+span.run80 {
+  background-color: rgb(255, 234, 178);
+  display: block;
+}
+span.run81 {
+  background-color: rgb(255, 232, 178);
+  display: block;
+}
+span.run82 {
+  background-color: rgb(255, 229, 178);
+  display: block;
+}
+span.run83 {
+  background-color: rgb(255, 226, 178);
+  display: block;
+}
+span.run84 {
+  background-color: rgb(255, 224, 178);
+  display: block;
+}
+span.run85 {
+  background-color: rgb(255, 220, 178);
+  display: block;
+}
+span.run86 {
+  background-color: rgb(255, 218, 178);
+  display: block;
+}
+span.run87 {
+  background-color: rgb(255, 215, 178);
+  display: block;
+}
+span.run88 {
+  background-color: rgb(255, 212, 178);
+  display: block;
+}
+span.run89 {
+  background-color: rgb(255, 210, 178);
+  display: block;
+}
+span.run90 {
+  background-color: rgb(255, 206, 178);
+  display: block;
+}
+span.run91 {
+  background-color: rgb(255, 204, 178);
+  display: block;
+}
+span.run92 {
+  background-color: rgb(255, 201, 178);
+  display: block;
+}
+span.run93 {
+  background-color: rgb(255, 198, 178);
+  display: block;
+}
+span.run94 {
+  background-color: rgb(255, 196, 178);
+  display: block;
+}
+span.run95 {
+  background-color: rgb(255, 192, 178);
+  display: block;
+}
+span.run96 {
+  background-color: rgb(255, 189, 178);
+  display: block;
+}
+span.run97 {
+  background-color: rgb(255, 187, 178);
+  display: block;
+}
+span.run98 {
+  background-color: rgb(255, 184, 178);
+  display: block;
+}
+span.run99 {
+  background-color: rgb(255, 182, 178);
+  display: block;
+}
+span.run100 {
+  background-color: rgb(255, 178, 178);
+  display: block;
+}
+</style>
+    </head>
+  <body><h3>C0 code coverage information</h3>
+    <p>Generated on Tue Nov 11 15:30:21 -0500 2008 with <a href='http://eigenclass.org/hiki/rcov'>rcov 0.8.1.2</a>
+      </p>
+    <hr/>
+    <pre><span class='marked0'>Code reported as executed by Ruby looks like this...
+</span><span class='marked1'>and this: this line is also marked as covered.
+</span><span class='inferred0'>Lines considered as run by rcov, but not reported by Ruby, look like this,
+</span><span class='inferred1'>and this: these lines were inferred by rcov (using simple heuristics).
+</span><span class='uncovered0'>Finally, here&apos;s a line marked as not executed.
+</span></pre>                       
+<table class='report'><thead><tr><td class='heading'>Name</td>
+      <td class='heading'>Total lines</td>
+      <td class='heading'>Lines of code</td>
+      <td class='heading'>Total coverage</td>
+      <td class='heading'>Code coverage</td>
+      </tr>
+    </thead>
+  <tbody><tr class='light'><td><a href='-Library-Ruby-Gems-1_8-gems-rails-2_1_1-lib-initializer_rb.html'>/Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/initializer.rb</a>
+        </td>
+      <td class='lines_total'><tt>915</tt>
+        </td>
+      <td class='lines_code'><tt>524</tt>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_total'>87.7%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='88'/>
+                  <td class='uncovered' width='12'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_code'>79.8%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='80'/>
+                  <td class='uncovered' width='20'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<pre><span class="marked0"><a name="line1"></a>  1 require 'logger'
+</span><span class="marked1"><a name="line2"></a>  2 require 'set'
+</span><span class="marked0"><a name="line3"></a>  3 require 'pathname'
+</span><span class="inferred1"><a name="line4"></a>  4 
+</span><span class="marked0"><a name="line5"></a>  5 $LOAD_PATH.unshift File.dirname(__FILE__)
+</span><span class="marked1"><a name="line6"></a>  6 require 'railties_path'
+</span><span class="marked0"><a name="line7"></a>  7 require 'rails/version'
+</span><span class="marked1"><a name="line8"></a>  8 require 'rails/plugin/locator'
+</span><span class="marked0"><a name="line9"></a>  9 require 'rails/plugin/loader'
+</span><span class="marked1"><a name="line10"></a> 10 require 'rails/gem_dependency'
+</span><span class="inferred0"><a name="line11"></a> 11 
+</span><span class="inferred1"><a name="line12"></a> 12 
+</span><span class="marked0"><a name="line13"></a> 13 RAILS_ENV = (ENV['RAILS_ENV'] || 'development').dup unless defined?(RAILS_ENV)
+</span><span class="inferred1"><a name="line14"></a> 14 
+</span><span class="marked0"><a name="line15"></a> 15 module Rails
+</span><span class="marked1"><a name="line16"></a> 16   class &lt;&lt; self
+</span><span class="inferred0"><a name="line17"></a> 17     # The Configuration instance used to configure the Rails environment
+</span><span class="marked1"><a name="line18"></a> 18     def configuration
+</span><span class="uncovered0"><a name="line19"></a> 19       @@configuration
+</span><span class="uncovered1"><a name="line20"></a> 20     end
+</span><span class="inferred0"><a name="line21"></a> 21   
+</span><span class="marked1"><a name="line22"></a> 22     def configuration=(configuration)
+</span><span class="marked0"><a name="line23"></a> 23       @@configuration = configuration
+</span><span class="marked1"><a name="line24"></a> 24     end
+</span><span class="inferred0"><a name="line25"></a> 25   
+</span><span class="marked1"><a name="line26"></a> 26     def logger
+</span><span class="uncovered0"><a name="line27"></a> 27       RAILS_DEFAULT_LOGGER
+</span><span class="uncovered1"><a name="line28"></a> 28     end
+</span><span class="inferred0"><a name="line29"></a> 29   
+</span><span class="marked1"><a name="line30"></a> 30     def root
+</span><span class="marked0"><a name="line31"></a> 31       if defined?(RAILS_ROOT)
+</span><span class="marked1"><a name="line32"></a> 32         RAILS_ROOT
+</span><span class="uncovered0"><a name="line33"></a> 33       else
+</span><span class="uncovered1"><a name="line34"></a> 34         nil
+</span><span class="uncovered0"><a name="line35"></a> 35       end
+</span><span class="marked1"><a name="line36"></a> 36     end
+</span><span class="inferred0"><a name="line37"></a> 37   
+</span><span class="marked1"><a name="line38"></a> 38     def env
+</span><span class="uncovered0"><a name="line39"></a> 39       require 'active_support/string_inquirer'
+</span><span class="uncovered1"><a name="line40"></a> 40       ActiveSupport::StringInquirer.new(RAILS_ENV)
+</span><span class="uncovered0"><a name="line41"></a> 41     end
+</span><span class="inferred1"><a name="line42"></a> 42   
+</span><span class="marked0"><a name="line43"></a> 43     def cache
+</span><span class="uncovered1"><a name="line44"></a> 44       RAILS_CACHE
+</span><span class="uncovered0"><a name="line45"></a> 45     end
+</span><span class="inferred1"><a name="line46"></a> 46 
+</span><span class="marked0"><a name="line47"></a> 47     def version
+</span><span class="uncovered1"><a name="line48"></a> 48       VERSION::STRING
+</span><span class="uncovered0"><a name="line49"></a> 49     end
+</span><span class="inferred1"><a name="line50"></a> 50 
+</span><span class="marked0"><a name="line51"></a> 51     def public_path
+</span><span class="marked1"><a name="line52"></a> 52       @@public_path ||= self.root ? File.join(self.root, &quot;public&quot;) : &quot;public&quot;
+</span><span class="marked0"><a name="line53"></a> 53     end
+</span><span class="inferred1"><a name="line54"></a> 54 
+</span><span class="marked0"><a name="line55"></a> 55     def public_path=(path)
+</span><span class="uncovered1"><a name="line56"></a> 56       @@public_path = path
+</span><span class="uncovered0"><a name="line57"></a> 57     end
+</span><span class="uncovered1"><a name="line58"></a> 58   end
+</span><span class="inferred0"><a name="line59"></a> 59   
+</span><span class="inferred1"><a name="line60"></a> 60   # The Initializer is responsible for processing the Rails configuration, such
+</span><span class="inferred0"><a name="line61"></a> 61   # as setting the $LOAD_PATH, requiring the right frameworks, initializing
+</span><span class="inferred1"><a name="line62"></a> 62   # logging, and more. It can be run either as a single command that'll just
+</span><span class="inferred0"><a name="line63"></a> 63   # use the default configuration, like this:
+</span><span class="inferred1"><a name="line64"></a> 64   #
+</span><span class="inferred0"><a name="line65"></a> 65   #   Rails::Initializer.run
+</span><span class="inferred1"><a name="line66"></a> 66   #
+</span><span class="inferred0"><a name="line67"></a> 67   # But normally it's more interesting to pass in a custom configuration
+</span><span class="inferred1"><a name="line68"></a> 68   # through the block running:
+</span><span class="inferred0"><a name="line69"></a> 69   #
+</span><span class="inferred1"><a name="line70"></a> 70   #   Rails::Initializer.run do |config|
+</span><span class="inferred0"><a name="line71"></a> 71   #     config.frameworks -= [ :action_mailer ]
+</span><span class="inferred1"><a name="line72"></a> 72   #   end
+</span><span class="inferred0"><a name="line73"></a> 73   #
+</span><span class="inferred1"><a name="line74"></a> 74   # This will use the default configuration options from Rails::Configuration,
+</span><span class="inferred0"><a name="line75"></a> 75   # but allow for overwriting on select areas.
+</span><span class="marked1"><a name="line76"></a> 76   class Initializer
+</span><span class="inferred0"><a name="line77"></a> 77     # The Configuration instance used by this Initializer instance.
+</span><span class="marked1"><a name="line78"></a> 78     attr_reader :configuration
+</span><span class="inferred0"><a name="line79"></a> 79 
+</span><span class="inferred1"><a name="line80"></a> 80     # The set of loaded plugins.
+</span><span class="marked0"><a name="line81"></a> 81     attr_reader :loaded_plugins
+</span><span class="inferred1"><a name="line82"></a> 82 
+</span><span class="inferred0"><a name="line83"></a> 83     # Whether or not all the gem dependencies have been met
+</span><span class="marked1"><a name="line84"></a> 84     attr_reader :gems_dependencies_loaded
+</span><span class="inferred0"><a name="line85"></a> 85 
+</span><span class="inferred1"><a name="line86"></a> 86     # Runs the initializer. By default, this will invoke the #process method,
+</span><span class="inferred0"><a name="line87"></a> 87     # which simply executes all of the initialization routines. Alternately,
+</span><span class="inferred1"><a name="line88"></a> 88     # you can specify explicitly which initialization routine you want:
+</span><span class="inferred0"><a name="line89"></a> 89     #
+</span><span class="inferred1"><a name="line90"></a> 90     #   Rails::Initializer.run(:set_load_path)
+</span><span class="inferred0"><a name="line91"></a> 91     #
+</span><span class="inferred1"><a name="line92"></a> 92     # This is useful if you only want the load path initialized, without
+</span><span class="inferred0"><a name="line93"></a> 93     # incuring the overhead of completely loading the entire environment.
+</span><span class="marked1"><a name="line94"></a> 94     def self.run(command = :process, configuration = Configuration.new)
+</span><span class="marked0"><a name="line95"></a> 95       yield configuration if block_given?
+</span><span class="marked1"><a name="line96"></a> 96       initializer = new configuration
+</span><span class="marked0"><a name="line97"></a> 97       initializer.send(command)
+</span><span class="marked1"><a name="line98"></a> 98       initializer
+</span><span class="inferred0"><a name="line99"></a> 99     end
+</span><span class="inferred1"><a name="line100"></a>100 
+</span><span class="inferred0"><a name="line101"></a>101     # Create a new Initializer instance that references the given Configuration
+</span><span class="inferred1"><a name="line102"></a>102     # instance.
+</span><span class="marked0"><a name="line103"></a>103     def initialize(configuration)
+</span><span class="marked1"><a name="line104"></a>104       @configuration = configuration
+</span><span class="marked0"><a name="line105"></a>105       @loaded_plugins = []
+</span><span class="inferred1"><a name="line106"></a>106     end
+</span><span class="inferred0"><a name="line107"></a>107 
+</span><span class="inferred1"><a name="line108"></a>108     # Sequentially step through all of the available initialization routines,
+</span><span class="inferred0"><a name="line109"></a>109     # in order (view execution order in source).
+</span><span class="marked1"><a name="line110"></a>110     def process
+</span><span class="marked0"><a name="line111"></a>111       Rails.configuration = configuration
+</span><span class="inferred1"><a name="line112"></a>112 
+</span><span class="marked0"><a name="line113"></a>113       check_ruby_version
+</span><span class="marked1"><a name="line114"></a>114       install_gem_spec_stubs
+</span><span class="marked0"><a name="line115"></a>115       set_load_path
+</span><span class="marked1"><a name="line116"></a>116       add_gem_load_paths
+</span><span class="inferred0"><a name="line117"></a>117 
+</span><span class="marked1"><a name="line118"></a>118       require_frameworks
+</span><span class="marked0"><a name="line119"></a>119       set_autoload_paths
+</span><span class="marked1"><a name="line120"></a>120       add_plugin_load_paths
+</span><span class="marked0"><a name="line121"></a>121       load_environment
+</span><span class="inferred1"><a name="line122"></a>122 
+</span><span class="marked0"><a name="line123"></a>123       initialize_encoding
+</span><span class="marked1"><a name="line124"></a>124       initialize_database
+</span><span class="inferred0"><a name="line125"></a>125 
+</span><span class="marked1"><a name="line126"></a>126       initialize_cache
+</span><span class="marked0"><a name="line127"></a>127       initialize_framework_caches
+</span><span class="inferred1"><a name="line128"></a>128 
+</span><span class="marked0"><a name="line129"></a>129       initialize_logger
+</span><span class="marked1"><a name="line130"></a>130       initialize_framework_logging
+</span><span class="inferred0"><a name="line131"></a>131 
+</span><span class="marked1"><a name="line132"></a>132       initialize_framework_views
+</span><span class="marked0"><a name="line133"></a>133       initialize_dependency_mechanism
+</span><span class="marked1"><a name="line134"></a>134       initialize_whiny_nils
+</span><span class="marked0"><a name="line135"></a>135       initialize_temporary_session_directory
+</span><span class="marked1"><a name="line136"></a>136       initialize_time_zone
+</span><span class="marked0"><a name="line137"></a>137       initialize_framework_settings
+</span><span class="inferred1"><a name="line138"></a>138 
+</span><span class="marked0"><a name="line139"></a>139       add_support_load_paths
+</span><span class="inferred1"><a name="line140"></a>140 
+</span><span class="marked0"><a name="line141"></a>141       load_gems
+</span><span class="marked1"><a name="line142"></a>142       load_plugins
+</span><span class="inferred0"><a name="line143"></a>143 
+</span><span class="inferred1"><a name="line144"></a>144       # pick up any gems that plugins depend on
+</span><span class="marked0"><a name="line145"></a>145       add_gem_load_paths
+</span><span class="marked1"><a name="line146"></a>146       load_gems
+</span><span class="marked0"><a name="line147"></a>147       check_gem_dependencies
+</span><span class="inferred1"><a name="line148"></a>148       
+</span><span class="marked0"><a name="line149"></a>149       load_application_initializers
+</span><span class="inferred1"><a name="line150"></a>150 
+</span><span class="inferred0"><a name="line151"></a>151       # the framework is now fully initialized
+</span><span class="marked1"><a name="line152"></a>152       after_initialize
+</span><span class="inferred0"><a name="line153"></a>153 
+</span><span class="inferred1"><a name="line154"></a>154       # Prepare dispatcher callbacks and run 'prepare' callbacks
+</span><span class="marked0"><a name="line155"></a>155       prepare_dispatcher
+</span><span class="inferred1"><a name="line156"></a>156 
+</span><span class="inferred0"><a name="line157"></a>157       # Routing must be initialized after plugins to allow the former to extend the routes
+</span><span class="marked1"><a name="line158"></a>158       initialize_routing
+</span><span class="inferred0"><a name="line159"></a>159 
+</span><span class="inferred1"><a name="line160"></a>160       # Observers are loaded after plugins in case Observers or observed models are modified by plugins.
+</span><span class="inferred0"><a name="line161"></a>161       
+</span><span class="marked1"><a name="line162"></a>162       load_observers
+</span><span class="inferred0"><a name="line163"></a>163     end
+</span><span class="inferred1"><a name="line164"></a>164 
+</span><span class="inferred0"><a name="line165"></a>165     # Check for valid Ruby version
+</span><span class="inferred1"><a name="line166"></a>166     # This is done in an external file, so we can use it
+</span><span class="inferred0"><a name="line167"></a>167     # from the `rails` program as well without duplication.
+</span><span class="marked1"><a name="line168"></a>168     def check_ruby_version
+</span><span class="marked0"><a name="line169"></a>169       require 'ruby_version_check'
+</span><span class="marked1"><a name="line170"></a>170     end
+</span><span class="inferred0"><a name="line171"></a>171 
+</span><span class="inferred1"><a name="line172"></a>172     # If Rails is vendored and RubyGems is available, install stub GemSpecs
+</span><span class="inferred0"><a name="line173"></a>173     # for Rails, Active Support, Active Record, Action Pack, Action Mailer, and
+</span><span class="inferred1"><a name="line174"></a>174     # Active Resource. This allows Gem plugins to depend on Rails even when
+</span><span class="inferred0"><a name="line175"></a>175     # the Gem version of Rails shouldn't be loaded.
+</span><span class="marked1"><a name="line176"></a>176     def install_gem_spec_stubs
+</span><span class="marked0"><a name="line177"></a>177       unless Rails.respond_to?(:vendor_rails?)
+</span><span class="uncovered1"><a name="line178"></a>178         abort %{Your config/boot.rb is outdated: Run &quot;rake rails:update&quot;.}
+</span><span class="uncovered0"><a name="line179"></a>179       end
+</span><span class="inferred1"><a name="line180"></a>180 
+</span><span class="marked0"><a name="line181"></a>181       if Rails.vendor_rails?
+</span><span class="uncovered1"><a name="line182"></a>182         begin; require &quot;rubygems&quot;; rescue LoadError; return; end
+</span><span class="uncovered0"><a name="line183"></a>183 
+</span><span class="uncovered1"><a name="line184"></a>184         stubs = %w(rails activesupport activerecord actionpack actionmailer activeresource)
+</span><span class="uncovered0"><a name="line185"></a>185         stubs.reject! { |s| Gem.loaded_specs.key?(s) }
+</span><span class="uncovered1"><a name="line186"></a>186 
+</span><span class="uncovered0"><a name="line187"></a>187         stubs.each do |stub|
+</span><span class="uncovered1"><a name="line188"></a>188           Gem.loaded_specs[stub] = Gem::Specification.new do |s|
+</span><span class="uncovered0"><a name="line189"></a>189             s.name = stub
+</span><span class="uncovered1"><a name="line190"></a>190             s.version = Rails::VERSION::STRING
+</span><span class="uncovered0"><a name="line191"></a>191           end
+</span><span class="uncovered1"><a name="line192"></a>192         end
+</span><span class="uncovered0"><a name="line193"></a>193       end
+</span><span class="uncovered1"><a name="line194"></a>194     end
+</span><span class="inferred0"><a name="line195"></a>195 
+</span><span class="inferred1"><a name="line196"></a>196     # Set the &lt;tt&gt;$LOAD_PATH&lt;/tt&gt; based on the value of
+</span><span class="inferred0"><a name="line197"></a>197     # Configuration#load_paths. Duplicates are removed.
+</span><span class="marked1"><a name="line198"></a>198     def set_load_path
+</span><span class="marked0"><a name="line199"></a>199       load_paths = configuration.load_paths + configuration.framework_paths
+</span><span class="marked1"><a name="line200"></a>200       load_paths.reverse_each { |dir| $LOAD_PATH.unshift(dir) if File.directory?(dir) }
+</span><span class="marked0"><a name="line201"></a>201       $LOAD_PATH.uniq!
+</span><span class="inferred1"><a name="line202"></a>202     end
+</span><span class="inferred0"><a name="line203"></a>203 
+</span><span class="inferred1"><a name="line204"></a>204     # Set the paths from which Rails will automatically load source files, and
+</span><span class="inferred0"><a name="line205"></a>205     # the load_once paths.
+</span><span class="marked1"><a name="line206"></a>206     def set_autoload_paths
+</span><span class="marked0"><a name="line207"></a>207       ActiveSupport::Dependencies.load_paths = configuration.load_paths.uniq
+</span><span class="marked1"><a name="line208"></a>208       ActiveSupport::Dependencies.load_once_paths = configuration.load_once_paths.uniq
+</span><span class="inferred0"><a name="line209"></a>209 
+</span><span class="marked1"><a name="line210"></a>210       extra = ActiveSupport::Dependencies.load_once_paths - ActiveSupport::Dependencies.load_paths
+</span><span class="marked0"><a name="line211"></a>211       unless extra.empty?
+</span><span class="uncovered1"><a name="line212"></a>212         abort &lt;&lt;-end_error
+</span><span class="uncovered0"><a name="line213"></a>213           load_once_paths must be a subset of the load_paths.
+</span><span class="uncovered1"><a name="line214"></a>214           Extra items in load_once_paths: #{extra * ','}
+</span><span class="uncovered0"><a name="line215"></a>215         end_error
+</span><span class="uncovered1"><a name="line216"></a>216       end
+</span><span class="inferred0"><a name="line217"></a>217 
+</span><span class="inferred1"><a name="line218"></a>218       # Freeze the arrays so future modifications will fail rather than do nothing mysteriously
+</span><span class="marked0"><a name="line219"></a>219       configuration.load_once_paths.freeze
+</span><span class="inferred1"><a name="line220"></a>220     end
+</span><span class="inferred0"><a name="line221"></a>221 
+</span><span class="inferred1"><a name="line222"></a>222     # Requires all frameworks specified by the Configuration#frameworks
+</span><span class="inferred0"><a name="line223"></a>223     # list. By default, all frameworks (Active Record, Active Support,
+</span><span class="inferred1"><a name="line224"></a>224     # Action Pack, Action Mailer, and Active Resource) are loaded.
+</span><span class="marked0"><a name="line225"></a>225     def require_frameworks
+</span><span class="marked1"><a name="line226"></a>226       configuration.frameworks.each { |framework| require(framework.to_s) }
+</span><span class="uncovered0"><a name="line227"></a>227     rescue LoadError =&gt; e
+</span><span class="uncovered1"><a name="line228"></a>228       # re-raise because Mongrel would swallow it
+</span><span class="uncovered0"><a name="line229"></a>229       raise e.to_s
+</span><span class="marked1"><a name="line230"></a>230     end
+</span><span class="inferred0"><a name="line231"></a>231 
+</span><span class="inferred1"><a name="line232"></a>232     # Add the load paths used by support functions such as the info controller
+</span><span class="marked0"><a name="line233"></a>233     def add_support_load_paths
+</span><span class="marked1"><a name="line234"></a>234     end
+</span><span class="inferred0"><a name="line235"></a>235 
+</span><span class="inferred1"><a name="line236"></a>236     # Adds all load paths from plugins to the global set of load paths, so that
+</span><span class="inferred0"><a name="line237"></a>237     # code from plugins can be required (explicitly or automatically via ActiveSupport::Dependencies).
+</span><span class="marked1"><a name="line238"></a>238     def add_plugin_load_paths
+</span><span class="marked0"><a name="line239"></a>239       plugin_loader.add_plugin_load_paths
+</span><span class="marked1"><a name="line240"></a>240     end
+</span><span class="inferred0"><a name="line241"></a>241 
+</span><span class="marked1"><a name="line242"></a>242     def add_gem_load_paths
+</span><span class="marked0"><a name="line243"></a>243       unless @configuration.gems.empty?
+</span><span class="uncovered1"><a name="line244"></a>244         require &quot;rubygems&quot;
+</span><span class="uncovered0"><a name="line245"></a>245         @configuration.gems.each { |gem| gem.add_load_paths }
+</span><span class="uncovered1"><a name="line246"></a>246       end
+</span><span class="marked0"><a name="line247"></a>247     end
+</span><span class="inferred1"><a name="line248"></a>248 
+</span><span class="marked0"><a name="line249"></a>249     def load_gems
+</span><span class="marked1"><a name="line250"></a>250       @configuration.gems.each { |gem| gem.load }
+</span><span class="marked0"><a name="line251"></a>251     end
+</span><span class="inferred1"><a name="line252"></a>252 
+</span><span class="marked0"><a name="line253"></a>253     def check_gem_dependencies
+</span><span class="marked1"><a name="line254"></a>254       unloaded_gems = @configuration.gems.reject { |g| g.loaded? }
+</span><span class="marked0"><a name="line255"></a>255       if unloaded_gems.size &gt; 0
+</span><span class="uncovered1"><a name="line256"></a>256         @gems_dependencies_loaded = false
+</span><span class="uncovered0"><a name="line257"></a>257         # don't print if the gems rake tasks are being run
+</span><span class="uncovered1"><a name="line258"></a>258         unless $rails_gem_installer
+</span><span class="uncovered0"><a name="line259"></a>259           abort &lt;&lt;-end_error
+</span><span class="uncovered1"><a name="line260"></a>260 Missing these required gems:
+</span><span class="uncovered0"><a name="line261"></a>261   #{unloaded_gems.map { |gem| &quot;#{gem.name}  #{gem.requirement}&quot; } * &quot;\n  &quot;}
+</span><span class="uncovered1"><a name="line262"></a>262 
+</span><span class="uncovered0"><a name="line263"></a>263 You're running:
+</span><span class="uncovered1"><a name="line264"></a>264   ruby #{Gem.ruby_version} at #{Gem.ruby}
+</span><span class="uncovered0"><a name="line265"></a>265   rubygems #{Gem::RubyGemsVersion} at #{Gem.path * ', '}
+</span><span class="uncovered1"><a name="line266"></a>266 
+</span><span class="uncovered0"><a name="line267"></a>267 Run `rake gems:install` to install the missing gems.
+</span><span class="uncovered1"><a name="line268"></a>268           end_error
+</span><span class="uncovered0"><a name="line269"></a>269         end
+</span><span class="inferred1"><a name="line270"></a>270       else
+</span><span class="marked0"><a name="line271"></a>271         @gems_dependencies_loaded = true
+</span><span class="inferred1"><a name="line272"></a>272       end
+</span><span class="inferred0"><a name="line273"></a>273     end
+</span><span class="inferred1"><a name="line274"></a>274 
+</span><span class="inferred0"><a name="line275"></a>275     # Loads all plugins in &lt;tt&gt;config.plugin_paths&lt;/tt&gt;.  &lt;tt&gt;plugin_paths&lt;/tt&gt;
+</span><span class="inferred1"><a name="line276"></a>276     # defaults to &lt;tt&gt;vendor/plugins&lt;/tt&gt; but may also be set to a list of
+</span><span class="inferred0"><a name="line277"></a>277     # paths, such as
+</span><span class="inferred1"><a name="line278"></a>278     #   config.plugin_paths = [&quot;#{RAILS_ROOT}/lib/plugins&quot;, &quot;#{RAILS_ROOT}/vendor/plugins&quot;]
+</span><span class="inferred0"><a name="line279"></a>279     #
+</span><span class="inferred1"><a name="line280"></a>280     # In the default implementation, as each plugin discovered in &lt;tt&gt;plugin_paths&lt;/tt&gt; is initialized:
+</span><span class="inferred0"><a name="line281"></a>281     # * its +lib+ directory, if present, is added to the load path (immediately after the applications lib directory)
+</span><span class="inferred1"><a name="line282"></a>282     # * &lt;tt&gt;init.rb&lt;/tt&gt; is evaluated, if present
+</span><span class="inferred0"><a name="line283"></a>283     #
+</span><span class="inferred1"><a name="line284"></a>284     # After all plugins are loaded, duplicates are removed from the load path.
+</span><span class="inferred0"><a name="line285"></a>285     # If an array of plugin names is specified in config.plugins, only those plugins will be loaded
+</span><span class="inferred1"><a name="line286"></a>286     # and they plugins will be loaded in that order. Otherwise, plugins are loaded in alphabetical
+</span><span class="inferred0"><a name="line287"></a>287     # order.
+</span><span class="inferred1"><a name="line288"></a>288     #
+</span><span class="inferred0"><a name="line289"></a>289     # if config.plugins ends contains :all then the named plugins will be loaded in the given order and all other
+</span><span class="inferred1"><a name="line290"></a>290     # plugins will be loaded in alphabetical order
+</span><span class="marked0"><a name="line291"></a>291     def load_plugins
+</span><span class="marked1"><a name="line292"></a>292       plugin_loader.load_plugins
+</span><span class="marked0"><a name="line293"></a>293     end
+</span><span class="inferred1"><a name="line294"></a>294 
+</span><span class="marked0"><a name="line295"></a>295     def plugin_loader
+</span><span class="marked1"><a name="line296"></a>296       @plugin_loader ||= configuration.plugin_loader.new(self)
+</span><span class="marked0"><a name="line297"></a>297     end
+</span><span class="inferred1"><a name="line298"></a>298 
+</span><span class="inferred0"><a name="line299"></a>299     # Loads the environment specified by Configuration#environment_path, which
+</span><span class="inferred1"><a name="line300"></a>300     # is typically one of development, test, or production.
+</span><span class="marked0"><a name="line301"></a>301     def load_environment
+</span><span class="marked1"><a name="line302"></a>302       silence_warnings do
+</span><span class="marked0"><a name="line303"></a>303         return if @environment_loaded
+</span><span class="marked1"><a name="line304"></a>304         @environment_loaded = true
+</span><span class="inferred0"><a name="line305"></a>305         
+</span><span class="marked1"><a name="line306"></a>306         config = configuration
+</span><span class="marked0"><a name="line307"></a>307         constants = self.class.constants
+</span><span class="inferred1"><a name="line308"></a>308         
+</span><span class="marked0"><a name="line309"></a>309         eval(IO.read(configuration.environment_path), binding, configuration.environment_path)
+</span><span class="inferred1"><a name="line310"></a>310         
+</span><span class="marked0"><a name="line311"></a>311         (self.class.constants - constants).each do |const|
+</span><span class="uncovered1"><a name="line312"></a>312           Object.const_set(const, self.class.const_get(const))
+</span><span class="uncovered0"><a name="line313"></a>313         end
+</span><span class="uncovered1"><a name="line314"></a>314       end
+</span><span class="marked0"><a name="line315"></a>315     end
+</span><span class="inferred1"><a name="line316"></a>316 
+</span><span class="marked0"><a name="line317"></a>317     def load_observers
+</span><span class="marked1"><a name="line318"></a>318       if gems_dependencies_loaded &amp;&amp; configuration.frameworks.include?(:active_record)
+</span><span class="marked0"><a name="line319"></a>319         ActiveRecord::Base.instantiate_observers
+</span><span class="inferred1"><a name="line320"></a>320       end
+</span><span class="marked0"><a name="line321"></a>321     end
+</span><span class="inferred1"><a name="line322"></a>322 
+</span><span class="inferred0"><a name="line323"></a>323     # For Ruby 1.8, this initialization sets $KCODE to 'u' to enable the
+</span><span class="inferred1"><a name="line324"></a>324     # multibyte safe operations. Plugin authors supporting other encodings
+</span><span class="inferred0"><a name="line325"></a>325     # should override this behaviour and set the relevant +default_charset+
+</span><span class="inferred1"><a name="line326"></a>326     # on ActionController::Base.
+</span><span class="inferred0"><a name="line327"></a>327     #
+</span><span class="inferred1"><a name="line328"></a>328     # For Ruby 1.9, this does nothing. Specify the default encoding in the Ruby
+</span><span class="inferred0"><a name="line329"></a>329     # shebang line if you don't want UTF-8.
+</span><span class="marked1"><a name="line330"></a>330     def initialize_encoding
+</span><span class="marked0"><a name="line331"></a>331       $KCODE='u' if RUBY_VERSION &lt; '1.9'
+</span><span class="marked1"><a name="line332"></a>332     end
+</span><span class="inferred0"><a name="line333"></a>333 
+</span><span class="inferred1"><a name="line334"></a>334     # This initialization routine does nothing unless &lt;tt&gt;:active_record&lt;/tt&gt;
+</span><span class="inferred0"><a name="line335"></a>335     # is one of the frameworks to load (Configuration#frameworks). If it is,
+</span><span class="inferred1"><a name="line336"></a>336     # this sets the database configuration from Configuration#database_configuration
+</span><span class="inferred0"><a name="line337"></a>337     # and then establishes the connection.
+</span><span class="marked1"><a name="line338"></a>338     def initialize_database
+</span><span class="marked0"><a name="line339"></a>339       if configuration.frameworks.include?(:active_record)
+</span><span class="marked1"><a name="line340"></a>340         ActiveRecord::Base.configurations = configuration.database_configuration
+</span><span class="marked0"><a name="line341"></a>341         ActiveRecord::Base.establish_connection
+</span><span class="inferred1"><a name="line342"></a>342       end
+</span><span class="marked0"><a name="line343"></a>343     end
+</span><span class="inferred1"><a name="line344"></a>344 
+</span><span class="marked0"><a name="line345"></a>345     def initialize_cache
+</span><span class="marked1"><a name="line346"></a>346       unless defined?(RAILS_CACHE)
+</span><span class="marked0"><a name="line347"></a>347         silence_warnings { Object.const_set &quot;RAILS_CACHE&quot;, ActiveSupport::Cache.lookup_store(configuration.cache_store) }
+</span><span class="inferred1"><a name="line348"></a>348       end
+</span><span class="marked0"><a name="line349"></a>349     end
+</span><span class="inferred1"><a name="line350"></a>350 
+</span><span class="marked0"><a name="line351"></a>351     def initialize_framework_caches
+</span><span class="marked1"><a name="line352"></a>352       if configuration.frameworks.include?(:action_controller)
+</span><span class="marked0"><a name="line353"></a>353         ActionController::Base.cache_store ||= RAILS_CACHE
+</span><span class="inferred1"><a name="line354"></a>354       end
+</span><span class="marked0"><a name="line355"></a>355     end
+</span><span class="inferred1"><a name="line356"></a>356 
+</span><span class="inferred0"><a name="line357"></a>357     # If the RAILS_DEFAULT_LOGGER constant is already set, this initialization
+</span><span class="inferred1"><a name="line358"></a>358     # routine does nothing. If the constant is not set, and Configuration#logger
+</span><span class="inferred0"><a name="line359"></a>359     # is not +nil+, this also does nothing. Otherwise, a new logger instance
+</span><span class="inferred1"><a name="line360"></a>360     # is created at Configuration#log_path, with a default log level of
+</span><span class="inferred0"><a name="line361"></a>361     # Configuration#log_level.
+</span><span class="inferred1"><a name="line362"></a>362     #
+</span><span class="inferred0"><a name="line363"></a>363     # If the log could not be created, the log will be set to output to
+</span><span class="inferred1"><a name="line364"></a>364     # +STDERR+, with a log level of +WARN+.
+</span><span class="marked0"><a name="line365"></a>365     def initialize_logger
+</span><span class="inferred1"><a name="line366"></a>366       # if the environment has explicitly defined a logger, use it
+</span><span class="marked0"><a name="line367"></a>367       return if defined?(RAILS_DEFAULT_LOGGER)
+</span><span class="inferred1"><a name="line368"></a>368 
+</span><span class="marked0"><a name="line369"></a>369       unless logger = configuration.logger
+</span><span class="marked1"><a name="line370"></a>370         begin
+</span><span class="marked0"><a name="line371"></a>371           logger = ActiveSupport::BufferedLogger.new(configuration.log_path)
+</span><span class="marked1"><a name="line372"></a>372           logger.level = ActiveSupport::BufferedLogger.const_get(configuration.log_level.to_s.upcase)
+</span><span class="marked0"><a name="line373"></a>373           if configuration.environment == &quot;production&quot;
+</span><span class="uncovered1"><a name="line374"></a>374             logger.auto_flushing = false
+</span><span class="uncovered0"><a name="line375"></a>375             logger.set_non_blocking_io
+</span><span class="uncovered1"><a name="line376"></a>376           end
+</span><span class="uncovered0"><a name="line377"></a>377         rescue StandardError =&gt; e
+</span><span class="uncovered1"><a name="line378"></a>378           logger = ActiveSupport::BufferedLogger.new(STDERR)
+</span><span class="uncovered0"><a name="line379"></a>379           logger.level = ActiveSupport::BufferedLogger::WARN
+</span><span class="uncovered1"><a name="line380"></a>380           logger.warn(
+</span><span class="uncovered0"><a name="line381"></a>381             &quot;Rails Error: Unable to access log file. Please ensure that #{configuration.log_path} exists and is chmod 0666. &quot; +
+</span><span class="uncovered1"><a name="line382"></a>382             &quot;The log level has been raised to WARN and the output directed to STDERR until the problem is fixed.&quot;
+</span><span class="uncovered0"><a name="line383"></a>383           )
+</span><span class="uncovered1"><a name="line384"></a>384         end
+</span><span class="uncovered0"><a name="line385"></a>385       end
+</span><span class="inferred1"><a name="line386"></a>386 
+</span><span class="marked0"><a name="line387"></a>387       silence_warnings { Object.const_set &quot;RAILS_DEFAULT_LOGGER&quot;, logger }
+</span><span class="inferred1"><a name="line388"></a>388     end
+</span><span class="inferred0"><a name="line389"></a>389 
+</span><span class="inferred1"><a name="line390"></a>390     # Sets the logger for Active Record, Action Controller, and Action Mailer
+</span><span class="inferred0"><a name="line391"></a>391     # (but only for those frameworks that are to be loaded). If the framework's
+</span><span class="inferred1"><a name="line392"></a>392     # logger is already set, it is not changed, otherwise it is set to use
+</span><span class="inferred0"><a name="line393"></a>393     # RAILS_DEFAULT_LOGGER.
+</span><span class="marked1"><a name="line394"></a>394     def initialize_framework_logging
+</span><span class="marked0"><a name="line395"></a>395       for framework in ([ :active_record, :action_controller, :action_mailer ] &amp; configuration.frameworks)
+</span><span class="marked1"><a name="line396"></a>396         framework.to_s.camelize.constantize.const_get(&quot;Base&quot;).logger ||= RAILS_DEFAULT_LOGGER
+</span><span class="inferred0"><a name="line397"></a>397       end
+</span><span class="inferred1"><a name="line398"></a>398       
+</span><span class="marked0"><a name="line399"></a>399       RAILS_CACHE.logger ||= RAILS_DEFAULT_LOGGER
+</span><span class="inferred1"><a name="line400"></a>400     end
+</span><span class="inferred0"><a name="line401"></a>401 
+</span><span class="inferred1"><a name="line402"></a>402     # Sets +ActionController::Base#view_paths+ and +ActionMailer::Base#template_root+
+</span><span class="inferred0"><a name="line403"></a>403     # (but only for those frameworks that are to be loaded). If the framework's
+</span><span class="inferred1"><a name="line404"></a>404     # paths have already been set, it is not changed, otherwise it is
+</span><span class="inferred0"><a name="line405"></a>405     # set to use Configuration#view_path.
+</span><span class="marked1"><a name="line406"></a>406     def initialize_framework_views
+</span><span class="marked0"><a name="line407"></a>407       ActionMailer::Base.template_root ||= configuration.view_path  if configuration.frameworks.include?(:action_mailer)
+</span><span class="marked1"><a name="line408"></a>408       ActionController::Base.view_paths = [configuration.view_path] if configuration.frameworks.include?(:action_controller) &amp;&amp; ActionController::Base.view_paths.empty?
+</span><span class="inferred0"><a name="line409"></a>409     end
+</span><span class="inferred1"><a name="line410"></a>410 
+</span><span class="inferred0"><a name="line411"></a>411     # If Action Controller is not one of the loaded frameworks (Configuration#frameworks)
+</span><span class="inferred1"><a name="line412"></a>412     # this does nothing. Otherwise, it loads the routing definitions and sets up
+</span><span class="inferred0"><a name="line413"></a>413     # loading module used to lazily load controllers (Configuration#controller_paths).
+</span><span class="marked1"><a name="line414"></a>414     def initialize_routing
+</span><span class="marked0"><a name="line415"></a>415       return unless configuration.frameworks.include?(:action_controller)
+</span><span class="marked1"><a name="line416"></a>416       ActionController::Routing.controller_paths = configuration.controller_paths
+</span><span class="marked0"><a name="line417"></a>417       ActionController::Routing::Routes.configuration_file = configuration.routes_configuration_file
+</span><span class="marked1"><a name="line418"></a>418       ActionController::Routing::Routes.reload
+</span><span class="inferred0"><a name="line419"></a>419     end
+</span><span class="inferred1"><a name="line420"></a>420 
+</span><span class="inferred0"><a name="line421"></a>421     # Sets the dependency loading mechanism based on the value of
+</span><span class="inferred1"><a name="line422"></a>422     # Configuration#cache_classes.
+</span><span class="marked0"><a name="line423"></a>423     def initialize_dependency_mechanism
+</span><span class="marked1"><a name="line424"></a>424       ActiveSupport::Dependencies.mechanism = configuration.cache_classes ? :require : :load
+</span><span class="marked0"><a name="line425"></a>425     end
+</span><span class="inferred1"><a name="line426"></a>426 
+</span><span class="inferred0"><a name="line427"></a>427     # Loads support for &quot;whiny nil&quot; (noisy warnings when methods are invoked
+</span><span class="inferred1"><a name="line428"></a>428     # on +nil+ values) if Configuration#whiny_nils is true.
+</span><span class="marked0"><a name="line429"></a>429     def initialize_whiny_nils
+</span><span class="marked1"><a name="line430"></a>430       require('active_support/whiny_nil') if configuration.whiny_nils
+</span><span class="marked0"><a name="line431"></a>431     end
+</span><span class="inferred1"><a name="line432"></a>432 
+</span><span class="marked0"><a name="line433"></a>433     def initialize_temporary_session_directory
+</span><span class="marked1"><a name="line434"></a>434       if configuration.frameworks.include?(:action_controller)
+</span><span class="marked0"><a name="line435"></a>435         session_path = &quot;#{configuration.root_path}/tmp/sessions/&quot;
+</span><span class="marked1"><a name="line436"></a>436         ActionController::Base.session_options[:tmpdir] = File.exist?(session_path) ? session_path : Dir::tmpdir
+</span><span class="inferred0"><a name="line437"></a>437       end
+</span><span class="marked1"><a name="line438"></a>438     end
+</span><span class="inferred0"><a name="line439"></a>439 
+</span><span class="inferred1"><a name="line440"></a>440     # Sets the default value for Time.zone, and turns on ActiveRecord::Base#time_zone_aware_attributes.
+</span><span class="inferred0"><a name="line441"></a>441     # If assigned value cannot be matched to a TimeZone, an exception will be raised.
+</span><span class="marked1"><a name="line442"></a>442     def initialize_time_zone
+</span><span class="marked0"><a name="line443"></a>443       if configuration.time_zone
+</span><span class="marked1"><a name="line444"></a>444         zone_default = Time.send!(:get_zone, configuration.time_zone)
+</span><span class="marked0"><a name="line445"></a>445         unless zone_default
+</span><span class="uncovered1"><a name="line446"></a>446           raise %{Value assigned to config.time_zone not recognized. Run &quot;rake -D time&quot; for a list of tasks for finding appropriate time zone names.}
+</span><span class="uncovered0"><a name="line447"></a>447         end
+</span><span class="marked1"><a name="line448"></a>448         Time.zone_default = zone_default
+</span><span class="marked0"><a name="line449"></a>449         if configuration.frameworks.include?(:active_record)
+</span><span class="marked1"><a name="line450"></a>450           ActiveRecord::Base.time_zone_aware_attributes = true
+</span><span class="marked0"><a name="line451"></a>451           ActiveRecord::Base.default_timezone = :utc
+</span><span class="inferred1"><a name="line452"></a>452         end
+</span><span class="inferred0"><a name="line453"></a>453       end
+</span><span class="marked1"><a name="line454"></a>454     end
+</span><span class="inferred0"><a name="line455"></a>455 
+</span><span class="inferred1"><a name="line456"></a>456     # Initializes framework-specific settings for each of the loaded frameworks
+</span><span class="inferred0"><a name="line457"></a>457     # (Configuration#frameworks). The available settings map to the accessors
+</span><span class="inferred1"><a name="line458"></a>458     # on each of the corresponding Base classes.
+</span><span class="marked0"><a name="line459"></a>459     def initialize_framework_settings
+</span><span class="marked1"><a name="line460"></a>460       configuration.frameworks.each do |framework|
+</span><span class="marked0"><a name="line461"></a>461         base_class = framework.to_s.camelize.constantize.const_get(&quot;Base&quot;)
+</span><span class="inferred1"><a name="line462"></a>462 
+</span><span class="marked0"><a name="line463"></a>463         configuration.send(framework).each do |setting, value|
+</span><span class="marked1"><a name="line464"></a>464           base_class.send(&quot;#{setting}=&quot;, value)
+</span><span class="inferred0"><a name="line465"></a>465         end
+</span><span class="inferred1"><a name="line466"></a>466       end
+</span><span class="marked0"><a name="line467"></a>467       configuration.active_support.each do |setting, value|
+</span><span class="uncovered1"><a name="line468"></a>468         ActiveSupport.send(&quot;#{setting}=&quot;, value)
+</span><span class="uncovered0"><a name="line469"></a>469       end
+</span><span class="uncovered1"><a name="line470"></a>470     end
+</span><span class="inferred0"><a name="line471"></a>471 
+</span><span class="inferred1"><a name="line472"></a>472     # Fires the user-supplied after_initialize block (Configuration#after_initialize)
+</span><span class="marked0"><a name="line473"></a>473     def after_initialize
+</span><span class="marked1"><a name="line474"></a>474       if gems_dependencies_loaded
+</span><span class="marked0"><a name="line475"></a>475         configuration.after_initialize_blocks.each do |block|
+</span><span class="uncovered1"><a name="line476"></a>476           block.call
+</span><span class="uncovered0"><a name="line477"></a>477         end
+</span><span class="uncovered1"><a name="line478"></a>478       end
+</span><span class="marked0"><a name="line479"></a>479     end
+</span><span class="inferred1"><a name="line480"></a>480 
+</span><span class="marked0"><a name="line481"></a>481     def load_application_initializers
+</span><span class="marked1"><a name="line482"></a>482       if gems_dependencies_loaded
+</span><span class="marked0"><a name="line483"></a>483         Dir[&quot;#{configuration.root_path}/config/initializers/**/*.rb&quot;].sort.each do |initializer|
+</span><span class="marked1"><a name="line484"></a>484           load(initializer)
+</span><span class="inferred0"><a name="line485"></a>485         end
+</span><span class="inferred1"><a name="line486"></a>486       end
+</span><span class="marked0"><a name="line487"></a>487     end
+</span><span class="inferred1"><a name="line488"></a>488 
+</span><span class="marked0"><a name="line489"></a>489     def prepare_dispatcher
+</span><span class="marked1"><a name="line490"></a>490       return unless configuration.frameworks.include?(:action_controller)
+</span><span class="marked0"><a name="line491"></a>491       require 'dispatcher' unless defined?(::Dispatcher)
+</span><span class="marked1"><a name="line492"></a>492       Dispatcher.define_dispatcher_callbacks(configuration.cache_classes)
+</span><span class="marked0"><a name="line493"></a>493       Dispatcher.new(RAILS_DEFAULT_LOGGER).send :run_callbacks, :prepare_dispatch
+</span><span class="inferred1"><a name="line494"></a>494     end
+</span><span class="inferred0"><a name="line495"></a>495 
+</span><span class="inferred1"><a name="line496"></a>496   end
+</span><span class="inferred0"><a name="line497"></a>497 
+</span><span class="inferred1"><a name="line498"></a>498   # The Configuration class holds all the parameters for the Initializer and
+</span><span class="inferred0"><a name="line499"></a>499   # ships with defaults that suites most Rails applications. But it's possible
+</span><span class="inferred1"><a name="line500"></a>500   # to overwrite everything. Usually, you'll create an Configuration file
+</span><span class="inferred0"><a name="line501"></a>501   # implicitly through the block running on the Initializer, but it's also
+</span><span class="inferred1"><a name="line502"></a>502   # possible to create the Configuration instance in advance and pass it in
+</span><span class="inferred0"><a name="line503"></a>503   # like this:
+</span><span class="inferred1"><a name="line504"></a>504   #
+</span><span class="inferred0"><a name="line505"></a>505   #   config = Rails::Configuration.new
+</span><span class="inferred1"><a name="line506"></a>506   #   Rails::Initializer.run(:process, config)
+</span><span class="marked0"><a name="line507"></a>507   class Configuration
+</span><span class="inferred1"><a name="line508"></a>508     # The application's base directory.
+</span><span class="marked0"><a name="line509"></a>509     attr_reader :root_path
+</span><span class="inferred1"><a name="line510"></a>510 
+</span><span class="inferred0"><a name="line511"></a>511     # A stub for setting options on ActionController::Base.
+</span><span class="marked1"><a name="line512"></a>512     attr_accessor :action_controller
+</span><span class="inferred0"><a name="line513"></a>513 
+</span><span class="inferred1"><a name="line514"></a>514     # A stub for setting options on ActionMailer::Base.
+</span><span class="marked0"><a name="line515"></a>515     attr_accessor :action_mailer
+</span><span class="inferred1"><a name="line516"></a>516 
+</span><span class="inferred0"><a name="line517"></a>517     # A stub for setting options on ActionView::Base.
+</span><span class="marked1"><a name="line518"></a>518     attr_accessor :action_view
+</span><span class="inferred0"><a name="line519"></a>519 
+</span><span class="inferred1"><a name="line520"></a>520     # A stub for setting options on ActiveRecord::Base.
+</span><span class="marked0"><a name="line521"></a>521     attr_accessor :active_record
+</span><span class="inferred1"><a name="line522"></a>522 
+</span><span class="inferred0"><a name="line523"></a>523     # A stub for setting options on ActiveRecord::Base.
+</span><span class="marked1"><a name="line524"></a>524     attr_accessor :active_resource
+</span><span class="inferred0"><a name="line525"></a>525 
+</span><span class="inferred1"><a name="line526"></a>526     # A stub for setting options on ActiveSupport.
+</span><span class="marked0"><a name="line527"></a>527     attr_accessor :active_support
+</span><span class="inferred1"><a name="line528"></a>528 
+</span><span class="inferred0"><a name="line529"></a>529     # Whether or not classes should be cached (set to false if you want
+</span><span class="inferred1"><a name="line530"></a>530     # application classes to be reloaded on each request)
+</span><span class="marked0"><a name="line531"></a>531     attr_accessor :cache_classes
+</span><span class="inferred1"><a name="line532"></a>532 
+</span><span class="inferred0"><a name="line533"></a>533     # The list of paths that should be searched for controllers. (Defaults
+</span><span class="inferred1"><a name="line534"></a>534     # to &lt;tt&gt;app/controllers&lt;/tt&gt; and &lt;tt&gt;components&lt;/tt&gt;.)
+</span><span class="marked0"><a name="line535"></a>535     attr_accessor :controller_paths
+</span><span class="inferred1"><a name="line536"></a>536 
+</span><span class="inferred0"><a name="line537"></a>537     # The path to the database configuration file to use. (Defaults to
+</span><span class="inferred1"><a name="line538"></a>538     # &lt;tt&gt;config/database.yml&lt;/tt&gt;.)
+</span><span class="marked0"><a name="line539"></a>539     attr_accessor :database_configuration_file
+</span><span class="inferred1"><a name="line540"></a>540     
+</span><span class="inferred0"><a name="line541"></a>541     # The path to the routes configuration file to use. (Defaults to
+</span><span class="inferred1"><a name="line542"></a>542     # &lt;tt&gt;config/routes.rb&lt;/tt&gt;.)
+</span><span class="marked0"><a name="line543"></a>543     attr_accessor :routes_configuration_file
+</span><span class="inferred1"><a name="line544"></a>544 
+</span><span class="inferred0"><a name="line545"></a>545     # The list of rails framework components that should be loaded. (Defaults
+</span><span class="inferred1"><a name="line546"></a>546     # to &lt;tt&gt;:active_record&lt;/tt&gt;, &lt;tt&gt;:action_controller&lt;/tt&gt;,
+</span><span class="inferred0"><a name="line547"></a>547     # &lt;tt&gt;:action_view&lt;/tt&gt;, &lt;tt&gt;:action_mailer&lt;/tt&gt;, and
+</span><span class="inferred1"><a name="line548"></a>548     # &lt;tt&gt;:active_resource&lt;/tt&gt;).
+</span><span class="marked0"><a name="line549"></a>549     attr_accessor :frameworks
+</span><span class="inferred1"><a name="line550"></a>550 
+</span><span class="inferred0"><a name="line551"></a>551     # An array of additional paths to prepend to the load path. By default,
+</span><span class="inferred1"><a name="line552"></a>552     # all +app+, +lib+, +vendor+ and mock paths are included in this list.
+</span><span class="marked0"><a name="line553"></a>553     attr_accessor :load_paths
+</span><span class="inferred1"><a name="line554"></a>554 
+</span><span class="inferred0"><a name="line555"></a>555     # An array of paths from which Rails will automatically load from only once.
+</span><span class="inferred1"><a name="line556"></a>556     # All elements of this array must also be in +load_paths+.
+</span><span class="marked0"><a name="line557"></a>557     attr_accessor :load_once_paths
+</span><span class="inferred1"><a name="line558"></a>558 
+</span><span class="inferred0"><a name="line559"></a>559     # The log level to use for the default Rails logger. In production mode,
+</span><span class="inferred1"><a name="line560"></a>560     # this defaults to &lt;tt&gt;:info&lt;/tt&gt;. In development mode, it defaults to
+</span><span class="inferred0"><a name="line561"></a>561     # &lt;tt&gt;:debug&lt;/tt&gt;.
+</span><span class="marked1"><a name="line562"></a>562     attr_accessor :log_level
+</span><span class="inferred0"><a name="line563"></a>563 
+</span><span class="inferred1"><a name="line564"></a>564     # The path to the log file to use. Defaults to log/#{environment}.log
+</span><span class="inferred0"><a name="line565"></a>565     # (e.g. log/development.log or log/production.log).
+</span><span class="marked1"><a name="line566"></a>566     attr_accessor :log_path
+</span><span class="inferred0"><a name="line567"></a>567 
+</span><span class="inferred1"><a name="line568"></a>568     # The specific logger to use. By default, a logger will be created and
+</span><span class="inferred0"><a name="line569"></a>569     # initialized using #log_path and #log_level, but a programmer may
+</span><span class="inferred1"><a name="line570"></a>570     # specifically set the logger to use via this accessor and it will be
+</span><span class="inferred0"><a name="line571"></a>571     # used directly.
+</span><span class="marked1"><a name="line572"></a>572     attr_accessor :logger
+</span><span class="inferred0"><a name="line573"></a>573 
+</span><span class="inferred1"><a name="line574"></a>574     # The specific cache store to use. By default, the ActiveSupport::Cache::Store will be used.
+</span><span class="marked0"><a name="line575"></a>575     attr_accessor :cache_store
+</span><span class="inferred1"><a name="line576"></a>576 
+</span><span class="inferred0"><a name="line577"></a>577     # The root of the application's views. (Defaults to &lt;tt&gt;app/views&lt;/tt&gt;.)
+</span><span class="marked1"><a name="line578"></a>578     attr_accessor :view_path
+</span><span class="inferred0"><a name="line579"></a>579 
+</span><span class="inferred1"><a name="line580"></a>580     # Set to +true+ if you want to be warned (noisily) when you try to invoke
+</span><span class="inferred0"><a name="line581"></a>581     # any method of +nil+. Set to +false+ for the standard Ruby behavior.
+</span><span class="marked1"><a name="line582"></a>582     attr_accessor :whiny_nils
+</span><span class="inferred0"><a name="line583"></a>583 
+</span><span class="inferred1"><a name="line584"></a>584     # The list of plugins to load. If this is set to &lt;tt&gt;nil&lt;/tt&gt;, all plugins will
+</span><span class="inferred0"><a name="line585"></a>585     # be loaded. If this is set to &lt;tt&gt;[]&lt;/tt&gt;, no plugins will be loaded. Otherwise,
+</span><span class="inferred1"><a name="line586"></a>586     # plugins will be loaded in the order specified.
+</span><span class="marked0"><a name="line587"></a>587     attr_reader :plugins
+</span><span class="marked1"><a name="line588"></a>588     def plugins=(plugins)
+</span><span class="marked0"><a name="line589"></a>589       @plugins = plugins.nil? ? nil : plugins.map { |p| p.to_sym }
+</span><span class="marked1"><a name="line590"></a>590     end
+</span><span class="inferred0"><a name="line591"></a>591 
+</span><span class="inferred1"><a name="line592"></a>592     # The path to the root of the plugins directory. By default, it is in
+</span><span class="inferred0"><a name="line593"></a>593     # &lt;tt&gt;vendor/plugins&lt;/tt&gt;.
+</span><span class="marked1"><a name="line594"></a>594     attr_accessor :plugin_paths
+</span><span class="inferred0"><a name="line595"></a>595 
+</span><span class="inferred1"><a name="line596"></a>596     # The classes that handle finding the desired plugins that you'd like to load for
+</span><span class="inferred0"><a name="line597"></a>597     # your application. By default it is the Rails::Plugin::FileSystemLocator which finds
+</span><span class="inferred1"><a name="line598"></a>598     # plugins to load in &lt;tt&gt;vendor/plugins&lt;/tt&gt;. You can hook into gem location by subclassing
+</span><span class="inferred0"><a name="line599"></a>599     # Rails::Plugin::Locator and adding it onto the list of &lt;tt&gt;plugin_locators&lt;/tt&gt;.
+</span><span class="marked1"><a name="line600"></a>600     attr_accessor :plugin_locators
+</span><span class="inferred0"><a name="line601"></a>601 
+</span><span class="inferred1"><a name="line602"></a>602     # The class that handles loading each plugin. Defaults to Rails::Plugin::Loader, but
+</span><span class="inferred0"><a name="line603"></a>603     # a sub class would have access to fine grained modification of the loading behavior. See
+</span><span class="inferred1"><a name="line604"></a>604     # the implementation of Rails::Plugin::Loader for more details.
+</span><span class="marked0"><a name="line605"></a>605     attr_accessor :plugin_loader
+</span><span class="inferred1"><a name="line606"></a>606     
+</span><span class="inferred0"><a name="line607"></a>607     # Enables or disables plugin reloading.  You can get around this setting per plugin.
+</span><span class="inferred1"><a name="line608"></a>608     # If &lt;tt&gt;reload_plugins?&lt;/tt&gt; is false, add this to your plugin's &lt;tt&gt;init.rb&lt;/tt&gt;
+</span><span class="inferred0"><a name="line609"></a>609     # to make it reloadable:
+</span><span class="inferred1"><a name="line610"></a>610     #
+</span><span class="inferred0"><a name="line611"></a>611     #   ActiveSupport::Dependencies.load_once_paths.delete lib_path
+</span><span class="inferred1"><a name="line612"></a>612     #
+</span><span class="inferred0"><a name="line613"></a>613     # If &lt;tt&gt;reload_plugins?&lt;/tt&gt; is true, add this to your plugin's &lt;tt&gt;init.rb&lt;/tt&gt;
+</span><span class="inferred1"><a name="line614"></a>614     # to only load it once:
+</span><span class="inferred0"><a name="line615"></a>615     #
+</span><span class="inferred1"><a name="line616"></a>616     #   ActiveSupport::Dependencies.load_once_paths &lt;&lt; lib_path
+</span><span class="inferred0"><a name="line617"></a>617     #
+</span><span class="marked1"><a name="line618"></a>618     attr_accessor :reload_plugins
+</span><span class="inferred0"><a name="line619"></a>619 
+</span><span class="inferred1"><a name="line620"></a>620     # Returns true if plugin reloading is enabled.
+</span><span class="marked0"><a name="line621"></a>621     def reload_plugins?
+</span><span class="uncovered1"><a name="line622"></a>622       !!@reload_plugins
+</span><span class="uncovered0"><a name="line623"></a>623     end
+</span><span class="inferred1"><a name="line624"></a>624 
+</span><span class="inferred0"><a name="line625"></a>625     # An array of gems that this rails application depends on.  Rails will automatically load
+</span><span class="inferred1"><a name="line626"></a>626     # these gems during installation, and allow you to install any missing gems with:
+</span><span class="inferred0"><a name="line627"></a>627     #
+</span><span class="inferred1"><a name="line628"></a>628     #   rake gems:install
+</span><span class="inferred0"><a name="line629"></a>629     #
+</span><span class="inferred1"><a name="line630"></a>630     # You can add gems with the #gem method.
+</span><span class="marked0"><a name="line631"></a>631     attr_accessor :gems
+</span><span class="inferred1"><a name="line632"></a>632 
+</span><span class="inferred0"><a name="line633"></a>633     # Adds a single Gem dependency to the rails application. By default, it will require
+</span><span class="inferred1"><a name="line634"></a>634     # the library with the same name as the gem. Use :lib to specify a different name.
+</span><span class="inferred0"><a name="line635"></a>635     #
+</span><span class="inferred1"><a name="line636"></a>636     #   # gem 'aws-s3', '&gt;= 0.4.0'
+</span><span class="inferred0"><a name="line637"></a>637     #   # require 'aws/s3'
+</span><span class="inferred1"><a name="line638"></a>638     #   config.gem 'aws-s3', :lib =&gt; 'aws/s3', :version =&gt; '&gt;= 0.4.0', \
+</span><span class="inferred0"><a name="line639"></a>639     #     :source =&gt; &quot;http://code.whytheluckystiff.net&quot;
+</span><span class="inferred1"><a name="line640"></a>640     #
+</span><span class="inferred0"><a name="line641"></a>641     # To require a library be installed, but not attempt to load it, pass :lib =&gt; false
+</span><span class="inferred1"><a name="line642"></a>642     #
+</span><span class="inferred0"><a name="line643"></a>643     #   config.gem 'qrp', :version =&gt; '0.4.1', :lib =&gt; false
+</span><span class="marked1"><a name="line644"></a>644     def gem(name, options = {})
+</span><span class="uncovered0"><a name="line645"></a>645       @gems &lt;&lt; Rails::GemDependency.new(name, options)
+</span><span class="uncovered1"><a name="line646"></a>646     end
+</span><span class="inferred0"><a name="line647"></a>647     
+</span><span class="inferred1"><a name="line648"></a>648     # Deprecated options:
+</span><span class="marked0"><a name="line649"></a>649     def breakpoint_server(_ = nil)
+</span><span class="uncovered1"><a name="line650"></a>650       $stderr.puts %(
+</span><span class="uncovered0"><a name="line651"></a>651       *******************************************************************
+</span><span class="uncovered1"><a name="line652"></a>652       * config.breakpoint_server has been deprecated and has no effect. *
+</span><span class="uncovered0"><a name="line653"></a>653       *******************************************************************
+</span><span class="uncovered1"><a name="line654"></a>654       )
+</span><span class="uncovered0"><a name="line655"></a>655     end
+</span><span class="marked1"><a name="line656"></a>656     alias_method :breakpoint_server=, :breakpoint_server
+</span><span class="inferred0"><a name="line657"></a>657 
+</span><span class="inferred1"><a name="line658"></a>658     # Sets the default +time_zone+.  Setting this will enable +time_zone+
+</span><span class="inferred0"><a name="line659"></a>659     # awareness for Active Record models and set the Active Record default
+</span><span class="inferred1"><a name="line660"></a>660     # timezone to &lt;tt&gt;:utc&lt;/tt&gt;.
+</span><span class="marked0"><a name="line661"></a>661     attr_accessor :time_zone
+</span><span class="inferred1"><a name="line662"></a>662 
+</span><span class="inferred0"><a name="line663"></a>663     # Create a new Configuration instance, initialized with the default
+</span><span class="inferred1"><a name="line664"></a>664     # values.
+</span><span class="marked0"><a name="line665"></a>665     def initialize
+</span><span class="marked1"><a name="line666"></a>666       set_root_path!
+</span><span class="inferred0"><a name="line667"></a>667 
+</span><span class="marked1"><a name="line668"></a>668       self.frameworks                   = default_frameworks
+</span><span class="marked0"><a name="line669"></a>669       self.load_paths                   = default_load_paths
+</span><span class="marked1"><a name="line670"></a>670       self.load_once_paths              = default_load_once_paths
+</span><span class="marked0"><a name="line671"></a>671       self.log_path                     = default_log_path
+</span><span class="marked1"><a name="line672"></a>672       self.log_level                    = default_log_level
+</span><span class="marked0"><a name="line673"></a>673       self.view_path                    = default_view_path
+</span><span class="marked1"><a name="line674"></a>674       self.controller_paths             = default_controller_paths
+</span><span class="marked0"><a name="line675"></a>675       self.cache_classes                = default_cache_classes
+</span><span class="marked1"><a name="line676"></a>676       self.whiny_nils                   = default_whiny_nils
+</span><span class="marked0"><a name="line677"></a>677       self.plugins                      = default_plugins
+</span><span class="marked1"><a name="line678"></a>678       self.plugin_paths                 = default_plugin_paths
+</span><span class="marked0"><a name="line679"></a>679       self.plugin_locators              = default_plugin_locators
+</span><span class="marked1"><a name="line680"></a>680       self.plugin_loader                = default_plugin_loader
+</span><span class="marked0"><a name="line681"></a>681       self.database_configuration_file  = default_database_configuration_file
+</span><span class="marked1"><a name="line682"></a>682       self.routes_configuration_file    = default_routes_configuration_file
+</span><span class="marked0"><a name="line683"></a>683       self.gems                         = default_gems
+</span><span class="inferred1"><a name="line684"></a>684 
+</span><span class="marked0"><a name="line685"></a>685       for framework in default_frameworks
+</span><span class="marked1"><a name="line686"></a>686         self.send(&quot;#{framework}=&quot;, Rails::OrderedOptions.new)
+</span><span class="inferred0"><a name="line687"></a>687       end
+</span><span class="marked1"><a name="line688"></a>688       self.active_support = Rails::OrderedOptions.new
+</span><span class="inferred0"><a name="line689"></a>689     end
+</span><span class="inferred1"><a name="line690"></a>690 
+</span><span class="inferred0"><a name="line691"></a>691     # Set the root_path to RAILS_ROOT and canonicalize it.
+</span><span class="marked1"><a name="line692"></a>692     def set_root_path!
+</span><span class="marked0"><a name="line693"></a>693       raise 'RAILS_ROOT is not set' unless defined?(::RAILS_ROOT)
+</span><span class="marked1"><a name="line694"></a>694       raise 'RAILS_ROOT is not a directory' unless File.directory?(::RAILS_ROOT)
+</span><span class="inferred0"><a name="line695"></a>695 
+</span><span class="marked1"><a name="line696"></a>696       @root_path =
+</span><span class="inferred0"><a name="line697"></a>697         # Pathname is incompatible with Windows, but Windows doesn't have
+</span><span class="inferred1"><a name="line698"></a>698         # real symlinks so File.expand_path is safe.
+</span><span class="marked0"><a name="line699"></a>699         if RUBY_PLATFORM =~ /(:?mswin|mingw)/
+</span><span class="inferred1"><a name="line700"></a>700           File.expand_path(::RAILS_ROOT)
+</span><span class="inferred0"><a name="line701"></a>701 
+</span><span class="inferred1"><a name="line702"></a>702         # Otherwise use Pathname#realpath which respects symlinks.
+</span><span class="inferred0"><a name="line703"></a>703         else
+</span><span class="marked1"><a name="line704"></a>704           Pathname.new(::RAILS_ROOT).realpath.to_s
+</span><span class="inferred0"><a name="line705"></a>705         end
+</span><span class="inferred1"><a name="line706"></a>706       
+</span><span class="marked0"><a name="line707"></a>707       Object.const_set(:RELATIVE_RAILS_ROOT, ::RAILS_ROOT.dup) unless defined?(::RELATIVE_RAILS_ROOT)
+</span><span class="marked1"><a name="line708"></a>708       ::RAILS_ROOT.replace @root_path
+</span><span class="inferred0"><a name="line709"></a>709     end
+</span><span class="inferred1"><a name="line710"></a>710 
+</span><span class="inferred0"><a name="line711"></a>711     # Loads and returns the contents of the #database_configuration_file. The
+</span><span class="inferred1"><a name="line712"></a>712     # contents of the file are processed via ERB before being sent through
+</span><span class="inferred0"><a name="line713"></a>713     # YAML::load.
+</span><span class="marked1"><a name="line714"></a>714     def database_configuration
+</span><span class="marked0"><a name="line715"></a>715       require 'erb'
+</span><span class="marked1"><a name="line716"></a>716       YAML::load(ERB.new(IO.read(database_configuration_file)).result)
+</span><span class="inferred0"><a name="line717"></a>717     end
+</span><span class="inferred1"><a name="line718"></a>718 
+</span><span class="inferred0"><a name="line719"></a>719     # The path to the current environment's file (&lt;tt&gt;development.rb&lt;/tt&gt;, etc.). By
+</span><span class="inferred1"><a name="line720"></a>720     # default the file is at &lt;tt&gt;config/environments/#{environment}.rb&lt;/tt&gt;.
+</span><span class="marked0"><a name="line721"></a>721     def environment_path
+</span><span class="marked1"><a name="line722"></a>722       &quot;#{root_path}/config/environments/#{environment}.rb&quot;
+</span><span class="marked0"><a name="line723"></a>723     end
+</span><span class="inferred1"><a name="line724"></a>724 
+</span><span class="inferred0"><a name="line725"></a>725     # Return the currently selected environment. By default, it returns the
+</span><span class="inferred1"><a name="line726"></a>726     # value of the RAILS_ENV constant.
+</span><span class="marked0"><a name="line727"></a>727     def environment
+</span><span class="marked1"><a name="line728"></a>728       ::RAILS_ENV
+</span><span class="marked0"><a name="line729"></a>729     end
+</span><span class="inferred1"><a name="line730"></a>730 
+</span><span class="inferred0"><a name="line731"></a>731     # Adds a block which will be executed after rails has been fully initialized.
+</span><span class="inferred1"><a name="line732"></a>732     # Useful for per-environment configuration which depends on the framework being
+</span><span class="inferred0"><a name="line733"></a>733     # fully initialized.
+</span><span class="marked1"><a name="line734"></a>734     def after_initialize(&amp;after_initialize_block)
+</span><span class="uncovered0"><a name="line735"></a>735       after_initialize_blocks &lt;&lt; after_initialize_block if after_initialize_block
+</span><span class="uncovered1"><a name="line736"></a>736     end
+</span><span class="inferred0"><a name="line737"></a>737 
+</span><span class="inferred1"><a name="line738"></a>738     # Returns the blocks added with Configuration#after_initialize
+</span><span class="marked0"><a name="line739"></a>739     def after_initialize_blocks
+</span><span class="marked1"><a name="line740"></a>740       @after_initialize_blocks ||= []
+</span><span class="marked0"><a name="line741"></a>741     end
+</span><span class="inferred1"><a name="line742"></a>742 
+</span><span class="inferred0"><a name="line743"></a>743     # Add a preparation callback that will run before every request in development
+</span><span class="inferred1"><a name="line744"></a>744     # mode, or before the first request in production.
+</span><span class="inferred0"><a name="line745"></a>745     #
+</span><span class="inferred1"><a name="line746"></a>746     # See Dispatcher#to_prepare.
+</span><span class="marked0"><a name="line747"></a>747     def to_prepare(&amp;callback)
+</span><span class="uncovered1"><a name="line748"></a>748       after_initialize do 
+</span><span class="uncovered0"><a name="line749"></a>749         require 'dispatcher' unless defined?(::Dispatcher)
+</span><span class="uncovered1"><a name="line750"></a>750         Dispatcher.to_prepare(&amp;callback)
+</span><span class="uncovered0"><a name="line751"></a>751       end
+</span><span class="uncovered1"><a name="line752"></a>752     end
+</span><span class="inferred0"><a name="line753"></a>753 
+</span><span class="marked1"><a name="line754"></a>754     def builtin_directories
+</span><span class="inferred0"><a name="line755"></a>755       # Include builtins only in the development environment.
+</span><span class="marked1"><a name="line756"></a>756       (environment == 'development') ? Dir[&quot;#{RAILTIES_PATH}/builtin/*/&quot;] : []
+</span><span class="marked0"><a name="line757"></a>757     end
+</span><span class="inferred1"><a name="line758"></a>758 
+</span><span class="marked0"><a name="line759"></a>759     def framework_paths
+</span><span class="marked1"><a name="line760"></a>760       paths = %w(railties railties/lib activesupport/lib)
+</span><span class="marked0"><a name="line761"></a>761       paths &lt;&lt; 'actionpack/lib' if frameworks.include? :action_controller or frameworks.include? :action_view
+</span><span class="inferred1"><a name="line762"></a>762       
+</span><span class="marked0"><a name="line763"></a>763       [:active_record, :action_mailer, :active_resource, :action_web_service].each do |framework|
+</span><span class="marked1"><a name="line764"></a>764         paths &lt;&lt; &quot;#{framework.to_s.gsub('_', '')}/lib&quot; if frameworks.include? framework
+</span><span class="inferred0"><a name="line765"></a>765       end
+</span><span class="inferred1"><a name="line766"></a>766       
+</span><span class="marked0"><a name="line767"></a>767       paths.map { |dir| &quot;#{framework_root_path}/#{dir}&quot; }.select { |dir| File.directory?(dir) }
+</span><span class="inferred1"><a name="line768"></a>768     end
+</span><span class="inferred0"><a name="line769"></a>769 
+</span><span class="marked1"><a name="line770"></a>770     private
+</span><span class="marked0"><a name="line771"></a>771       def framework_root_path
+</span><span class="marked1"><a name="line772"></a>772         defined?(::RAILS_FRAMEWORK_ROOT) ? ::RAILS_FRAMEWORK_ROOT : &quot;#{root_path}/vendor/rails&quot;
+</span><span class="marked0"><a name="line773"></a>773       end
+</span><span class="inferred1"><a name="line774"></a>774 
+</span><span class="marked0"><a name="line775"></a>775       def default_frameworks
+</span><span class="marked1"><a name="line776"></a>776         [ :active_record, :action_controller, :action_view, :action_mailer, :active_resource ]
+</span><span class="marked0"><a name="line777"></a>777       end
+</span><span class="inferred1"><a name="line778"></a>778 
+</span><span class="marked0"><a name="line779"></a>779       def default_load_paths
+</span><span class="marked1"><a name="line780"></a>780         paths = []
+</span><span class="inferred0"><a name="line781"></a>781         
+</span><span class="inferred1"><a name="line782"></a>782         # Add the old mock paths only if the directories exists
+</span><span class="marked0"><a name="line783"></a>783         paths.concat(Dir[&quot;#{root_path}/test/mocks/#{environment}&quot;]) if File.exists?(&quot;#{root_path}/test/mocks/#{environment}&quot;)
+</span><span class="inferred1"><a name="line784"></a>784 
+</span><span class="inferred0"><a name="line785"></a>785         # Add the app's controller directory
+</span><span class="marked1"><a name="line786"></a>786         paths.concat(Dir[&quot;#{root_path}/app/controllers/&quot;])
+</span><span class="inferred0"><a name="line787"></a>787 
+</span><span class="inferred1"><a name="line788"></a>788         # Then components subdirectories.
+</span><span class="marked0"><a name="line789"></a>789         paths.concat(Dir[&quot;#{root_path}/components/[_a-z]*&quot;])
+</span><span class="inferred1"><a name="line790"></a>790 
+</span><span class="inferred0"><a name="line791"></a>791         # Followed by the standard includes.
+</span><span class="marked1"><a name="line792"></a>792         paths.concat %w(
+</span><span class="inferred0"><a name="line793"></a>793           app
+</span><span class="inferred1"><a name="line794"></a>794           app/models
+</span><span class="inferred0"><a name="line795"></a>795           app/controllers
+</span><span class="inferred1"><a name="line796"></a>796           app/helpers
+</span><span class="inferred0"><a name="line797"></a>797           app/services
+</span><span class="inferred1"><a name="line798"></a>798           components
+</span><span class="inferred0"><a name="line799"></a>799           config
+</span><span class="inferred1"><a name="line800"></a>800           lib
+</span><span class="inferred0"><a name="line801"></a>801           vendor
+</span><span class="marked1"><a name="line802"></a>802         ).map { |dir| &quot;#{root_path}/#{dir}&quot; }.select { |dir| File.directory?(dir) }
+</span><span class="inferred0"><a name="line803"></a>803 
+</span><span class="marked1"><a name="line804"></a>804         paths.concat builtin_directories
+</span><span class="inferred0"><a name="line805"></a>805       end
+</span><span class="inferred1"><a name="line806"></a>806 
+</span><span class="inferred0"><a name="line807"></a>807       # Doesn't matter since plugins aren't in load_paths yet.
+</span><span class="marked1"><a name="line808"></a>808       def default_load_once_paths
+</span><span class="marked0"><a name="line809"></a>809         []
+</span><span class="marked1"><a name="line810"></a>810       end
+</span><span class="inferred0"><a name="line811"></a>811 
+</span><span class="marked1"><a name="line812"></a>812       def default_log_path
+</span><span class="marked0"><a name="line813"></a>813         File.join(root_path, 'log', &quot;#{environment}.log&quot;)
+</span><span class="marked1"><a name="line814"></a>814       end
+</span><span class="inferred0"><a name="line815"></a>815 
+</span><span class="marked1"><a name="line816"></a>816       def default_log_level
+</span><span class="marked0"><a name="line817"></a>817         environment == 'production' ? :info : :debug
+</span><span class="marked1"><a name="line818"></a>818       end
+</span><span class="inferred0"><a name="line819"></a>819 
+</span><span class="marked1"><a name="line820"></a>820       def default_database_configuration_file
+</span><span class="marked0"><a name="line821"></a>821         File.join(root_path, 'config', 'database.yml')
+</span><span class="marked1"><a name="line822"></a>822       end
+</span><span class="inferred0"><a name="line823"></a>823 
+</span><span class="marked1"><a name="line824"></a>824       def default_routes_configuration_file
+</span><span class="marked0"><a name="line825"></a>825         File.join(root_path, 'config', 'routes.rb')
+</span><span class="marked1"><a name="line826"></a>826       end
+</span><span class="inferred0"><a name="line827"></a>827 
+</span><span class="marked1"><a name="line828"></a>828       def default_view_path
+</span><span class="marked0"><a name="line829"></a>829         File.join(root_path, 'app', 'views')
+</span><span class="marked1"><a name="line830"></a>830       end
+</span><span class="inferred0"><a name="line831"></a>831 
+</span><span class="marked1"><a name="line832"></a>832       def default_controller_paths
+</span><span class="marked0"><a name="line833"></a>833         paths = [File.join(root_path, 'app', 'controllers')]
+</span><span class="marked1"><a name="line834"></a>834         paths.concat builtin_directories
+</span><span class="marked0"><a name="line835"></a>835         paths
+</span><span class="inferred1"><a name="line836"></a>836       end
+</span><span class="inferred0"><a name="line837"></a>837 
+</span><span class="marked1"><a name="line838"></a>838       def default_dependency_mechanism
+</span><span class="uncovered0"><a name="line839"></a>839         :load
+</span><span class="uncovered1"><a name="line840"></a>840       end
+</span><span class="inferred0"><a name="line841"></a>841 
+</span><span class="marked1"><a name="line842"></a>842       def default_cache_classes
+</span><span class="marked0"><a name="line843"></a>843         false
+</span><span class="marked1"><a name="line844"></a>844       end
+</span><span class="inferred0"><a name="line845"></a>845 
+</span><span class="marked1"><a name="line846"></a>846       def default_whiny_nils
+</span><span class="marked0"><a name="line847"></a>847         false
+</span><span class="marked1"><a name="line848"></a>848       end
+</span><span class="inferred0"><a name="line849"></a>849 
+</span><span class="marked1"><a name="line850"></a>850       def default_plugins
+</span><span class="marked0"><a name="line851"></a>851         nil
+</span><span class="marked1"><a name="line852"></a>852       end
+</span><span class="inferred0"><a name="line853"></a>853 
+</span><span class="marked1"><a name="line854"></a>854       def default_plugin_paths
+</span><span class="marked0"><a name="line855"></a>855         [&quot;#{root_path}/vendor/plugins&quot;]
+</span><span class="marked1"><a name="line856"></a>856       end
+</span><span class="inferred0"><a name="line857"></a>857 
+</span><span class="marked1"><a name="line858"></a>858       def default_plugin_locators
+</span><span class="marked0"><a name="line859"></a>859         locators = []
+</span><span class="marked1"><a name="line860"></a>860         locators &lt;&lt; Plugin::GemLocator if defined? Gem
+</span><span class="marked0"><a name="line861"></a>861         locators &lt;&lt; Plugin::FileSystemLocator
+</span><span class="inferred1"><a name="line862"></a>862       end
+</span><span class="inferred0"><a name="line863"></a>863 
+</span><span class="marked1"><a name="line864"></a>864       def default_plugin_loader
+</span><span class="marked0"><a name="line865"></a>865         Plugin::Loader
+</span><span class="marked1"><a name="line866"></a>866       end
+</span><span class="inferred0"><a name="line867"></a>867       
+</span><span class="marked1"><a name="line868"></a>868       def default_cache_store
+</span><span class="uncovered0"><a name="line869"></a>869         if File.exist?(&quot;#{root_path}/tmp/cache/&quot;)
+</span><span class="uncovered1"><a name="line870"></a>870           [ :file_store, &quot;#{root_path}/tmp/cache/&quot; ]
+</span><span class="uncovered0"><a name="line871"></a>871         else
+</span><span class="uncovered1"><a name="line872"></a>872           :memory_store
+</span><span class="uncovered0"><a name="line873"></a>873         end
+</span><span class="uncovered1"><a name="line874"></a>874       end
+</span><span class="inferred0"><a name="line875"></a>875       
+</span><span class="marked1"><a name="line876"></a>876       def default_gems
+</span><span class="marked0"><a name="line877"></a>877         []
+</span><span class="marked1"><a name="line878"></a>878       end
+</span><span class="inferred0"><a name="line879"></a>879   end
+</span><span class="inferred1"><a name="line880"></a>880 end
+</span><span class="inferred0"><a name="line881"></a>881 
+</span><span class="inferred1"><a name="line882"></a>882 # Needs to be duplicated from Active Support since its needed before Active
+</span><span class="inferred0"><a name="line883"></a>883 # Support is available. Here both Options and Hash are namespaced to prevent
+</span><span class="inferred1"><a name="line884"></a>884 # conflicts with other implementations AND with the classes residing in Active Support.
+</span><span class="marked0"><a name="line885"></a>885 class Rails::OrderedOptions &lt; Array #:nodoc:
+</span><span class="marked1"><a name="line886"></a>886   def []=(key, value)
+</span><span class="marked0"><a name="line887"></a>887     key = key.to_sym
+</span><span class="inferred1"><a name="line888"></a>888 
+</span><span class="marked0"><a name="line889"></a>889     if pair = find_pair(key)
+</span><span class="uncovered1"><a name="line890"></a>890       pair.pop
+</span><span class="uncovered0"><a name="line891"></a>891       pair &lt;&lt; value
+</span><span class="inferred1"><a name="line892"></a>892     else
+</span><span class="marked0"><a name="line893"></a>893       self &lt;&lt; [key, value]
+</span><span class="inferred1"><a name="line894"></a>894     end
+</span><span class="inferred0"><a name="line895"></a>895   end
+</span><span class="inferred1"><a name="line896"></a>896 
+</span><span class="marked0"><a name="line897"></a>897   def [](key)
+</span><span class="uncovered1"><a name="line898"></a>898     pair = find_pair(key.to_sym)
+</span><span class="uncovered0"><a name="line899"></a>899     pair ? pair.last : nil
+</span><span class="uncovered1"><a name="line900"></a>900   end
+</span><span class="inferred0"><a name="line901"></a>901 
+</span><span class="marked1"><a name="line902"></a>902   def method_missing(name, *args)
+</span><span class="marked0"><a name="line903"></a>903     if name.to_s =~ /(.*)=$/
+</span><span class="marked1"><a name="line904"></a>904       self[$1.to_sym] = args.first
+</span><span class="uncovered0"><a name="line905"></a>905     else
+</span><span class="uncovered1"><a name="line906"></a>906       self[name]
+</span><span class="uncovered0"><a name="line907"></a>907     end
+</span><span class="marked1"><a name="line908"></a>908   end
+</span><span class="inferred0"><a name="line909"></a>909 
+</span><span class="marked1"><a name="line910"></a>910   private
+</span><span class="marked0"><a name="line911"></a>911     def find_pair(key)
+</span><span class="marked1"><a name="line912"></a>912       self.each { |i| return i if i.first == key }
+</span><span class="marked0"><a name="line913"></a>913       return false
+</span><span class="inferred1"><a name="line914"></a>914     end
+</span><span class="inferred0"><a name="line915"></a>915 end
+</span></pre><hr/>
+    <p>Generated using the <a href='http://eigenclass.org/hiki.rb?rcov'>rcov code coverage analysis tool for Ruby</a>
+   version 0.8.1.2.</p>
+<p><a href='http://validator.w3.org/check/referer'><img src='http://www.w3.org/Icons/valid-xhtml10' height='31' alt='Valid XHTML 1.0!' width='88'/>
+        </a>
+      <a href='http://jigsaw.w3.org/css-validator/check/referer'><img src='http://jigsaw.w3.org/css-validator/images/vcss' alt='Valid CSS!' style='border:0;width:88px;height:31px'/>
+        </a>
+      </p>
+    </body>
+  </html>

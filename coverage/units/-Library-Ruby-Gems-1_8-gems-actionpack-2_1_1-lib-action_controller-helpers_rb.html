@@ -1,0 +1,831 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'><head><title>/Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/helpers.rb - C0 code coverage information</title>
+    <style type='text/css'>body { background-color: rgb(240, 240, 245); }</style>
+    <style type='text/css'>span.cross-ref-title {
+ font-size: 140%;
+}
+span.cross-ref a {
+ text-decoration: none;
+}
+span.cross-ref {
+ background-color:#f3f7fa;
+ border: 1px dashed #333;
+ margin: 1em;
+ padding: 0.5em;
+ overflow: hidden;
+}
+a.crossref-toggle {
+ text-decoration: none;
+}
+span.marked0 {
+ background-color: rgb(185, 210, 200);
+ display: block;
+}
+span.marked1 {
+ background-color: rgb(190, 215, 205);
+ display: block;
+}
+span.inferred0 {
+ background-color: rgb(175, 200, 200);
+ display: block;
+}
+span.inferred1 {
+ background-color: rgb(180, 205, 205);
+ display: block;
+}
+span.uncovered0 {
+ background-color: rgb(225, 110, 110);
+ display: block;
+}
+span.uncovered1 {
+ background-color: rgb(235, 120, 120);
+ display: block;
+}
+span.overview {
+ border-bottom: 8px solid black;
+}
+div.overview {
+ border-bottom: 8px solid black;
+}
+body {
+ font-family: verdana, arial, helvetica;
+}
+div.footer {
+ font-size: 68%;
+ margin-top: 1.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+ margin-bottom: 0.5em;
+}
+h5 {
+ margin-top: 0.5em;
+}
+.hidden {
+ display: none;
+}
+div.separator {
+ height: 10px;
+}
+/* Commented out for better readability, esp. on IE */
+/*
+table tr td, table tr th {
+ font-size: 68%;
+}
+td.value table tr td {
+ font-size: 11px;
+}
+*/
+table.percent_graph {
+ height: 12px;
+ border: #808080 1px solid;
+ empty-cells: show;
+}
+table.percent_graph td.covered {
+ height: 10px;
+ background: #00f000;
+}
+table.percent_graph td.uncovered {
+ height: 10px;
+ background: #e00000;
+}
+table.percent_graph td.NA {
+ height: 10px;
+ background: #eaeaea;
+}
+table.report {
+ border-collapse: collapse;
+ width: 100%;
+}
+table.report td.heading {
+ background: #dcecff;
+ border: #d0d0d0 1px solid;
+ font-weight: bold;
+ text-align: center;
+}
+table.report td.heading:hover {
+ background: #c0ffc0;
+}
+table.report td.text {
+ border: #d0d0d0 1px solid;
+}
+table.report td.value,
+table.report td.lines_total,
+table.report td.lines_code {
+ text-align: right;
+ border: #d0d0d0 1px solid;
+}
+table.report tr.light {
+ background-color: rgb(240, 240, 245);
+}
+table.report tr.dark {
+ background-color: rgb(230, 230, 235);
+}
+</style>
+    <script type='text/javascript'>
+// <![CDATA[
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make cross-references hidden by default
+  document.writeln( "<style type=\"text/css\">span.cross-ref { display: none }</style>" )
+  // ]]>
+</script>
+    <style type='text/css'>span.run0 {
+  background-color: rgb(178, 204, 255);
+  display: block;
+}
+span.run1 {
+  background-color: rgb(178, 206, 255);
+  display: block;
+}
+span.run2 {
+  background-color: rgb(178, 209, 255);
+  display: block;
+}
+span.run3 {
+  background-color: rgb(178, 211, 255);
+  display: block;
+}
+span.run4 {
+  background-color: rgb(178, 214, 255);
+  display: block;
+}
+span.run5 {
+  background-color: rgb(178, 218, 255);
+  display: block;
+}
+span.run6 {
+  background-color: rgb(178, 220, 255);
+  display: block;
+}
+span.run7 {
+  background-color: rgb(178, 223, 255);
+  display: block;
+}
+span.run8 {
+  background-color: rgb(178, 225, 255);
+  display: block;
+}
+span.run9 {
+  background-color: rgb(178, 228, 255);
+  display: block;
+}
+span.run10 {
+  background-color: rgb(178, 232, 255);
+  display: block;
+}
+span.run11 {
+  background-color: rgb(178, 234, 255);
+  display: block;
+}
+span.run12 {
+  background-color: rgb(178, 237, 255);
+  display: block;
+}
+span.run13 {
+  background-color: rgb(178, 239, 255);
+  display: block;
+}
+span.run14 {
+  background-color: rgb(178, 242, 255);
+  display: block;
+}
+span.run15 {
+  background-color: rgb(178, 246, 255);
+  display: block;
+}
+span.run16 {
+  background-color: rgb(178, 248, 255);
+  display: block;
+}
+span.run17 {
+  background-color: rgb(178, 251, 255);
+  display: block;
+}
+span.run18 {
+  background-color: rgb(178, 253, 255);
+  display: block;
+}
+span.run19 {
+  background-color: rgb(178, 255, 253);
+  display: block;
+}
+span.run20 {
+  background-color: rgb(178, 255, 249);
+  display: block;
+}
+span.run21 {
+  background-color: rgb(178, 255, 247);
+  display: block;
+}
+span.run22 {
+  background-color: rgb(178, 255, 244);
+  display: block;
+}
+span.run23 {
+  background-color: rgb(178, 255, 242);
+  display: block;
+}
+span.run24 {
+  background-color: rgb(178, 255, 239);
+  display: block;
+}
+span.run25 {
+  background-color: rgb(178, 255, 235);
+  display: block;
+}
+span.run26 {
+  background-color: rgb(178, 255, 233);
+  display: block;
+}
+span.run27 {
+  background-color: rgb(178, 255, 230);
+  display: block;
+}
+span.run28 {
+  background-color: rgb(178, 255, 228);
+  display: block;
+}
+span.run29 {
+  background-color: rgb(178, 255, 225);
+  display: block;
+}
+span.run30 {
+  background-color: rgb(178, 255, 221);
+  display: block;
+}
+span.run31 {
+  background-color: rgb(178, 255, 219);
+  display: block;
+}
+span.run32 {
+  background-color: rgb(178, 255, 216);
+  display: block;
+}
+span.run33 {
+  background-color: rgb(178, 255, 214);
+  display: block;
+}
+span.run34 {
+  background-color: rgb(178, 255, 211);
+  display: block;
+}
+span.run35 {
+  background-color: rgb(178, 255, 207);
+  display: block;
+}
+span.run36 {
+  background-color: rgb(178, 255, 205);
+  display: block;
+}
+span.run37 {
+  background-color: rgb(178, 255, 202);
+  display: block;
+}
+span.run38 {
+  background-color: rgb(178, 255, 200);
+  display: block;
+}
+span.run39 {
+  background-color: rgb(178, 255, 197);
+  display: block;
+}
+span.run40 {
+  background-color: rgb(178, 255, 193);
+  display: block;
+}
+span.run41 {
+  background-color: rgb(178, 255, 191);
+  display: block;
+}
+span.run42 {
+  background-color: rgb(178, 255, 188);
+  display: block;
+}
+span.run43 {
+  background-color: rgb(178, 255, 186);
+  display: block;
+}
+span.run44 {
+  background-color: rgb(178, 255, 183);
+  display: block;
+}
+span.run45 {
+  background-color: rgb(178, 255, 179);
+  display: block;
+}
+span.run46 {
+  background-color: rgb(179, 255, 178);
+  display: block;
+}
+span.run47 {
+  background-color: rgb(182, 255, 178);
+  display: block;
+}
+span.run48 {
+  background-color: rgb(184, 255, 178);
+  display: block;
+}
+span.run49 {
+  background-color: rgb(187, 255, 178);
+  display: block;
+}
+span.run50 {
+  background-color: rgb(191, 255, 178);
+  display: block;
+}
+span.run51 {
+  background-color: rgb(193, 255, 178);
+  display: block;
+}
+span.run52 {
+  background-color: rgb(196, 255, 178);
+  display: block;
+}
+span.run53 {
+  background-color: rgb(198, 255, 178);
+  display: block;
+}
+span.run54 {
+  background-color: rgb(201, 255, 178);
+  display: block;
+}
+span.run55 {
+  background-color: rgb(205, 255, 178);
+  display: block;
+}
+span.run56 {
+  background-color: rgb(207, 255, 178);
+  display: block;
+}
+span.run57 {
+  background-color: rgb(210, 255, 178);
+  display: block;
+}
+span.run58 {
+  background-color: rgb(212, 255, 178);
+  display: block;
+}
+span.run59 {
+  background-color: rgb(215, 255, 178);
+  display: block;
+}
+span.run60 {
+  background-color: rgb(219, 255, 178);
+  display: block;
+}
+span.run61 {
+  background-color: rgb(221, 255, 178);
+  display: block;
+}
+span.run62 {
+  background-color: rgb(224, 255, 178);
+  display: block;
+}
+span.run63 {
+  background-color: rgb(226, 255, 178);
+  display: block;
+}
+span.run64 {
+  background-color: rgb(229, 255, 178);
+  display: block;
+}
+span.run65 {
+  background-color: rgb(233, 255, 178);
+  display: block;
+}
+span.run66 {
+  background-color: rgb(235, 255, 178);
+  display: block;
+}
+span.run67 {
+  background-color: rgb(238, 255, 178);
+  display: block;
+}
+span.run68 {
+  background-color: rgb(240, 255, 178);
+  display: block;
+}
+span.run69 {
+  background-color: rgb(243, 255, 178);
+  display: block;
+}
+span.run70 {
+  background-color: rgb(247, 255, 178);
+  display: block;
+}
+span.run71 {
+  background-color: rgb(249, 255, 178);
+  display: block;
+}
+span.run72 {
+  background-color: rgb(252, 255, 178);
+  display: block;
+}
+span.run73 {
+  background-color: rgb(255, 255, 178);
+  display: block;
+}
+span.run74 {
+  background-color: rgb(255, 252, 178);
+  display: block;
+}
+span.run75 {
+  background-color: rgb(255, 248, 178);
+  display: block;
+}
+span.run76 {
+  background-color: rgb(255, 246, 178);
+  display: block;
+}
+span.run77 {
+  background-color: rgb(255, 243, 178);
+  display: block;
+}
+span.run78 {
+  background-color: rgb(255, 240, 178);
+  display: block;
+}
+span.run79 {
+  background-color: rgb(255, 238, 178);
+  display: block;
+}
+span.run80 {
+  background-color: rgb(255, 234, 178);
+  display: block;
+}
+span.run81 {
+  background-color: rgb(255, 232, 178);
+  display: block;
+}
+span.run82 {
+  background-color: rgb(255, 229, 178);
+  display: block;
+}
+span.run83 {
+  background-color: rgb(255, 226, 178);
+  display: block;
+}
+span.run84 {
+  background-color: rgb(255, 224, 178);
+  display: block;
+}
+span.run85 {
+  background-color: rgb(255, 220, 178);
+  display: block;
+}
+span.run86 {
+  background-color: rgb(255, 218, 178);
+  display: block;
+}
+span.run87 {
+  background-color: rgb(255, 215, 178);
+  display: block;
+}
+span.run88 {
+  background-color: rgb(255, 212, 178);
+  display: block;
+}
+span.run89 {
+  background-color: rgb(255, 210, 178);
+  display: block;
+}
+span.run90 {
+  background-color: rgb(255, 206, 178);
+  display: block;
+}
+span.run91 {
+  background-color: rgb(255, 204, 178);
+  display: block;
+}
+span.run92 {
+  background-color: rgb(255, 201, 178);
+  display: block;
+}
+span.run93 {
+  background-color: rgb(255, 198, 178);
+  display: block;
+}
+span.run94 {
+  background-color: rgb(255, 196, 178);
+  display: block;
+}
+span.run95 {
+  background-color: rgb(255, 192, 178);
+  display: block;
+}
+span.run96 {
+  background-color: rgb(255, 189, 178);
+  display: block;
+}
+span.run97 {
+  background-color: rgb(255, 187, 178);
+  display: block;
+}
+span.run98 {
+  background-color: rgb(255, 184, 178);
+  display: block;
+}
+span.run99 {
+  background-color: rgb(255, 182, 178);
+  display: block;
+}
+span.run100 {
+  background-color: rgb(255, 178, 178);
+  display: block;
+}
+</style>
+    </head>
+  <body><h3>C0 code coverage information</h3>
+    <p>Generated on Tue Nov 11 15:29:51 -0500 2008 with <a href='http://eigenclass.org/hiki/rcov'>rcov 0.8.1.2</a>
+      </p>
+    <hr/>
+    <pre><span class='marked0'>Code reported as executed by Ruby looks like this...
+</span><span class='marked1'>and this: this line is also marked as covered.
+</span><span class='inferred0'>Lines considered as run by rcov, but not reported by Ruby, look like this,
+</span><span class='inferred1'>and this: these lines were inferred by rcov (using simple heuristics).
+</span><span class='uncovered0'>Finally, here&apos;s a line marked as not executed.
+</span></pre>                       
+<table class='report'><thead><tr><td class='heading'>Name</td>
+      <td class='heading'>Total lines</td>
+      <td class='heading'>Lines of code</td>
+      <td class='heading'>Total coverage</td>
+      <td class='heading'>Code coverage</td>
+      </tr>
+    </thead>
+  <tbody><tr class='light'><td><a href='-Library-Ruby-Gems-1_8-gems-actionpack-2_1_1-lib-action_controller-helpers_rb.html'>/Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/helpers.rb</a>
+        </td>
+      <td class='lines_total'><tt>221</tt>
+        </td>
+      <td class='lines_code'><tt>95</tt>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_total'>86.4%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='86'/>
+                  <td class='uncovered' width='14'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_code'>68.4%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='68'/>
+                  <td class='uncovered' width='32'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<pre><span class="inferred0"><a name="line1"></a>  1 # FIXME: helper { ... } is broken on Ruby 1.9
+</span><span class="marked1"><a name="line2"></a>  2 module ActionController #:nodoc:
+</span><span class="marked0"><a name="line3"></a>  3   module Helpers #:nodoc:
+</span><span class="marked1"><a name="line4"></a>  4     HELPERS_DIR = (defined?(RAILS_ROOT) ? &quot;#{RAILS_ROOT}/app/helpers&quot; : &quot;app/helpers&quot;)
+</span><span class="inferred0"><a name="line5"></a>  5 
+</span><span class="marked1"><a name="line6"></a>  6     def self.included(base)
+</span><span class="inferred0"><a name="line7"></a>  7       # Initialize the base module to aggregate its helpers.
+</span><span class="marked1"><a name="line8"></a>  8       base.class_inheritable_accessor :master_helper_module
+</span><span class="marked0"><a name="line9"></a>  9       base.master_helper_module = Module.new
+</span><span class="inferred1"><a name="line10"></a> 10 
+</span><span class="inferred0"><a name="line11"></a> 11       # Extend base with class methods to declare helpers.
+</span><span class="marked1"><a name="line12"></a> 12       base.extend(ClassMethods)
+</span><span class="inferred0"><a name="line13"></a> 13 
+</span><span class="marked1"><a name="line14"></a> 14       base.class_eval do
+</span><span class="inferred0"><a name="line15"></a> 15         # Wrap inherited to create a new master helper module for subclasses.
+</span><span class="marked1"><a name="line16"></a> 16         class &lt;&lt; self
+</span><span class="marked0"><a name="line17"></a> 17           alias_method_chain :inherited, :helper
+</span><span class="inferred1"><a name="line18"></a> 18         end
+</span><span class="inferred0"><a name="line19"></a> 19       end
+</span><span class="inferred1"><a name="line20"></a> 20     end
+</span><span class="inferred0"><a name="line21"></a> 21 
+</span><span class="inferred1"><a name="line22"></a> 22     # The Rails framework provides a large number of helpers for working with +assets+, +dates+, +forms+, 
+</span><span class="inferred0"><a name="line23"></a> 23     # +numbers+ and Active Record objects, to name a few. These helpers are available to all templates
+</span><span class="inferred1"><a name="line24"></a> 24     # by default.
+</span><span class="inferred0"><a name="line25"></a> 25     #
+</span><span class="inferred1"><a name="line26"></a> 26     # In addition to using the standard template helpers provided in the Rails framework, creating custom helpers to
+</span><span class="inferred0"><a name="line27"></a> 27     # extract complicated logic or reusable functionality is strongly encouraged.  By default, the controller will 
+</span><span class="inferred1"><a name="line28"></a> 28     # include a helper whose name matches that of the controller, e.g., &lt;tt&gt;MyController&lt;/tt&gt; will automatically
+</span><span class="inferred0"><a name="line29"></a> 29     # include &lt;tt&gt;MyHelper&lt;/tt&gt;.
+</span><span class="inferred1"><a name="line30"></a> 30     # 
+</span><span class="inferred0"><a name="line31"></a> 31     # Additional helpers can be specified using the +helper+ class method in &lt;tt&gt;ActionController::Base&lt;/tt&gt; or any
+</span><span class="inferred1"><a name="line32"></a> 32     # controller which inherits from it.
+</span><span class="inferred0"><a name="line33"></a> 33     #
+</span><span class="inferred1"><a name="line34"></a> 34     # ==== Examples
+</span><span class="inferred0"><a name="line35"></a> 35     # The +to_s+ method from the Time class can be wrapped in a helper method to display a custom message if 
+</span><span class="inferred1"><a name="line36"></a> 36     # the Time object is blank:
+</span><span class="inferred0"><a name="line37"></a> 37     #
+</span><span class="inferred1"><a name="line38"></a> 38     #   module FormattedTimeHelper
+</span><span class="inferred0"><a name="line39"></a> 39     #     def format_time(time, format=:long, blank_message=&quot;&amp;nbsp;&quot;)
+</span><span class="inferred1"><a name="line40"></a> 40     #       time.blank? ? blank_message : time.to_s(format)
+</span><span class="inferred0"><a name="line41"></a> 41     #     end
+</span><span class="inferred1"><a name="line42"></a> 42     #   end
+</span><span class="inferred0"><a name="line43"></a> 43     #
+</span><span class="inferred1"><a name="line44"></a> 44     # FormattedTimeHelper can now be included in a controller, using the +helper+ class method:
+</span><span class="inferred0"><a name="line45"></a> 45     #
+</span><span class="inferred1"><a name="line46"></a> 46     #   class EventsController &lt; ActionController::Base
+</span><span class="inferred0"><a name="line47"></a> 47     #     helper FormattedTimeHelper
+</span><span class="inferred1"><a name="line48"></a> 48     #     def index
+</span><span class="inferred0"><a name="line49"></a> 49     #       @events = Event.find(:all)
+</span><span class="inferred1"><a name="line50"></a> 50     #     end
+</span><span class="inferred0"><a name="line51"></a> 51     #   end
+</span><span class="inferred1"><a name="line52"></a> 52     #
+</span><span class="inferred0"><a name="line53"></a> 53     # Then, in any view rendered by &lt;tt&gt;EventController&lt;/tt&gt;, the &lt;tt&gt;format_time&lt;/tt&gt; method can be called:
+</span><span class="inferred1"><a name="line54"></a> 54     #
+</span><span class="inferred0"><a name="line55"></a> 55     #   &lt;% @events.each do |event| -%&gt;
+</span><span class="inferred1"><a name="line56"></a> 56     #     &lt;p&gt;
+</span><span class="inferred0"><a name="line57"></a> 57     #       &lt;% format_time(event.time, :short, &quot;N/A&quot;) %&gt; | &lt;%= event.name %&gt; 
+</span><span class="inferred1"><a name="line58"></a> 58     #     &lt;/p&gt;
+</span><span class="inferred0"><a name="line59"></a> 59     #   &lt;% end -%&gt;
+</span><span class="inferred1"><a name="line60"></a> 60     #
+</span><span class="inferred0"><a name="line61"></a> 61     # Finally, assuming we have two event instances, one which has a time and one which does not, 
+</span><span class="inferred1"><a name="line62"></a> 62     # the output might look like this:
+</span><span class="inferred0"><a name="line63"></a> 63     #
+</span><span class="inferred1"><a name="line64"></a> 64     #   23 Aug 11:30 | Carolina Railhawks Soccer Match 
+</span><span class="inferred0"><a name="line65"></a> 65     #   N/A | Carolina Railhaws Training Workshop
+</span><span class="inferred1"><a name="line66"></a> 66     #
+</span><span class="marked0"><a name="line67"></a> 67     module ClassMethods
+</span><span class="inferred1"><a name="line68"></a> 68       # Makes all the (instance) methods in the helper module available to templates rendered through this controller.
+</span><span class="inferred0"><a name="line69"></a> 69       # See ActionView::Helpers (link:classes/ActionView/Helpers.html) for more about making your own helper modules
+</span><span class="inferred1"><a name="line70"></a> 70       # available to the templates.
+</span><span class="marked0"><a name="line71"></a> 71       def add_template_helper(helper_module) #:nodoc:
+</span><span class="marked1"><a name="line72"></a> 72         master_helper_module.module_eval { include helper_module }
+</span><span class="marked0"><a name="line73"></a> 73       end
+</span><span class="inferred1"><a name="line74"></a> 74 
+</span><span class="inferred0"><a name="line75"></a> 75       # The +helper+ class method can take a series of helper module names, a block, or both.
+</span><span class="inferred1"><a name="line76"></a> 76       #
+</span><span class="inferred0"><a name="line77"></a> 77       # * &lt;tt&gt;*args&lt;/tt&gt;: One or more modules, strings or symbols, or the special symbol &lt;tt&gt;:all&lt;/tt&gt;.
+</span><span class="inferred1"><a name="line78"></a> 78       # * &lt;tt&gt;&amp;block&lt;/tt&gt;: A block defining helper methods.
+</span><span class="inferred0"><a name="line79"></a> 79       # 
+</span><span class="inferred1"><a name="line80"></a> 80       # ==== Examples
+</span><span class="inferred0"><a name="line81"></a> 81       # When the argument is a string or symbol, the method will provide the &quot;_helper&quot; suffix, require the file 
+</span><span class="inferred1"><a name="line82"></a> 82       # and include the module in the template class.  The second form illustrates how to include custom helpers 
+</span><span class="inferred0"><a name="line83"></a> 83       # when working with namespaced controllers, or other cases where the file containing the helper definition is not
+</span><span class="inferred1"><a name="line84"></a> 84       # in one of Rails' standard load paths:
+</span><span class="inferred0"><a name="line85"></a> 85       #   helper :foo             # =&gt; requires 'foo_helper' and includes FooHelper
+</span><span class="inferred1"><a name="line86"></a> 86       #   helper 'resources/foo'  # =&gt; requires 'resources/foo_helper' and includes Resources::FooHelper
+</span><span class="inferred0"><a name="line87"></a> 87       #
+</span><span class="inferred1"><a name="line88"></a> 88       # When the argument is a module it will be included directly in the template class.
+</span><span class="inferred0"><a name="line89"></a> 89       #   helper FooHelper # =&gt; includes FooHelper
+</span><span class="inferred1"><a name="line90"></a> 90       #
+</span><span class="inferred0"><a name="line91"></a> 91       # When the argument is the symbol &lt;tt&gt;:all&lt;/tt&gt;, the controller will include all helpers from 
+</span><span class="inferred1"><a name="line92"></a> 92       # &lt;tt&gt;app/helpers/**/*.rb&lt;/tt&gt; under RAILS_ROOT.
+</span><span class="inferred0"><a name="line93"></a> 93       #   helper :all
+</span><span class="inferred1"><a name="line94"></a> 94       #
+</span><span class="inferred0"><a name="line95"></a> 95       # Additionally, the +helper+ class method can receive and evaluate a block, making the methods defined available 
+</span><span class="inferred1"><a name="line96"></a> 96       # to the template.
+</span><span class="inferred0"><a name="line97"></a> 97       #   # One line
+</span><span class="inferred1"><a name="line98"></a> 98       #   helper { def hello() &quot;Hello, world!&quot; end }
+</span><span class="inferred0"><a name="line99"></a> 99       #   # Multi-line
+</span><span class="inferred1"><a name="line100"></a>100       #   helper do
+</span><span class="inferred0"><a name="line101"></a>101       #     def foo(bar) 
+</span><span class="inferred1"><a name="line102"></a>102       #       &quot;#{bar} is the very best&quot; 
+</span><span class="inferred0"><a name="line103"></a>103       #     end
+</span><span class="inferred1"><a name="line104"></a>104       #   end
+</span><span class="inferred0"><a name="line105"></a>105       # 
+</span><span class="inferred1"><a name="line106"></a>106       # Finally, all the above styles can be mixed together, and the +helper+ method can be invoked with a mix of
+</span><span class="inferred0"><a name="line107"></a>107       # +symbols+, +strings+, +modules+ and blocks.
+</span><span class="inferred1"><a name="line108"></a>108       #   helper(:three, BlindHelper) { def mice() 'mice' end }
+</span><span class="inferred0"><a name="line109"></a>109       #
+</span><span class="marked1"><a name="line110"></a>110       def helper(*args, &amp;block)
+</span><span class="marked0"><a name="line111"></a>111         args.flatten.each do |arg|
+</span><span class="marked1"><a name="line112"></a>112           case arg
+</span><span class="marked0"><a name="line113"></a>113             when Module
+</span><span class="marked1"><a name="line114"></a>114               add_template_helper(arg)
+</span><span class="marked0"><a name="line115"></a>115             when :all
+</span><span class="marked1"><a name="line116"></a>116               helper(all_application_helpers)
+</span><span class="marked0"><a name="line117"></a>117             when String, Symbol
+</span><span class="marked1"><a name="line118"></a>118               file_name  = arg.to_s.underscore + '_helper'
+</span><span class="marked0"><a name="line119"></a>119               class_name = file_name.camelize
+</span><span class="inferred1"><a name="line120"></a>120 
+</span><span class="marked0"><a name="line121"></a>121               begin
+</span><span class="marked1"><a name="line122"></a>122                 require_dependency(file_name)
+</span><span class="uncovered0"><a name="line123"></a>123               rescue LoadError =&gt; load_error
+</span><span class="uncovered1"><a name="line124"></a>124                 requiree = / -- (.*?)(\.rb)?$/.match(load_error.message).to_a[1]
+</span><span class="uncovered0"><a name="line125"></a>125                 if requiree == file_name
+</span><span class="uncovered1"><a name="line126"></a>126                   msg = &quot;Missing helper file helpers/#{file_name}.rb&quot;
+</span><span class="uncovered0"><a name="line127"></a>127                   raise LoadError.new(msg).copy_blame!(load_error)
+</span><span class="uncovered1"><a name="line128"></a>128                 else
+</span><span class="uncovered0"><a name="line129"></a>129                   raise
+</span><span class="uncovered1"><a name="line130"></a>130                 end
+</span><span class="uncovered0"><a name="line131"></a>131               end
+</span><span class="inferred1"><a name="line132"></a>132 
+</span><span class="marked0"><a name="line133"></a>133               add_template_helper(class_name.constantize)
+</span><span class="uncovered1"><a name="line134"></a>134             else
+</span><span class="uncovered0"><a name="line135"></a>135               raise ArgumentError, &quot;helper expects String, Symbol, or Module argument (was: #{args.inspect})&quot;
+</span><span class="uncovered1"><a name="line136"></a>136           end
+</span><span class="uncovered0"><a name="line137"></a>137         end
+</span><span class="inferred1"><a name="line138"></a>138 
+</span><span class="inferred0"><a name="line139"></a>139         # Evaluate block in template class if given.
+</span><span class="marked1"><a name="line140"></a>140         master_helper_module.module_eval(&amp;block) if block_given?
+</span><span class="inferred0"><a name="line141"></a>141       end
+</span><span class="inferred1"><a name="line142"></a>142 
+</span><span class="inferred0"><a name="line143"></a>143       # Declare a controller method as a helper. For example, the following
+</span><span class="inferred1"><a name="line144"></a>144       # makes the +current_user+ controller method available to the view:
+</span><span class="inferred0"><a name="line145"></a>145       #   class ApplicationController &lt; ActionController::Base
+</span><span class="inferred1"><a name="line146"></a>146       #     helper_method :current_user, :logged_in?
+</span><span class="inferred0"><a name="line147"></a>147       #
+</span><span class="inferred1"><a name="line148"></a>148       #     def current_user
+</span><span class="inferred0"><a name="line149"></a>149       #       @current_user ||= User.find_by_id(session[:user])
+</span><span class="inferred1"><a name="line150"></a>150       #     end
+</span><span class="inferred0"><a name="line151"></a>151       #
+</span><span class="inferred1"><a name="line152"></a>152       #      def logged_in?
+</span><span class="inferred0"><a name="line153"></a>153       #        current_user != nil
+</span><span class="inferred1"><a name="line154"></a>154       #      end
+</span><span class="inferred0"><a name="line155"></a>155       #   end
+</span><span class="inferred1"><a name="line156"></a>156       #
+</span><span class="inferred0"><a name="line157"></a>157       # In a view:
+</span><span class="inferred1"><a name="line158"></a>158       #  &lt;% if logged_in? -%&gt;Welcome, &lt;%= current_user.name %&gt;&lt;% end -%&gt;
+</span><span class="marked0"><a name="line159"></a>159       def helper_method(*methods)
+</span><span class="marked1"><a name="line160"></a>160         methods.flatten.each do |method|
+</span><span class="marked0"><a name="line161"></a>161           master_helper_module.module_eval &lt;&lt;-end_eval
+</span><span class="inferred1"><a name="line162"></a>162             def #{method}(*args, &amp;block)
+</span><span class="inferred0"><a name="line163"></a>163               controller.send(%(#{method}), *args, &amp;block)
+</span><span class="inferred1"><a name="line164"></a>164             end
+</span><span class="inferred0"><a name="line165"></a>165           end_eval
+</span><span class="inferred1"><a name="line166"></a>166         end
+</span><span class="marked0"><a name="line167"></a>167       end
+</span><span class="inferred1"><a name="line168"></a>168 
+</span><span class="inferred0"><a name="line169"></a>169       # Declares helper accessors for controller attributes. For example, the
+</span><span class="inferred1"><a name="line170"></a>170       # following adds new +name+ and &lt;tt&gt;name=&lt;/tt&gt; instance methods to a
+</span><span class="inferred0"><a name="line171"></a>171       # controller and makes them available to the view:
+</span><span class="inferred1"><a name="line172"></a>172       #   helper_attr :name
+</span><span class="inferred0"><a name="line173"></a>173       #   attr_accessor :name
+</span><span class="marked1"><a name="line174"></a>174       def helper_attr(*attrs)
+</span><span class="uncovered0"><a name="line175"></a>175         attrs.flatten.each { |attr| helper_method(attr, &quot;#{attr}=&quot;) }
+</span><span class="uncovered1"><a name="line176"></a>176       end
+</span><span class="inferred0"><a name="line177"></a>177 
+</span><span class="inferred1"><a name="line178"></a>178       # Provides a proxy to access helpers methods from outside the view.
+</span><span class="marked0"><a name="line179"></a>179       def helpers
+</span><span class="uncovered1"><a name="line180"></a>180         unless @helper_proxy
+</span><span class="uncovered0"><a name="line181"></a>181           @helper_proxy = ActionView::Base.new
+</span><span class="uncovered1"><a name="line182"></a>182           @helper_proxy.extend master_helper_module
+</span><span class="uncovered0"><a name="line183"></a>183         else
+</span><span class="uncovered1"><a name="line184"></a>184           @helper_proxy
+</span><span class="uncovered0"><a name="line185"></a>185         end
+</span><span class="uncovered1"><a name="line186"></a>186       end
+</span><span class="inferred0"><a name="line187"></a>187 
+</span><span class="marked1"><a name="line188"></a>188       private
+</span><span class="marked0"><a name="line189"></a>189         def default_helper_module!
+</span><span class="marked1"><a name="line190"></a>190           unless name.blank?
+</span><span class="marked0"><a name="line191"></a>191             module_name = name.sub(/Controller$|$/, 'Helper')
+</span><span class="marked1"><a name="line192"></a>192             module_path = module_name.split('::').map { |m| m.underscore }.join('/')
+</span><span class="marked0"><a name="line193"></a>193             require_dependency module_path
+</span><span class="marked1"><a name="line194"></a>194             helper module_name.constantize
+</span><span class="inferred0"><a name="line195"></a>195           end
+</span><span class="uncovered1"><a name="line196"></a>196         rescue MissingSourceFile =&gt; e
+</span><span class="uncovered0"><a name="line197"></a>197           raise unless e.is_missing? module_path
+</span><span class="uncovered1"><a name="line198"></a>198         rescue NameError =&gt; e
+</span><span class="uncovered0"><a name="line199"></a>199           raise unless e.missing_name? module_name
+</span><span class="marked1"><a name="line200"></a>200         end
+</span><span class="inferred0"><a name="line201"></a>201 
+</span><span class="marked1"><a name="line202"></a>202         def inherited_with_helper(child)
+</span><span class="marked0"><a name="line203"></a>203           inherited_without_helper(child)
+</span><span class="inferred1"><a name="line204"></a>204 
+</span><span class="marked0"><a name="line205"></a>205           begin
+</span><span class="marked1"><a name="line206"></a>206             child.master_helper_module = Module.new
+</span><span class="marked0"><a name="line207"></a>207             child.master_helper_module.send! :include, master_helper_module
+</span><span class="marked1"><a name="line208"></a>208             child.send! :default_helper_module!
+</span><span class="uncovered0"><a name="line209"></a>209           rescue MissingSourceFile =&gt; e
+</span><span class="uncovered1"><a name="line210"></a>210             raise unless e.is_missing?(&quot;helpers/#{child.controller_path}_helper&quot;)
+</span><span class="uncovered0"><a name="line211"></a>211           end
+</span><span class="uncovered1"><a name="line212"></a>212         end
+</span><span class="inferred0"><a name="line213"></a>213 
+</span><span class="inferred1"><a name="line214"></a>214         # Extract helper names from files in app/helpers/**/*.rb
+</span><span class="marked0"><a name="line215"></a>215         def all_application_helpers
+</span><span class="marked1"><a name="line216"></a>216           extract = /^#{Regexp.quote(HELPERS_DIR)}\/?(.*)_helper.rb$/
+</span><span class="marked0"><a name="line217"></a>217           Dir[&quot;#{HELPERS_DIR}/**/*_helper.rb&quot;].map { |file| file.sub extract, '\1' }
+</span><span class="inferred1"><a name="line218"></a>218         end
+</span><span class="inferred0"><a name="line219"></a>219     end
+</span><span class="inferred1"><a name="line220"></a>220   end
+</span><span class="inferred0"><a name="line221"></a>221 end
+</span></pre><hr/>
+    <p>Generated using the <a href='http://eigenclass.org/hiki.rb?rcov'>rcov code coverage analysis tool for Ruby</a>
+   version 0.8.1.2.</p>
+<p><a href='http://validator.w3.org/check/referer'><img src='http://www.w3.org/Icons/valid-xhtml10' height='31' alt='Valid XHTML 1.0!' width='88'/>
+        </a>
+      <a href='http://jigsaw.w3.org/css-validator/check/referer'><img src='http://jigsaw.w3.org/css-validator/images/vcss' alt='Valid CSS!' style='border:0;width:88px;height:31px'/>
+        </a>
+      </p>
+    </body>
+  </html>

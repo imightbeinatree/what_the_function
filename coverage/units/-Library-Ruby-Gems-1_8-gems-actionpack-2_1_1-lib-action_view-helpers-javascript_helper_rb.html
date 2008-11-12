@@ -1,0 +1,827 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'><head><title>/Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/helpers/javascript_helper.rb - C0 code coverage information</title>
+    <style type='text/css'>body { background-color: rgb(240, 240, 245); }</style>
+    <style type='text/css'>span.cross-ref-title {
+ font-size: 140%;
+}
+span.cross-ref a {
+ text-decoration: none;
+}
+span.cross-ref {
+ background-color:#f3f7fa;
+ border: 1px dashed #333;
+ margin: 1em;
+ padding: 0.5em;
+ overflow: hidden;
+}
+a.crossref-toggle {
+ text-decoration: none;
+}
+span.marked0 {
+ background-color: rgb(185, 210, 200);
+ display: block;
+}
+span.marked1 {
+ background-color: rgb(190, 215, 205);
+ display: block;
+}
+span.inferred0 {
+ background-color: rgb(175, 200, 200);
+ display: block;
+}
+span.inferred1 {
+ background-color: rgb(180, 205, 205);
+ display: block;
+}
+span.uncovered0 {
+ background-color: rgb(225, 110, 110);
+ display: block;
+}
+span.uncovered1 {
+ background-color: rgb(235, 120, 120);
+ display: block;
+}
+span.overview {
+ border-bottom: 8px solid black;
+}
+div.overview {
+ border-bottom: 8px solid black;
+}
+body {
+ font-family: verdana, arial, helvetica;
+}
+div.footer {
+ font-size: 68%;
+ margin-top: 1.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+ margin-bottom: 0.5em;
+}
+h5 {
+ margin-top: 0.5em;
+}
+.hidden {
+ display: none;
+}
+div.separator {
+ height: 10px;
+}
+/* Commented out for better readability, esp. on IE */
+/*
+table tr td, table tr th {
+ font-size: 68%;
+}
+td.value table tr td {
+ font-size: 11px;
+}
+*/
+table.percent_graph {
+ height: 12px;
+ border: #808080 1px solid;
+ empty-cells: show;
+}
+table.percent_graph td.covered {
+ height: 10px;
+ background: #00f000;
+}
+table.percent_graph td.uncovered {
+ height: 10px;
+ background: #e00000;
+}
+table.percent_graph td.NA {
+ height: 10px;
+ background: #eaeaea;
+}
+table.report {
+ border-collapse: collapse;
+ width: 100%;
+}
+table.report td.heading {
+ background: #dcecff;
+ border: #d0d0d0 1px solid;
+ font-weight: bold;
+ text-align: center;
+}
+table.report td.heading:hover {
+ background: #c0ffc0;
+}
+table.report td.text {
+ border: #d0d0d0 1px solid;
+}
+table.report td.value,
+table.report td.lines_total,
+table.report td.lines_code {
+ text-align: right;
+ border: #d0d0d0 1px solid;
+}
+table.report tr.light {
+ background-color: rgb(240, 240, 245);
+}
+table.report tr.dark {
+ background-color: rgb(230, 230, 235);
+}
+</style>
+    <script type='text/javascript'>
+// <![CDATA[
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make cross-references hidden by default
+  document.writeln( "<style type=\"text/css\">span.cross-ref { display: none }</style>" )
+  // ]]>
+</script>
+    <style type='text/css'>span.run0 {
+  background-color: rgb(178, 204, 255);
+  display: block;
+}
+span.run1 {
+  background-color: rgb(178, 206, 255);
+  display: block;
+}
+span.run2 {
+  background-color: rgb(178, 209, 255);
+  display: block;
+}
+span.run3 {
+  background-color: rgb(178, 211, 255);
+  display: block;
+}
+span.run4 {
+  background-color: rgb(178, 214, 255);
+  display: block;
+}
+span.run5 {
+  background-color: rgb(178, 218, 255);
+  display: block;
+}
+span.run6 {
+  background-color: rgb(178, 220, 255);
+  display: block;
+}
+span.run7 {
+  background-color: rgb(178, 223, 255);
+  display: block;
+}
+span.run8 {
+  background-color: rgb(178, 225, 255);
+  display: block;
+}
+span.run9 {
+  background-color: rgb(178, 228, 255);
+  display: block;
+}
+span.run10 {
+  background-color: rgb(178, 232, 255);
+  display: block;
+}
+span.run11 {
+  background-color: rgb(178, 234, 255);
+  display: block;
+}
+span.run12 {
+  background-color: rgb(178, 237, 255);
+  display: block;
+}
+span.run13 {
+  background-color: rgb(178, 239, 255);
+  display: block;
+}
+span.run14 {
+  background-color: rgb(178, 242, 255);
+  display: block;
+}
+span.run15 {
+  background-color: rgb(178, 246, 255);
+  display: block;
+}
+span.run16 {
+  background-color: rgb(178, 248, 255);
+  display: block;
+}
+span.run17 {
+  background-color: rgb(178, 251, 255);
+  display: block;
+}
+span.run18 {
+  background-color: rgb(178, 253, 255);
+  display: block;
+}
+span.run19 {
+  background-color: rgb(178, 255, 253);
+  display: block;
+}
+span.run20 {
+  background-color: rgb(178, 255, 249);
+  display: block;
+}
+span.run21 {
+  background-color: rgb(178, 255, 247);
+  display: block;
+}
+span.run22 {
+  background-color: rgb(178, 255, 244);
+  display: block;
+}
+span.run23 {
+  background-color: rgb(178, 255, 242);
+  display: block;
+}
+span.run24 {
+  background-color: rgb(178, 255, 239);
+  display: block;
+}
+span.run25 {
+  background-color: rgb(178, 255, 235);
+  display: block;
+}
+span.run26 {
+  background-color: rgb(178, 255, 233);
+  display: block;
+}
+span.run27 {
+  background-color: rgb(178, 255, 230);
+  display: block;
+}
+span.run28 {
+  background-color: rgb(178, 255, 228);
+  display: block;
+}
+span.run29 {
+  background-color: rgb(178, 255, 225);
+  display: block;
+}
+span.run30 {
+  background-color: rgb(178, 255, 221);
+  display: block;
+}
+span.run31 {
+  background-color: rgb(178, 255, 219);
+  display: block;
+}
+span.run32 {
+  background-color: rgb(178, 255, 216);
+  display: block;
+}
+span.run33 {
+  background-color: rgb(178, 255, 214);
+  display: block;
+}
+span.run34 {
+  background-color: rgb(178, 255, 211);
+  display: block;
+}
+span.run35 {
+  background-color: rgb(178, 255, 207);
+  display: block;
+}
+span.run36 {
+  background-color: rgb(178, 255, 205);
+  display: block;
+}
+span.run37 {
+  background-color: rgb(178, 255, 202);
+  display: block;
+}
+span.run38 {
+  background-color: rgb(178, 255, 200);
+  display: block;
+}
+span.run39 {
+  background-color: rgb(178, 255, 197);
+  display: block;
+}
+span.run40 {
+  background-color: rgb(178, 255, 193);
+  display: block;
+}
+span.run41 {
+  background-color: rgb(178, 255, 191);
+  display: block;
+}
+span.run42 {
+  background-color: rgb(178, 255, 188);
+  display: block;
+}
+span.run43 {
+  background-color: rgb(178, 255, 186);
+  display: block;
+}
+span.run44 {
+  background-color: rgb(178, 255, 183);
+  display: block;
+}
+span.run45 {
+  background-color: rgb(178, 255, 179);
+  display: block;
+}
+span.run46 {
+  background-color: rgb(179, 255, 178);
+  display: block;
+}
+span.run47 {
+  background-color: rgb(182, 255, 178);
+  display: block;
+}
+span.run48 {
+  background-color: rgb(184, 255, 178);
+  display: block;
+}
+span.run49 {
+  background-color: rgb(187, 255, 178);
+  display: block;
+}
+span.run50 {
+  background-color: rgb(191, 255, 178);
+  display: block;
+}
+span.run51 {
+  background-color: rgb(193, 255, 178);
+  display: block;
+}
+span.run52 {
+  background-color: rgb(196, 255, 178);
+  display: block;
+}
+span.run53 {
+  background-color: rgb(198, 255, 178);
+  display: block;
+}
+span.run54 {
+  background-color: rgb(201, 255, 178);
+  display: block;
+}
+span.run55 {
+  background-color: rgb(205, 255, 178);
+  display: block;
+}
+span.run56 {
+  background-color: rgb(207, 255, 178);
+  display: block;
+}
+span.run57 {
+  background-color: rgb(210, 255, 178);
+  display: block;
+}
+span.run58 {
+  background-color: rgb(212, 255, 178);
+  display: block;
+}
+span.run59 {
+  background-color: rgb(215, 255, 178);
+  display: block;
+}
+span.run60 {
+  background-color: rgb(219, 255, 178);
+  display: block;
+}
+span.run61 {
+  background-color: rgb(221, 255, 178);
+  display: block;
+}
+span.run62 {
+  background-color: rgb(224, 255, 178);
+  display: block;
+}
+span.run63 {
+  background-color: rgb(226, 255, 178);
+  display: block;
+}
+span.run64 {
+  background-color: rgb(229, 255, 178);
+  display: block;
+}
+span.run65 {
+  background-color: rgb(233, 255, 178);
+  display: block;
+}
+span.run66 {
+  background-color: rgb(235, 255, 178);
+  display: block;
+}
+span.run67 {
+  background-color: rgb(238, 255, 178);
+  display: block;
+}
+span.run68 {
+  background-color: rgb(240, 255, 178);
+  display: block;
+}
+span.run69 {
+  background-color: rgb(243, 255, 178);
+  display: block;
+}
+span.run70 {
+  background-color: rgb(247, 255, 178);
+  display: block;
+}
+span.run71 {
+  background-color: rgb(249, 255, 178);
+  display: block;
+}
+span.run72 {
+  background-color: rgb(252, 255, 178);
+  display: block;
+}
+span.run73 {
+  background-color: rgb(255, 255, 178);
+  display: block;
+}
+span.run74 {
+  background-color: rgb(255, 252, 178);
+  display: block;
+}
+span.run75 {
+  background-color: rgb(255, 248, 178);
+  display: block;
+}
+span.run76 {
+  background-color: rgb(255, 246, 178);
+  display: block;
+}
+span.run77 {
+  background-color: rgb(255, 243, 178);
+  display: block;
+}
+span.run78 {
+  background-color: rgb(255, 240, 178);
+  display: block;
+}
+span.run79 {
+  background-color: rgb(255, 238, 178);
+  display: block;
+}
+span.run80 {
+  background-color: rgb(255, 234, 178);
+  display: block;
+}
+span.run81 {
+  background-color: rgb(255, 232, 178);
+  display: block;
+}
+span.run82 {
+  background-color: rgb(255, 229, 178);
+  display: block;
+}
+span.run83 {
+  background-color: rgb(255, 226, 178);
+  display: block;
+}
+span.run84 {
+  background-color: rgb(255, 224, 178);
+  display: block;
+}
+span.run85 {
+  background-color: rgb(255, 220, 178);
+  display: block;
+}
+span.run86 {
+  background-color: rgb(255, 218, 178);
+  display: block;
+}
+span.run87 {
+  background-color: rgb(255, 215, 178);
+  display: block;
+}
+span.run88 {
+  background-color: rgb(255, 212, 178);
+  display: block;
+}
+span.run89 {
+  background-color: rgb(255, 210, 178);
+  display: block;
+}
+span.run90 {
+  background-color: rgb(255, 206, 178);
+  display: block;
+}
+span.run91 {
+  background-color: rgb(255, 204, 178);
+  display: block;
+}
+span.run92 {
+  background-color: rgb(255, 201, 178);
+  display: block;
+}
+span.run93 {
+  background-color: rgb(255, 198, 178);
+  display: block;
+}
+span.run94 {
+  background-color: rgb(255, 196, 178);
+  display: block;
+}
+span.run95 {
+  background-color: rgb(255, 192, 178);
+  display: block;
+}
+span.run96 {
+  background-color: rgb(255, 189, 178);
+  display: block;
+}
+span.run97 {
+  background-color: rgb(255, 187, 178);
+  display: block;
+}
+span.run98 {
+  background-color: rgb(255, 184, 178);
+  display: block;
+}
+span.run99 {
+  background-color: rgb(255, 182, 178);
+  display: block;
+}
+span.run100 {
+  background-color: rgb(255, 178, 178);
+  display: block;
+}
+</style>
+    </head>
+  <body><h3>C0 code coverage information</h3>
+    <p>Generated on Tue Nov 11 15:29:57 -0500 2008 with <a href='http://eigenclass.org/hiki/rcov'>rcov 0.8.1.2</a>
+      </p>
+    <hr/>
+    <pre><span class='marked0'>Code reported as executed by Ruby looks like this...
+</span><span class='marked1'>and this: this line is also marked as covered.
+</span><span class='inferred0'>Lines considered as run by rcov, but not reported by Ruby, look like this,
+</span><span class='inferred1'>and this: these lines were inferred by rcov (using simple heuristics).
+</span><span class='uncovered0'>Finally, here&apos;s a line marked as not executed.
+</span></pre>                       
+<table class='report'><thead><tr><td class='heading'>Name</td>
+      <td class='heading'>Total lines</td>
+      <td class='heading'>Lines of code</td>
+      <td class='heading'>Total coverage</td>
+      <td class='heading'>Code coverage</td>
+      </tr>
+    </thead>
+  <tbody><tr class='light'><td><a href='-Library-Ruby-Gems-1_8-gems-actionpack-2_1_1-lib-action_view-helpers-javascript_helper_rb.html'>/Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_view/helpers/javascript_helper.rb</a>
+        </td>
+      <td class='lines_total'><tt>217</tt>
+        </td>
+      <td class='lines_code'><tt>82</tt>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_total'>69.6%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='70'/>
+                  <td class='uncovered' width='30'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_code'>29.3%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='29'/>
+                  <td class='uncovered' width='71'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<pre><span class="marked1"><a name="line1"></a>  1 require 'action_view/helpers/tag_helper'
+</span><span class="marked0"><a name="line2"></a>  2 require 'action_view/helpers/prototype_helper'
+</span><span class="inferred1"><a name="line3"></a>  3 
+</span><span class="marked0"><a name="line4"></a>  4 module ActionView
+</span><span class="marked1"><a name="line5"></a>  5   module Helpers
+</span><span class="inferred0"><a name="line6"></a>  6     # Provides functionality for working with JavaScript in your views.
+</span><span class="inferred1"><a name="line7"></a>  7     # 
+</span><span class="inferred0"><a name="line8"></a>  8     # == Ajax, controls and visual effects
+</span><span class="inferred1"><a name="line9"></a>  9     # 
+</span><span class="inferred0"><a name="line10"></a> 10     # * For information on using Ajax, see 
+</span><span class="inferred1"><a name="line11"></a> 11     #   ActionView::Helpers::PrototypeHelper.
+</span><span class="inferred0"><a name="line12"></a> 12     # * For information on using controls and visual effects, see
+</span><span class="inferred1"><a name="line13"></a> 13     #   ActionView::Helpers::ScriptaculousHelper.
+</span><span class="inferred0"><a name="line14"></a> 14     #
+</span><span class="inferred1"><a name="line15"></a> 15     # == Including the JavaScript libraries into your pages
+</span><span class="inferred0"><a name="line16"></a> 16     #
+</span><span class="inferred1"><a name="line17"></a> 17     # Rails includes the Prototype JavaScript framework and the Scriptaculous
+</span><span class="inferred0"><a name="line18"></a> 18     # JavaScript controls and visual effects library.  If you wish to use
+</span><span class="inferred1"><a name="line19"></a> 19     # these libraries and their helpers (ActionView::Helpers::PrototypeHelper
+</span><span class="inferred0"><a name="line20"></a> 20     # and ActionView::Helpers::ScriptaculousHelper), you must do one of the
+</span><span class="inferred1"><a name="line21"></a> 21     # following:
+</span><span class="inferred0"><a name="line22"></a> 22     #
+</span><span class="inferred1"><a name="line23"></a> 23     # * Use &lt;tt&gt;&lt;%= javascript_include_tag :defaults %&gt;&lt;/tt&gt; in the HEAD 
+</span><span class="inferred0"><a name="line24"></a> 24     #   section of your page (recommended): This function will return 
+</span><span class="inferred1"><a name="line25"></a> 25     #   references to the JavaScript files created by the +rails+ command in
+</span><span class="inferred0"><a name="line26"></a> 26     #   your &lt;tt&gt;public/javascripts&lt;/tt&gt; directory. Using it is recommended as
+</span><span class="inferred1"><a name="line27"></a> 27     #   the browser can then cache the libraries instead of fetching all the 
+</span><span class="inferred0"><a name="line28"></a> 28     #   functions anew on every request.
+</span><span class="inferred1"><a name="line29"></a> 29     # * Use &lt;tt&gt;&lt;%= javascript_include_tag 'prototype' %&gt;&lt;/tt&gt;: As above, but 
+</span><span class="inferred0"><a name="line30"></a> 30     #   will only include the Prototype core library, which means you are able
+</span><span class="inferred1"><a name="line31"></a> 31     #   to use all basic AJAX functionality. For the Scriptaculous-based 
+</span><span class="inferred0"><a name="line32"></a> 32     #   JavaScript helpers, like visual effects, autocompletion, drag and drop 
+</span><span class="inferred1"><a name="line33"></a> 33     #   and so on, you should use the method described above.
+</span><span class="inferred0"><a name="line34"></a> 34     # * Use &lt;tt&gt;&lt;%= define_javascript_functions %&gt;&lt;/tt&gt;: this will copy all the
+</span><span class="inferred1"><a name="line35"></a> 35     #   JavaScript support functions within a single script block. Not
+</span><span class="inferred0"><a name="line36"></a> 36     #   recommended.
+</span><span class="inferred1"><a name="line37"></a> 37     #
+</span><span class="inferred0"><a name="line38"></a> 38     # For documentation on +javascript_include_tag+ see 
+</span><span class="inferred1"><a name="line39"></a> 39     # ActionView::Helpers::AssetTagHelper.
+</span><span class="marked0"><a name="line40"></a> 40     module JavaScriptHelper
+</span><span class="marked1"><a name="line41"></a> 41       unless const_defined? :JAVASCRIPT_PATH
+</span><span class="marked0"><a name="line42"></a> 42         JAVASCRIPT_PATH = File.join(File.dirname(__FILE__), 'javascripts')
+</span><span class="inferred1"><a name="line43"></a> 43       end
+</span><span class="inferred0"><a name="line44"></a> 44 
+</span><span class="marked1"><a name="line45"></a> 45       include PrototypeHelper
+</span><span class="inferred0"><a name="line46"></a> 46       
+</span><span class="inferred1"><a name="line47"></a> 47       # Returns a link that will trigger a JavaScript +function+ using the 
+</span><span class="inferred0"><a name="line48"></a> 48       # onclick handler and return false after the fact.
+</span><span class="inferred1"><a name="line49"></a> 49       #
+</span><span class="inferred0"><a name="line50"></a> 50       # The +function+ argument can be omitted in favor of an +update_page+
+</span><span class="inferred1"><a name="line51"></a> 51       # block, which evaluates to a string when the template is rendered
+</span><span class="inferred0"><a name="line52"></a> 52       # (instead of making an Ajax request first).      
+</span><span class="inferred1"><a name="line53"></a> 53       #
+</span><span class="inferred0"><a name="line54"></a> 54       # Examples:
+</span><span class="inferred1"><a name="line55"></a> 55       #   link_to_function &quot;Greeting&quot;, &quot;alert('Hello world!')&quot;
+</span><span class="inferred0"><a name="line56"></a> 56       #     Produces:
+</span><span class="inferred1"><a name="line57"></a> 57       #       &lt;a onclick=&quot;alert('Hello world!'); return false;&quot; href=&quot;#&quot;&gt;Greeting&lt;/a&gt;
+</span><span class="inferred0"><a name="line58"></a> 58       #
+</span><span class="inferred1"><a name="line59"></a> 59       #   link_to_function(image_tag(&quot;delete&quot;), &quot;if (confirm('Really?')) do_delete()&quot;)
+</span><span class="inferred0"><a name="line60"></a> 60       #     Produces:
+</span><span class="inferred1"><a name="line61"></a> 61       #       &lt;a onclick=&quot;if (confirm('Really?')) do_delete(); return false;&quot; href=&quot;#&quot;&gt;
+</span><span class="inferred0"><a name="line62"></a> 62       #         &lt;img src=&quot;/images/delete.png?&quot; alt=&quot;Delete&quot;/&gt;
+</span><span class="inferred1"><a name="line63"></a> 63       #       &lt;/a&gt;
+</span><span class="inferred0"><a name="line64"></a> 64       #
+</span><span class="inferred1"><a name="line65"></a> 65       #   link_to_function(&quot;Show me more&quot;, nil, :id =&gt; &quot;more_link&quot;) do |page|
+</span><span class="inferred0"><a name="line66"></a> 66       #     page[:details].visual_effect  :toggle_blind
+</span><span class="inferred1"><a name="line67"></a> 67       #     page[:more_link].replace_html &quot;Show me less&quot;
+</span><span class="inferred0"><a name="line68"></a> 68       #   end
+</span><span class="inferred1"><a name="line69"></a> 69       #     Produces:
+</span><span class="inferred0"><a name="line70"></a> 70       #       &lt;a href=&quot;#&quot; id=&quot;more_link&quot; onclick=&quot;try {
+</span><span class="inferred1"><a name="line71"></a> 71       #         $(&amp;quot;details&amp;quot;).visualEffect(&amp;quot;toggle_blind&amp;quot;);
+</span><span class="inferred0"><a name="line72"></a> 72       #         $(&amp;quot;more_link&amp;quot;).update(&amp;quot;Show me less&amp;quot;);
+</span><span class="inferred1"><a name="line73"></a> 73       #       } 
+</span><span class="inferred0"><a name="line74"></a> 74       #       catch (e) { 
+</span><span class="inferred1"><a name="line75"></a> 75       #         alert('RJS error:\n\n' + e.toString()); 
+</span><span class="inferred0"><a name="line76"></a> 76       #         alert('$(\&amp;quot;details\&amp;quot;).visualEffect(\&amp;quot;toggle_blind\&amp;quot;);
+</span><span class="inferred1"><a name="line77"></a> 77       #         \n$(\&amp;quot;more_link\&amp;quot;).update(\&amp;quot;Show me less\&amp;quot;);');
+</span><span class="inferred0"><a name="line78"></a> 78       #         throw e 
+</span><span class="inferred1"><a name="line79"></a> 79       #       };
+</span><span class="inferred0"><a name="line80"></a> 80       #       return false;&quot;&gt;Show me more&lt;/a&gt;
+</span><span class="inferred1"><a name="line81"></a> 81       #
+</span><span class="marked0"><a name="line82"></a> 82       def link_to_function(name, *args, &amp;block)
+</span><span class="uncovered1"><a name="line83"></a> 83         html_options = args.extract_options!.symbolize_keys
+</span><span class="uncovered0"><a name="line84"></a> 84         function = args[0] || ''
+</span><span class="uncovered1"><a name="line85"></a> 85 
+</span><span class="uncovered0"><a name="line86"></a> 86         function = update_page(&amp;block) if block_given?
+</span><span class="uncovered1"><a name="line87"></a> 87         content_tag(
+</span><span class="uncovered0"><a name="line88"></a> 88           &quot;a&quot;, name, 
+</span><span class="uncovered1"><a name="line89"></a> 89           html_options.merge({ 
+</span><span class="uncovered0"><a name="line90"></a> 90             :href =&gt; html_options[:href] || &quot;#&quot;, 
+</span><span class="uncovered1"><a name="line91"></a> 91             :onclick =&gt; (html_options[:onclick] ? &quot;#{html_options[:onclick]}; &quot; : &quot;&quot;) + &quot;#{function}; return false;&quot; 
+</span><span class="uncovered0"><a name="line92"></a> 92           })
+</span><span class="uncovered1"><a name="line93"></a> 93         )
+</span><span class="uncovered0"><a name="line94"></a> 94       end
+</span><span class="inferred1"><a name="line95"></a> 95       
+</span><span class="inferred0"><a name="line96"></a> 96       # Returns a button that'll trigger a JavaScript +function+ using the 
+</span><span class="inferred1"><a name="line97"></a> 97       # onclick handler.
+</span><span class="inferred0"><a name="line98"></a> 98       #
+</span><span class="inferred1"><a name="line99"></a> 99       # The +function+ argument can be omitted in favor of an +update_page+
+</span><span class="inferred0"><a name="line100"></a>100       # block, which evaluates to a string when the template is rendered
+</span><span class="inferred1"><a name="line101"></a>101       # (instead of making an Ajax request first).      
+</span><span class="inferred0"><a name="line102"></a>102       #
+</span><span class="inferred1"><a name="line103"></a>103       # Examples:
+</span><span class="inferred0"><a name="line104"></a>104       #   button_to_function &quot;Greeting&quot;, &quot;alert('Hello world!')&quot;
+</span><span class="inferred1"><a name="line105"></a>105       #   button_to_function &quot;Delete&quot;, &quot;if (confirm('Really?')) do_delete()&quot;
+</span><span class="inferred0"><a name="line106"></a>106       #   button_to_function &quot;Details&quot; do |page|
+</span><span class="inferred1"><a name="line107"></a>107       #     page[:details].visual_effect :toggle_slide
+</span><span class="inferred0"><a name="line108"></a>108       #   end
+</span><span class="inferred1"><a name="line109"></a>109       #   button_to_function &quot;Details&quot;, :class =&gt; &quot;details_button&quot; do |page|
+</span><span class="inferred0"><a name="line110"></a>110       #     page[:details].visual_effect :toggle_slide
+</span><span class="inferred1"><a name="line111"></a>111       #   end
+</span><span class="marked0"><a name="line112"></a>112       def button_to_function(name, *args, &amp;block)
+</span><span class="uncovered1"><a name="line113"></a>113         html_options = args.extract_options!.symbolize_keys
+</span><span class="uncovered0"><a name="line114"></a>114         function = args[0] || ''
+</span><span class="uncovered1"><a name="line115"></a>115 
+</span><span class="uncovered0"><a name="line116"></a>116         function = update_page(&amp;block) if block_given?
+</span><span class="uncovered1"><a name="line117"></a>117         tag(:input, html_options.merge({ 
+</span><span class="uncovered0"><a name="line118"></a>118           :type =&gt; &quot;button&quot;, :value =&gt; name, 
+</span><span class="uncovered1"><a name="line119"></a>119           :onclick =&gt; (html_options[:onclick] ? &quot;#{html_options[:onclick]}; &quot; : &quot;&quot;) + &quot;#{function};&quot; 
+</span><span class="uncovered0"><a name="line120"></a>120         }))
+</span><span class="uncovered1"><a name="line121"></a>121       end
+</span><span class="inferred0"><a name="line122"></a>122 
+</span><span class="inferred1"><a name="line123"></a>123       # Includes the Action Pack JavaScript libraries inside a single &lt;script&gt; 
+</span><span class="inferred0"><a name="line124"></a>124       # tag. The function first includes prototype.js and then its core extensions,
+</span><span class="inferred1"><a name="line125"></a>125       # (determined by filenames starting with &quot;prototype&quot;).
+</span><span class="inferred0"><a name="line126"></a>126       # Afterwards, any additional scripts will be included in undefined order.
+</span><span class="inferred1"><a name="line127"></a>127       #
+</span><span class="inferred0"><a name="line128"></a>128       # Note: The recommended approach is to copy the contents of
+</span><span class="inferred1"><a name="line129"></a>129       # lib/action_view/helpers/javascripts/ into your application's
+</span><span class="inferred0"><a name="line130"></a>130       # public/javascripts/ directory, and use +javascript_include_tag+ to 
+</span><span class="inferred1"><a name="line131"></a>131       # create remote &lt;script&gt; links.
+</span><span class="marked0"><a name="line132"></a>132       def define_javascript_functions
+</span><span class="uncovered1"><a name="line133"></a>133         javascript = &quot;&lt;script type=\&quot;#{Mime::JS}\&quot;&gt;&quot;
+</span><span class="uncovered0"><a name="line134"></a>134         
+</span><span class="uncovered1"><a name="line135"></a>135         # load prototype.js and its extensions first 
+</span><span class="uncovered0"><a name="line136"></a>136         prototype_libs = Dir.glob(File.join(JAVASCRIPT_PATH, 'prototype*')).sort.reverse
+</span><span class="uncovered1"><a name="line137"></a>137         prototype_libs.each do |filename| 
+</span><span class="uncovered0"><a name="line138"></a>138           javascript &lt;&lt; &quot;\n&quot; &lt;&lt; IO.read(filename)
+</span><span class="uncovered1"><a name="line139"></a>139         end
+</span><span class="uncovered0"><a name="line140"></a>140         
+</span><span class="uncovered1"><a name="line141"></a>141         # load other libraries
+</span><span class="uncovered0"><a name="line142"></a>142         (Dir.glob(File.join(JAVASCRIPT_PATH, '*')) - prototype_libs).each do |filename| 
+</span><span class="uncovered1"><a name="line143"></a>143           javascript &lt;&lt; &quot;\n&quot; &lt;&lt; IO.read(filename)
+</span><span class="uncovered0"><a name="line144"></a>144         end
+</span><span class="uncovered1"><a name="line145"></a>145         javascript &lt;&lt; '&lt;/script&gt;'
+</span><span class="uncovered0"><a name="line146"></a>146       end
+</span><span class="inferred1"><a name="line147"></a>147 
+</span><span class="marked0"><a name="line148"></a>148       deprecate :define_javascript_functions=&gt;&quot;use javascript_include_tag instead&quot;
+</span><span class="inferred1"><a name="line149"></a>149 
+</span><span class="inferred0"><a name="line150"></a>150       # Escape carrier returns and single and double quotes for JavaScript segments.
+</span><span class="marked1"><a name="line151"></a>151       def escape_javascript(javascript)
+</span><span class="uncovered0"><a name="line152"></a>152         (javascript || '').gsub('\\','\0\0').gsub('&lt;/','&lt;\/').gsub(/\r\n|\n|\r/, &quot;\\n&quot;).gsub(/[&quot;']/) { |m| &quot;\\#{m}&quot; }
+</span><span class="uncovered1"><a name="line153"></a>153       end
+</span><span class="inferred0"><a name="line154"></a>154 
+</span><span class="inferred1"><a name="line155"></a>155       # Returns a JavaScript tag with the +content+ inside. Example:
+</span><span class="inferred0"><a name="line156"></a>156       #   javascript_tag &quot;alert('All is good')&quot;
+</span><span class="inferred1"><a name="line157"></a>157       #
+</span><span class="inferred0"><a name="line158"></a>158       # Returns:
+</span><span class="inferred1"><a name="line159"></a>159       #   &lt;script type=&quot;text/javascript&quot;&gt;
+</span><span class="inferred0"><a name="line160"></a>160       #   //&lt;![CDATA[
+</span><span class="inferred1"><a name="line161"></a>161       #   alert('All is good')
+</span><span class="inferred0"><a name="line162"></a>162       #   //]]&gt;
+</span><span class="inferred1"><a name="line163"></a>163       #   &lt;/script&gt;
+</span><span class="inferred0"><a name="line164"></a>164       #
+</span><span class="inferred1"><a name="line165"></a>165       # +html_options+ may be a hash of attributes for the &lt;script&gt; tag. Example:
+</span><span class="inferred0"><a name="line166"></a>166       #   javascript_tag &quot;alert('All is good')&quot;, :defer =&gt; 'defer' 
+</span><span class="inferred1"><a name="line167"></a>167       #   # =&gt; &lt;script defer=&quot;defer&quot; type=&quot;text/javascript&quot;&gt;alert('All is good')&lt;/script&gt;
+</span><span class="inferred0"><a name="line168"></a>168       #
+</span><span class="inferred1"><a name="line169"></a>169       # Instead of passing the content as an argument, you can also use a block
+</span><span class="inferred0"><a name="line170"></a>170       # in which case, you pass your +html_options+ as the first parameter.
+</span><span class="inferred1"><a name="line171"></a>171       #   &lt;% javascript_tag :defer =&gt; 'defer' do -%&gt;
+</span><span class="inferred0"><a name="line172"></a>172       #     alert('All is good')
+</span><span class="inferred1"><a name="line173"></a>173       #   &lt;% end -%&gt;
+</span><span class="marked0"><a name="line174"></a>174       def javascript_tag(content_or_options_with_block = nil, html_options = {}, &amp;block)
+</span><span class="uncovered1"><a name="line175"></a>175         if block_given?
+</span><span class="uncovered0"><a name="line176"></a>176           html_options = content_or_options_with_block if content_or_options_with_block.is_a?(Hash)
+</span><span class="uncovered1"><a name="line177"></a>177           content = capture(&amp;block)
+</span><span class="uncovered0"><a name="line178"></a>178         else
+</span><span class="uncovered1"><a name="line179"></a>179           content = content_or_options_with_block
+</span><span class="uncovered0"><a name="line180"></a>180         end
+</span><span class="uncovered1"><a name="line181"></a>181 
+</span><span class="uncovered0"><a name="line182"></a>182         javascript_tag = content_tag(&quot;script&quot;, javascript_cdata_section(content), html_options.merge(:type =&gt; Mime::JS))
+</span><span class="uncovered1"><a name="line183"></a>183         
+</span><span class="uncovered0"><a name="line184"></a>184         if block_given? &amp;&amp; block_is_within_action_view?(block)
+</span><span class="uncovered1"><a name="line185"></a>185           concat(javascript_tag, block.binding)
+</span><span class="uncovered0"><a name="line186"></a>186         else
+</span><span class="uncovered1"><a name="line187"></a>187           javascript_tag
+</span><span class="uncovered0"><a name="line188"></a>188         end
+</span><span class="uncovered1"><a name="line189"></a>189       end
+</span><span class="inferred0"><a name="line190"></a>190 
+</span><span class="marked1"><a name="line191"></a>191       def javascript_cdata_section(content) #:nodoc:
+</span><span class="uncovered0"><a name="line192"></a>192         &quot;\n//#{cdata_section(&quot;\n#{content}\n//&quot;)}\n&quot;
+</span><span class="uncovered1"><a name="line193"></a>193       end
+</span><span class="inferred0"><a name="line194"></a>194       
+</span><span class="marked1"><a name="line195"></a>195     protected
+</span><span class="marked0"><a name="line196"></a>196       def options_for_javascript(options)
+</span><span class="uncovered1"><a name="line197"></a>197         '{' + options.map {|k, v| &quot;#{k}:#{v}&quot;}.sort.join(', ') + '}'
+</span><span class="uncovered0"><a name="line198"></a>198       end
+</span><span class="inferred1"><a name="line199"></a>199       
+</span><span class="marked0"><a name="line200"></a>200       def array_or_string_for_javascript(option)
+</span><span class="uncovered1"><a name="line201"></a>201         js_option = if option.kind_of?(Array)
+</span><span class="uncovered0"><a name="line202"></a>202           &quot;['#{option.join('\',\'')}']&quot;
+</span><span class="uncovered1"><a name="line203"></a>203         elsif !option.nil?
+</span><span class="uncovered0"><a name="line204"></a>204           &quot;'#{option}'&quot;
+</span><span class="uncovered1"><a name="line205"></a>205         end
+</span><span class="uncovered0"><a name="line206"></a>206         js_option
+</span><span class="uncovered1"><a name="line207"></a>207       end
+</span><span class="inferred0"><a name="line208"></a>208 
+</span><span class="marked1"><a name="line209"></a>209     private
+</span><span class="marked0"><a name="line210"></a>210       def block_is_within_action_view?(block)
+</span><span class="uncovered1"><a name="line211"></a>211         eval(&quot;defined? _erbout&quot;, block.binding)
+</span><span class="uncovered0"><a name="line212"></a>212       end
+</span><span class="uncovered1"><a name="line213"></a>213     end
+</span><span class="inferred0"><a name="line214"></a>214     
+</span><span class="marked1"><a name="line215"></a>215     JavascriptHelper = JavaScriptHelper unless const_defined? :JavascriptHelper
+</span><span class="inferred0"><a name="line216"></a>216   end
+</span><span class="inferred1"><a name="line217"></a>217 end
+</span></pre><hr/>
+    <p>Generated using the <a href='http://eigenclass.org/hiki.rb?rcov'>rcov code coverage analysis tool for Ruby</a>
+   version 0.8.1.2.</p>
+<p><a href='http://validator.w3.org/check/referer'><img src='http://www.w3.org/Icons/valid-xhtml10' height='31' alt='Valid XHTML 1.0!' width='88'/>
+        </a>
+      <a href='http://jigsaw.w3.org/css-validator/check/referer'><img src='http://jigsaw.w3.org/css-validator/images/vcss' alt='Valid CSS!' style='border:0;width:88px;height:31px'/>
+        </a>
+      </p>
+    </body>
+  </html>

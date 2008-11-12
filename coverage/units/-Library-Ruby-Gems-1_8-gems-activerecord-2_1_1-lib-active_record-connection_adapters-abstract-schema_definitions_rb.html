@@ -1,0 +1,1274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'><head><title>/Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/schema_definitions.rb - C0 code coverage information</title>
+    <style type='text/css'>body { background-color: rgb(240, 240, 245); }</style>
+    <style type='text/css'>span.cross-ref-title {
+ font-size: 140%;
+}
+span.cross-ref a {
+ text-decoration: none;
+}
+span.cross-ref {
+ background-color:#f3f7fa;
+ border: 1px dashed #333;
+ margin: 1em;
+ padding: 0.5em;
+ overflow: hidden;
+}
+a.crossref-toggle {
+ text-decoration: none;
+}
+span.marked0 {
+ background-color: rgb(185, 210, 200);
+ display: block;
+}
+span.marked1 {
+ background-color: rgb(190, 215, 205);
+ display: block;
+}
+span.inferred0 {
+ background-color: rgb(175, 200, 200);
+ display: block;
+}
+span.inferred1 {
+ background-color: rgb(180, 205, 205);
+ display: block;
+}
+span.uncovered0 {
+ background-color: rgb(225, 110, 110);
+ display: block;
+}
+span.uncovered1 {
+ background-color: rgb(235, 120, 120);
+ display: block;
+}
+span.overview {
+ border-bottom: 8px solid black;
+}
+div.overview {
+ border-bottom: 8px solid black;
+}
+body {
+ font-family: verdana, arial, helvetica;
+}
+div.footer {
+ font-size: 68%;
+ margin-top: 1.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+ margin-bottom: 0.5em;
+}
+h5 {
+ margin-top: 0.5em;
+}
+.hidden {
+ display: none;
+}
+div.separator {
+ height: 10px;
+}
+/* Commented out for better readability, esp. on IE */
+/*
+table tr td, table tr th {
+ font-size: 68%;
+}
+td.value table tr td {
+ font-size: 11px;
+}
+*/
+table.percent_graph {
+ height: 12px;
+ border: #808080 1px solid;
+ empty-cells: show;
+}
+table.percent_graph td.covered {
+ height: 10px;
+ background: #00f000;
+}
+table.percent_graph td.uncovered {
+ height: 10px;
+ background: #e00000;
+}
+table.percent_graph td.NA {
+ height: 10px;
+ background: #eaeaea;
+}
+table.report {
+ border-collapse: collapse;
+ width: 100%;
+}
+table.report td.heading {
+ background: #dcecff;
+ border: #d0d0d0 1px solid;
+ font-weight: bold;
+ text-align: center;
+}
+table.report td.heading:hover {
+ background: #c0ffc0;
+}
+table.report td.text {
+ border: #d0d0d0 1px solid;
+}
+table.report td.value,
+table.report td.lines_total,
+table.report td.lines_code {
+ text-align: right;
+ border: #d0d0d0 1px solid;
+}
+table.report tr.light {
+ background-color: rgb(240, 240, 245);
+}
+table.report tr.dark {
+ background-color: rgb(230, 230, 235);
+}
+</style>
+    <script type='text/javascript'>
+// <![CDATA[
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make cross-references hidden by default
+  document.writeln( "<style type=\"text/css\">span.cross-ref { display: none }</style>" )
+  // ]]>
+</script>
+    <style type='text/css'>span.run0 {
+  background-color: rgb(178, 204, 255);
+  display: block;
+}
+span.run1 {
+  background-color: rgb(178, 206, 255);
+  display: block;
+}
+span.run2 {
+  background-color: rgb(178, 209, 255);
+  display: block;
+}
+span.run3 {
+  background-color: rgb(178, 211, 255);
+  display: block;
+}
+span.run4 {
+  background-color: rgb(178, 214, 255);
+  display: block;
+}
+span.run5 {
+  background-color: rgb(178, 218, 255);
+  display: block;
+}
+span.run6 {
+  background-color: rgb(178, 220, 255);
+  display: block;
+}
+span.run7 {
+  background-color: rgb(178, 223, 255);
+  display: block;
+}
+span.run8 {
+  background-color: rgb(178, 225, 255);
+  display: block;
+}
+span.run9 {
+  background-color: rgb(178, 228, 255);
+  display: block;
+}
+span.run10 {
+  background-color: rgb(178, 232, 255);
+  display: block;
+}
+span.run11 {
+  background-color: rgb(178, 234, 255);
+  display: block;
+}
+span.run12 {
+  background-color: rgb(178, 237, 255);
+  display: block;
+}
+span.run13 {
+  background-color: rgb(178, 239, 255);
+  display: block;
+}
+span.run14 {
+  background-color: rgb(178, 242, 255);
+  display: block;
+}
+span.run15 {
+  background-color: rgb(178, 246, 255);
+  display: block;
+}
+span.run16 {
+  background-color: rgb(178, 248, 255);
+  display: block;
+}
+span.run17 {
+  background-color: rgb(178, 251, 255);
+  display: block;
+}
+span.run18 {
+  background-color: rgb(178, 253, 255);
+  display: block;
+}
+span.run19 {
+  background-color: rgb(178, 255, 253);
+  display: block;
+}
+span.run20 {
+  background-color: rgb(178, 255, 249);
+  display: block;
+}
+span.run21 {
+  background-color: rgb(178, 255, 247);
+  display: block;
+}
+span.run22 {
+  background-color: rgb(178, 255, 244);
+  display: block;
+}
+span.run23 {
+  background-color: rgb(178, 255, 242);
+  display: block;
+}
+span.run24 {
+  background-color: rgb(178, 255, 239);
+  display: block;
+}
+span.run25 {
+  background-color: rgb(178, 255, 235);
+  display: block;
+}
+span.run26 {
+  background-color: rgb(178, 255, 233);
+  display: block;
+}
+span.run27 {
+  background-color: rgb(178, 255, 230);
+  display: block;
+}
+span.run28 {
+  background-color: rgb(178, 255, 228);
+  display: block;
+}
+span.run29 {
+  background-color: rgb(178, 255, 225);
+  display: block;
+}
+span.run30 {
+  background-color: rgb(178, 255, 221);
+  display: block;
+}
+span.run31 {
+  background-color: rgb(178, 255, 219);
+  display: block;
+}
+span.run32 {
+  background-color: rgb(178, 255, 216);
+  display: block;
+}
+span.run33 {
+  background-color: rgb(178, 255, 214);
+  display: block;
+}
+span.run34 {
+  background-color: rgb(178, 255, 211);
+  display: block;
+}
+span.run35 {
+  background-color: rgb(178, 255, 207);
+  display: block;
+}
+span.run36 {
+  background-color: rgb(178, 255, 205);
+  display: block;
+}
+span.run37 {
+  background-color: rgb(178, 255, 202);
+  display: block;
+}
+span.run38 {
+  background-color: rgb(178, 255, 200);
+  display: block;
+}
+span.run39 {
+  background-color: rgb(178, 255, 197);
+  display: block;
+}
+span.run40 {
+  background-color: rgb(178, 255, 193);
+  display: block;
+}
+span.run41 {
+  background-color: rgb(178, 255, 191);
+  display: block;
+}
+span.run42 {
+  background-color: rgb(178, 255, 188);
+  display: block;
+}
+span.run43 {
+  background-color: rgb(178, 255, 186);
+  display: block;
+}
+span.run44 {
+  background-color: rgb(178, 255, 183);
+  display: block;
+}
+span.run45 {
+  background-color: rgb(178, 255, 179);
+  display: block;
+}
+span.run46 {
+  background-color: rgb(179, 255, 178);
+  display: block;
+}
+span.run47 {
+  background-color: rgb(182, 255, 178);
+  display: block;
+}
+span.run48 {
+  background-color: rgb(184, 255, 178);
+  display: block;
+}
+span.run49 {
+  background-color: rgb(187, 255, 178);
+  display: block;
+}
+span.run50 {
+  background-color: rgb(191, 255, 178);
+  display: block;
+}
+span.run51 {
+  background-color: rgb(193, 255, 178);
+  display: block;
+}
+span.run52 {
+  background-color: rgb(196, 255, 178);
+  display: block;
+}
+span.run53 {
+  background-color: rgb(198, 255, 178);
+  display: block;
+}
+span.run54 {
+  background-color: rgb(201, 255, 178);
+  display: block;
+}
+span.run55 {
+  background-color: rgb(205, 255, 178);
+  display: block;
+}
+span.run56 {
+  background-color: rgb(207, 255, 178);
+  display: block;
+}
+span.run57 {
+  background-color: rgb(210, 255, 178);
+  display: block;
+}
+span.run58 {
+  background-color: rgb(212, 255, 178);
+  display: block;
+}
+span.run59 {
+  background-color: rgb(215, 255, 178);
+  display: block;
+}
+span.run60 {
+  background-color: rgb(219, 255, 178);
+  display: block;
+}
+span.run61 {
+  background-color: rgb(221, 255, 178);
+  display: block;
+}
+span.run62 {
+  background-color: rgb(224, 255, 178);
+  display: block;
+}
+span.run63 {
+  background-color: rgb(226, 255, 178);
+  display: block;
+}
+span.run64 {
+  background-color: rgb(229, 255, 178);
+  display: block;
+}
+span.run65 {
+  background-color: rgb(233, 255, 178);
+  display: block;
+}
+span.run66 {
+  background-color: rgb(235, 255, 178);
+  display: block;
+}
+span.run67 {
+  background-color: rgb(238, 255, 178);
+  display: block;
+}
+span.run68 {
+  background-color: rgb(240, 255, 178);
+  display: block;
+}
+span.run69 {
+  background-color: rgb(243, 255, 178);
+  display: block;
+}
+span.run70 {
+  background-color: rgb(247, 255, 178);
+  display: block;
+}
+span.run71 {
+  background-color: rgb(249, 255, 178);
+  display: block;
+}
+span.run72 {
+  background-color: rgb(252, 255, 178);
+  display: block;
+}
+span.run73 {
+  background-color: rgb(255, 255, 178);
+  display: block;
+}
+span.run74 {
+  background-color: rgb(255, 252, 178);
+  display: block;
+}
+span.run75 {
+  background-color: rgb(255, 248, 178);
+  display: block;
+}
+span.run76 {
+  background-color: rgb(255, 246, 178);
+  display: block;
+}
+span.run77 {
+  background-color: rgb(255, 243, 178);
+  display: block;
+}
+span.run78 {
+  background-color: rgb(255, 240, 178);
+  display: block;
+}
+span.run79 {
+  background-color: rgb(255, 238, 178);
+  display: block;
+}
+span.run80 {
+  background-color: rgb(255, 234, 178);
+  display: block;
+}
+span.run81 {
+  background-color: rgb(255, 232, 178);
+  display: block;
+}
+span.run82 {
+  background-color: rgb(255, 229, 178);
+  display: block;
+}
+span.run83 {
+  background-color: rgb(255, 226, 178);
+  display: block;
+}
+span.run84 {
+  background-color: rgb(255, 224, 178);
+  display: block;
+}
+span.run85 {
+  background-color: rgb(255, 220, 178);
+  display: block;
+}
+span.run86 {
+  background-color: rgb(255, 218, 178);
+  display: block;
+}
+span.run87 {
+  background-color: rgb(255, 215, 178);
+  display: block;
+}
+span.run88 {
+  background-color: rgb(255, 212, 178);
+  display: block;
+}
+span.run89 {
+  background-color: rgb(255, 210, 178);
+  display: block;
+}
+span.run90 {
+  background-color: rgb(255, 206, 178);
+  display: block;
+}
+span.run91 {
+  background-color: rgb(255, 204, 178);
+  display: block;
+}
+span.run92 {
+  background-color: rgb(255, 201, 178);
+  display: block;
+}
+span.run93 {
+  background-color: rgb(255, 198, 178);
+  display: block;
+}
+span.run94 {
+  background-color: rgb(255, 196, 178);
+  display: block;
+}
+span.run95 {
+  background-color: rgb(255, 192, 178);
+  display: block;
+}
+span.run96 {
+  background-color: rgb(255, 189, 178);
+  display: block;
+}
+span.run97 {
+  background-color: rgb(255, 187, 178);
+  display: block;
+}
+span.run98 {
+  background-color: rgb(255, 184, 178);
+  display: block;
+}
+span.run99 {
+  background-color: rgb(255, 182, 178);
+  display: block;
+}
+span.run100 {
+  background-color: rgb(255, 178, 178);
+  display: block;
+}
+</style>
+    </head>
+  <body><h3>C0 code coverage information</h3>
+    <p>Generated on Tue Nov 11 15:30:12 -0500 2008 with <a href='http://eigenclass.org/hiki/rcov'>rcov 0.8.1.2</a>
+      </p>
+    <hr/>
+    <pre><span class='marked0'>Code reported as executed by Ruby looks like this...
+</span><span class='marked1'>and this: this line is also marked as covered.
+</span><span class='inferred0'>Lines considered as run by rcov, but not reported by Ruby, look like this,
+</span><span class='inferred1'>and this: these lines were inferred by rcov (using simple heuristics).
+</span><span class='uncovered0'>Finally, here&apos;s a line marked as not executed.
+</span></pre>                       
+<table class='report'><thead><tr><td class='heading'>Name</td>
+      <td class='heading'>Total lines</td>
+      <td class='heading'>Lines of code</td>
+      <td class='heading'>Total coverage</td>
+      <td class='heading'>Code coverage</td>
+      </tr>
+    </thead>
+  <tbody><tr class='light'><td><a href='-Library-Ruby-Gems-1_8-gems-activerecord-2_1_1-lib-active_record-connection_adapters-abstract-schema_definitions_rb.html'>/Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/schema_definitions.rb</a>
+        </td>
+      <td class='lines_total'><tt>664</tt>
+        </td>
+      <td class='lines_code'><tt>344</tt>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_total'>69.7%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='70'/>
+                  <td class='uncovered' width='30'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_code'>44.5%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='44'/>
+                  <td class='uncovered' width='56'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<pre><span class="marked1"><a name="line1"></a>  1 require 'date'
+</span><span class="marked0"><a name="line2"></a>  2 require 'bigdecimal'
+</span><span class="marked1"><a name="line3"></a>  3 require 'bigdecimal/util'
+</span><span class="inferred0"><a name="line4"></a>  4 
+</span><span class="marked1"><a name="line5"></a>  5 module ActiveRecord
+</span><span class="marked0"><a name="line6"></a>  6   module ConnectionAdapters #:nodoc:
+</span><span class="inferred1"><a name="line7"></a>  7     # An abstract definition of a column in a table.
+</span><span class="marked0"><a name="line8"></a>  8     class Column
+</span><span class="marked1"><a name="line9"></a>  9       module Format
+</span><span class="marked0"><a name="line10"></a> 10         ISO_DATE = /\A(\d{4})-(\d\d)-(\d\d)\z/
+</span><span class="marked1"><a name="line11"></a> 11         ISO_DATETIME = /\A(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d):(\d\d)(\.\d+)?\z/
+</span><span class="inferred0"><a name="line12"></a> 12       end
+</span><span class="inferred1"><a name="line13"></a> 13 
+</span><span class="marked0"><a name="line14"></a> 14       attr_reader :name, :default, :type, :limit, :null, :sql_type, :precision, :scale
+</span><span class="marked1"><a name="line15"></a> 15       attr_accessor :primary
+</span><span class="inferred0"><a name="line16"></a> 16 
+</span><span class="inferred1"><a name="line17"></a> 17       # Instantiates a new column in the table.
+</span><span class="inferred0"><a name="line18"></a> 18       #
+</span><span class="inferred1"><a name="line19"></a> 19       # +name+ is the column's name, such as &lt;tt&gt;supplier_id&lt;/tt&gt; in &lt;tt&gt;supplier_id int(11)&lt;/tt&gt;.
+</span><span class="inferred0"><a name="line20"></a> 20       # +default+ is the type-casted default value, such as +new+ in &lt;tt&gt;sales_stage varchar(20) default 'new'&lt;/tt&gt;.
+</span><span class="inferred1"><a name="line21"></a> 21       # +sql_type+ is only used to extract the column's length, if necessary. For example +60+ in &lt;tt&gt;company_name varchar(60)&lt;/tt&gt;.
+</span><span class="inferred0"><a name="line22"></a> 22       # +null+ determines if this column allows +NULL+ values.
+</span><span class="marked1"><a name="line23"></a> 23       def initialize(name, default, sql_type = nil, null = true)
+</span><span class="marked0"><a name="line24"></a> 24         @name, @sql_type, @null = name, sql_type, null
+</span><span class="marked1"><a name="line25"></a> 25         @limit, @precision, @scale = extract_limit(sql_type), extract_precision(sql_type), extract_scale(sql_type)
+</span><span class="marked0"><a name="line26"></a> 26         @type = simplified_type(sql_type)
+</span><span class="marked1"><a name="line27"></a> 27         @default = extract_default(default)
+</span><span class="inferred0"><a name="line28"></a> 28 
+</span><span class="marked1"><a name="line29"></a> 29         @primary = nil
+</span><span class="inferred0"><a name="line30"></a> 30       end
+</span><span class="inferred1"><a name="line31"></a> 31 
+</span><span class="marked0"><a name="line32"></a> 32       def text?
+</span><span class="uncovered1"><a name="line33"></a> 33         [:string, :text].include? type
+</span><span class="uncovered0"><a name="line34"></a> 34       end
+</span><span class="inferred1"><a name="line35"></a> 35 
+</span><span class="marked0"><a name="line36"></a> 36       def number?
+</span><span class="uncovered1"><a name="line37"></a> 37         [:float, :integer, :decimal].include? type
+</span><span class="uncovered0"><a name="line38"></a> 38       end
+</span><span class="inferred1"><a name="line39"></a> 39 
+</span><span class="inferred0"><a name="line40"></a> 40       # Returns the Ruby class that corresponds to the abstract data type.
+</span><span class="marked1"><a name="line41"></a> 41       def klass
+</span><span class="uncovered0"><a name="line42"></a> 42         case type
+</span><span class="uncovered1"><a name="line43"></a> 43           when :integer       then Fixnum
+</span><span class="uncovered0"><a name="line44"></a> 44           when :float         then Float
+</span><span class="uncovered1"><a name="line45"></a> 45           when :decimal       then BigDecimal
+</span><span class="uncovered0"><a name="line46"></a> 46           when :datetime      then Time
+</span><span class="uncovered1"><a name="line47"></a> 47           when :date          then Date
+</span><span class="uncovered0"><a name="line48"></a> 48           when :timestamp     then Time
+</span><span class="uncovered1"><a name="line49"></a> 49           when :time          then Time
+</span><span class="uncovered0"><a name="line50"></a> 50           when :text, :string then String
+</span><span class="uncovered1"><a name="line51"></a> 51           when :binary        then String
+</span><span class="uncovered0"><a name="line52"></a> 52           when :boolean       then Object
+</span><span class="uncovered1"><a name="line53"></a> 53         end
+</span><span class="uncovered0"><a name="line54"></a> 54       end
+</span><span class="inferred1"><a name="line55"></a> 55 
+</span><span class="inferred0"><a name="line56"></a> 56       # Casts value (which is a String) to an appropriate instance.
+</span><span class="marked1"><a name="line57"></a> 57       def type_cast(value)
+</span><span class="marked0"><a name="line58"></a> 58         return nil if value.nil?
+</span><span class="uncovered1"><a name="line59"></a> 59         case type
+</span><span class="uncovered0"><a name="line60"></a> 60           when :string    then value
+</span><span class="uncovered1"><a name="line61"></a> 61           when :text      then value
+</span><span class="uncovered0"><a name="line62"></a> 62           when :integer   then value.to_i rescue value ? 1 : 0
+</span><span class="uncovered1"><a name="line63"></a> 63           when :float     then value.to_f
+</span><span class="uncovered0"><a name="line64"></a> 64           when :decimal   then self.class.value_to_decimal(value)
+</span><span class="uncovered1"><a name="line65"></a> 65           when :datetime  then self.class.string_to_time(value)
+</span><span class="uncovered0"><a name="line66"></a> 66           when :timestamp then self.class.string_to_time(value)
+</span><span class="uncovered1"><a name="line67"></a> 67           when :time      then self.class.string_to_dummy_time(value)
+</span><span class="uncovered0"><a name="line68"></a> 68           when :date      then self.class.string_to_date(value)
+</span><span class="uncovered1"><a name="line69"></a> 69           when :binary    then self.class.binary_to_string(value)
+</span><span class="uncovered0"><a name="line70"></a> 70           when :boolean   then self.class.value_to_boolean(value)
+</span><span class="uncovered1"><a name="line71"></a> 71           else value
+</span><span class="uncovered0"><a name="line72"></a> 72         end
+</span><span class="uncovered1"><a name="line73"></a> 73       end
+</span><span class="inferred0"><a name="line74"></a> 74 
+</span><span class="marked1"><a name="line75"></a> 75       def type_cast_code(var_name)
+</span><span class="uncovered0"><a name="line76"></a> 76         case type
+</span><span class="uncovered1"><a name="line77"></a> 77           when :string    then nil
+</span><span class="uncovered0"><a name="line78"></a> 78           when :text      then nil
+</span><span class="uncovered1"><a name="line79"></a> 79           when :integer   then &quot;(#{var_name}.to_i rescue #{var_name} ? 1 : 0)&quot;
+</span><span class="uncovered0"><a name="line80"></a> 80           when :float     then &quot;#{var_name}.to_f&quot;
+</span><span class="uncovered1"><a name="line81"></a> 81           when :decimal   then &quot;#{self.class.name}.value_to_decimal(#{var_name})&quot;
+</span><span class="uncovered0"><a name="line82"></a> 82           when :datetime  then &quot;#{self.class.name}.string_to_time(#{var_name})&quot;
+</span><span class="uncovered1"><a name="line83"></a> 83           when :timestamp then &quot;#{self.class.name}.string_to_time(#{var_name})&quot;
+</span><span class="uncovered0"><a name="line84"></a> 84           when :time      then &quot;#{self.class.name}.string_to_dummy_time(#{var_name})&quot;
+</span><span class="uncovered1"><a name="line85"></a> 85           when :date      then &quot;#{self.class.name}.string_to_date(#{var_name})&quot;
+</span><span class="uncovered0"><a name="line86"></a> 86           when :binary    then &quot;#{self.class.name}.binary_to_string(#{var_name})&quot;
+</span><span class="uncovered1"><a name="line87"></a> 87           when :boolean   then &quot;#{self.class.name}.value_to_boolean(#{var_name})&quot;
+</span><span class="uncovered0"><a name="line88"></a> 88           else nil
+</span><span class="uncovered1"><a name="line89"></a> 89         end
+</span><span class="uncovered0"><a name="line90"></a> 90       end
+</span><span class="inferred1"><a name="line91"></a> 91 
+</span><span class="inferred0"><a name="line92"></a> 92       # Returns the human name of the column name.
+</span><span class="inferred1"><a name="line93"></a> 93       #
+</span><span class="inferred0"><a name="line94"></a> 94       # ===== Examples
+</span><span class="inferred1"><a name="line95"></a> 95       #  Column.new('sales_stage', ...).human_name # =&gt; 'Sales stage'
+</span><span class="marked0"><a name="line96"></a> 96       def human_name
+</span><span class="uncovered1"><a name="line97"></a> 97         Base.human_attribute_name(@name)
+</span><span class="uncovered0"><a name="line98"></a> 98       end
+</span><span class="inferred1"><a name="line99"></a> 99 
+</span><span class="marked0"><a name="line100"></a>100       def extract_default(default)
+</span><span class="marked1"><a name="line101"></a>101         type_cast(default)
+</span><span class="marked0"><a name="line102"></a>102       end
+</span><span class="inferred1"><a name="line103"></a>103 
+</span><span class="marked0"><a name="line104"></a>104       class &lt;&lt; self
+</span><span class="inferred1"><a name="line105"></a>105         # Used to convert from Strings to BLOBs
+</span><span class="marked0"><a name="line106"></a>106         def string_to_binary(value)
+</span><span class="uncovered1"><a name="line107"></a>107           value
+</span><span class="uncovered0"><a name="line108"></a>108         end
+</span><span class="inferred1"><a name="line109"></a>109 
+</span><span class="inferred0"><a name="line110"></a>110         # Used to convert from BLOBs to Strings
+</span><span class="marked1"><a name="line111"></a>111         def binary_to_string(value)
+</span><span class="uncovered0"><a name="line112"></a>112           value
+</span><span class="uncovered1"><a name="line113"></a>113         end
+</span><span class="inferred0"><a name="line114"></a>114 
+</span><span class="marked1"><a name="line115"></a>115         def string_to_date(string)
+</span><span class="uncovered0"><a name="line116"></a>116           return string unless string.is_a?(String)
+</span><span class="uncovered1"><a name="line117"></a>117           return nil if string.empty?
+</span><span class="uncovered0"><a name="line118"></a>118 
+</span><span class="uncovered1"><a name="line119"></a>119           fast_string_to_date(string) || fallback_string_to_date(string)
+</span><span class="uncovered0"><a name="line120"></a>120         end
+</span><span class="inferred1"><a name="line121"></a>121 
+</span><span class="marked0"><a name="line122"></a>122         def string_to_time(string)
+</span><span class="uncovered1"><a name="line123"></a>123           return string unless string.is_a?(String)
+</span><span class="uncovered0"><a name="line124"></a>124           return nil if string.empty?
+</span><span class="uncovered1"><a name="line125"></a>125 
+</span><span class="uncovered0"><a name="line126"></a>126           fast_string_to_time(string) || fallback_string_to_time(string)
+</span><span class="uncovered1"><a name="line127"></a>127         end
+</span><span class="inferred0"><a name="line128"></a>128 
+</span><span class="marked1"><a name="line129"></a>129         def string_to_dummy_time(string)
+</span><span class="uncovered0"><a name="line130"></a>130           return string unless string.is_a?(String)
+</span><span class="uncovered1"><a name="line131"></a>131           return nil if string.empty?
+</span><span class="uncovered0"><a name="line132"></a>132 
+</span><span class="uncovered1"><a name="line133"></a>133           string_to_time &quot;2000-01-01 #{string}&quot;
+</span><span class="uncovered0"><a name="line134"></a>134         end
+</span><span class="inferred1"><a name="line135"></a>135 
+</span><span class="inferred0"><a name="line136"></a>136         # convert something to a boolean
+</span><span class="marked1"><a name="line137"></a>137         def value_to_boolean(value)
+</span><span class="uncovered0"><a name="line138"></a>138           if value == true || value == false
+</span><span class="uncovered1"><a name="line139"></a>139             value
+</span><span class="uncovered0"><a name="line140"></a>140           else
+</span><span class="uncovered1"><a name="line141"></a>141             %w(true t 1).include?(value.to_s.downcase)
+</span><span class="uncovered0"><a name="line142"></a>142           end
+</span><span class="uncovered1"><a name="line143"></a>143         end
+</span><span class="inferred0"><a name="line144"></a>144 
+</span><span class="inferred1"><a name="line145"></a>145         # convert something to a BigDecimal
+</span><span class="marked0"><a name="line146"></a>146         def value_to_decimal(value)
+</span><span class="uncovered1"><a name="line147"></a>147           # Using .class is faster than .is_a? and
+</span><span class="uncovered0"><a name="line148"></a>148           # subclasses of BigDecimal will be handled
+</span><span class="uncovered1"><a name="line149"></a>149           # in the else clause
+</span><span class="uncovered0"><a name="line150"></a>150           if value.class == BigDecimal
+</span><span class="uncovered1"><a name="line151"></a>151             value
+</span><span class="uncovered0"><a name="line152"></a>152           elsif value.respond_to?(:to_d)
+</span><span class="uncovered1"><a name="line153"></a>153             value.to_d
+</span><span class="uncovered0"><a name="line154"></a>154           else
+</span><span class="uncovered1"><a name="line155"></a>155             value.to_s.to_d
+</span><span class="uncovered0"><a name="line156"></a>156           end
+</span><span class="uncovered1"><a name="line157"></a>157         end
+</span><span class="inferred0"><a name="line158"></a>158 
+</span><span class="marked1"><a name="line159"></a>159         protected
+</span><span class="inferred0"><a name="line160"></a>160           # '0.123456' -&gt; 123456
+</span><span class="inferred1"><a name="line161"></a>161           # '1.123456' -&gt; 123456
+</span><span class="marked0"><a name="line162"></a>162           def microseconds(time)
+</span><span class="uncovered1"><a name="line163"></a>163             ((time[:sec_fraction].to_f % 1) * 1_000_000).to_i
+</span><span class="uncovered0"><a name="line164"></a>164           end
+</span><span class="inferred1"><a name="line165"></a>165 
+</span><span class="marked0"><a name="line166"></a>166           def new_date(year, mon, mday)
+</span><span class="uncovered1"><a name="line167"></a>167             if year &amp;&amp; year != 0
+</span><span class="uncovered0"><a name="line168"></a>168               Date.new(year, mon, mday) rescue nil
+</span><span class="uncovered1"><a name="line169"></a>169             end
+</span><span class="uncovered0"><a name="line170"></a>170           end
+</span><span class="inferred1"><a name="line171"></a>171 
+</span><span class="marked0"><a name="line172"></a>172           def new_time(year, mon, mday, hour, min, sec, microsec)
+</span><span class="uncovered1"><a name="line173"></a>173             # Treat 0000-00-00 00:00:00 as nil.
+</span><span class="uncovered0"><a name="line174"></a>174             return nil if year.nil? || year == 0
+</span><span class="uncovered1"><a name="line175"></a>175 
+</span><span class="uncovered0"><a name="line176"></a>176             Time.time_with_datetime_fallback(Base.default_timezone, year, mon, mday, hour, min, sec, microsec) rescue nil
+</span><span class="uncovered1"><a name="line177"></a>177           end
+</span><span class="inferred0"><a name="line178"></a>178 
+</span><span class="marked1"><a name="line179"></a>179           def fast_string_to_date(string)
+</span><span class="uncovered0"><a name="line180"></a>180             if string =~ Format::ISO_DATE
+</span><span class="uncovered1"><a name="line181"></a>181               new_date $1.to_i, $2.to_i, $3.to_i
+</span><span class="uncovered0"><a name="line182"></a>182             end
+</span><span class="uncovered1"><a name="line183"></a>183           end
+</span><span class="inferred0"><a name="line184"></a>184 
+</span><span class="inferred1"><a name="line185"></a>185           # Doesn't handle time zones.
+</span><span class="marked0"><a name="line186"></a>186           def fast_string_to_time(string)
+</span><span class="uncovered1"><a name="line187"></a>187             if string =~ Format::ISO_DATETIME
+</span><span class="uncovered0"><a name="line188"></a>188               microsec = ($7.to_f * 1_000_000).to_i
+</span><span class="uncovered1"><a name="line189"></a>189               new_time $1.to_i, $2.to_i, $3.to_i, $4.to_i, $5.to_i, $6.to_i, microsec
+</span><span class="uncovered0"><a name="line190"></a>190             end
+</span><span class="uncovered1"><a name="line191"></a>191           end
+</span><span class="inferred0"><a name="line192"></a>192 
+</span><span class="marked1"><a name="line193"></a>193           def fallback_string_to_date(string)
+</span><span class="uncovered0"><a name="line194"></a>194             new_date(*::Date._parse(string, false).values_at(:year, :mon, :mday))
+</span><span class="uncovered1"><a name="line195"></a>195           end
+</span><span class="inferred0"><a name="line196"></a>196 
+</span><span class="marked1"><a name="line197"></a>197           def fallback_string_to_time(string)
+</span><span class="uncovered0"><a name="line198"></a>198             time_hash = Date._parse(string)
+</span><span class="uncovered1"><a name="line199"></a>199             time_hash[:sec_fraction] = microseconds(time_hash)
+</span><span class="uncovered0"><a name="line200"></a>200 
+</span><span class="uncovered1"><a name="line201"></a>201             new_time(*time_hash.values_at(:year, :mon, :mday, :hour, :min, :sec, :sec_fraction))
+</span><span class="uncovered0"><a name="line202"></a>202           end
+</span><span class="uncovered1"><a name="line203"></a>203       end
+</span><span class="inferred0"><a name="line204"></a>204 
+</span><span class="marked1"><a name="line205"></a>205       private
+</span><span class="marked0"><a name="line206"></a>206         def extract_limit(sql_type)
+</span><span class="marked1"><a name="line207"></a>207           $1.to_i if sql_type =~ /\((.*)\)/
+</span><span class="marked0"><a name="line208"></a>208         end
+</span><span class="inferred1"><a name="line209"></a>209 
+</span><span class="marked0"><a name="line210"></a>210         def extract_precision(sql_type)
+</span><span class="marked1"><a name="line211"></a>211           $2.to_i if sql_type =~ /^(numeric|decimal|number)\((\d+)(,\d+)?\)/i
+</span><span class="marked0"><a name="line212"></a>212         end
+</span><span class="inferred1"><a name="line213"></a>213 
+</span><span class="marked0"><a name="line214"></a>214         def extract_scale(sql_type)
+</span><span class="marked1"><a name="line215"></a>215           case sql_type
+</span><span class="marked0"><a name="line216"></a>216             when /^(numeric|decimal|number)\((\d+)\)/i then 0
+</span><span class="marked1"><a name="line217"></a>217             when /^(numeric|decimal|number)\((\d+)(,(\d+))\)/i then $4.to_i
+</span><span class="inferred0"><a name="line218"></a>218           end
+</span><span class="marked1"><a name="line219"></a>219         end
+</span><span class="inferred0"><a name="line220"></a>220 
+</span><span class="marked1"><a name="line221"></a>221         def simplified_type(field_type)
+</span><span class="marked0"><a name="line222"></a>222           case field_type
+</span><span class="marked1"><a name="line223"></a>223             when /int/i
+</span><span class="marked0"><a name="line224"></a>224               :integer
+</span><span class="marked1"><a name="line225"></a>225             when /float|double/i
+</span><span class="uncovered0"><a name="line226"></a>226               :float
+</span><span class="marked1"><a name="line227"></a>227             when /decimal|numeric|number/i
+</span><span class="uncovered0"><a name="line228"></a>228               extract_scale(field_type) == 0 ? :integer : :decimal
+</span><span class="marked1"><a name="line229"></a>229             when /datetime/i
+</span><span class="marked0"><a name="line230"></a>230               :datetime
+</span><span class="marked1"><a name="line231"></a>231             when /timestamp/i
+</span><span class="uncovered0"><a name="line232"></a>232               :timestamp
+</span><span class="marked1"><a name="line233"></a>233             when /time/i
+</span><span class="uncovered0"><a name="line234"></a>234               :time
+</span><span class="marked1"><a name="line235"></a>235             when /date/i
+</span><span class="uncovered0"><a name="line236"></a>236               :date
+</span><span class="marked1"><a name="line237"></a>237             when /clob/i, /text/i
+</span><span class="uncovered0"><a name="line238"></a>238               :text
+</span><span class="marked1"><a name="line239"></a>239             when /blob/i, /binary/i
+</span><span class="uncovered0"><a name="line240"></a>240               :binary
+</span><span class="marked1"><a name="line241"></a>241             when /char/i, /string/i
+</span><span class="marked0"><a name="line242"></a>242               :string
+</span><span class="uncovered1"><a name="line243"></a>243             when /boolean/i
+</span><span class="uncovered0"><a name="line244"></a>244               :boolean
+</span><span class="uncovered1"><a name="line245"></a>245           end
+</span><span class="marked0"><a name="line246"></a>246         end
+</span><span class="inferred1"><a name="line247"></a>247     end
+</span><span class="inferred0"><a name="line248"></a>248 
+</span><span class="marked1"><a name="line249"></a>249     class IndexDefinition &lt; Struct.new(:table, :name, :unique, :columns) #:nodoc:
+</span><span class="inferred0"><a name="line250"></a>250     end
+</span><span class="inferred1"><a name="line251"></a>251 
+</span><span class="marked0"><a name="line252"></a>252     class ColumnDefinition &lt; Struct.new(:base, :name, :type, :limit, :precision, :scale, :default, :null) #:nodoc:
+</span><span class="inferred1"><a name="line253"></a>253 
+</span><span class="marked0"><a name="line254"></a>254       def sql_type
+</span><span class="uncovered1"><a name="line255"></a>255         base.type_to_sql(type.to_sym, limit, precision, scale) rescue type
+</span><span class="uncovered0"><a name="line256"></a>256       end
+</span><span class="inferred1"><a name="line257"></a>257 
+</span><span class="marked0"><a name="line258"></a>258       def to_sql
+</span><span class="uncovered1"><a name="line259"></a>259         column_sql = &quot;#{base.quote_column_name(name)} #{sql_type}&quot;
+</span><span class="uncovered0"><a name="line260"></a>260         column_options = {}
+</span><span class="uncovered1"><a name="line261"></a>261         column_options[:null] = null unless null.nil?
+</span><span class="uncovered0"><a name="line262"></a>262         column_options[:default] = default unless default.nil?
+</span><span class="uncovered1"><a name="line263"></a>263         add_column_options!(column_sql, column_options) unless type.to_sym == :primary_key
+</span><span class="uncovered0"><a name="line264"></a>264         column_sql
+</span><span class="uncovered1"><a name="line265"></a>265       end
+</span><span class="marked0"><a name="line266"></a>266       alias to_s :to_sql
+</span><span class="inferred1"><a name="line267"></a>267 
+</span><span class="marked0"><a name="line268"></a>268       private
+</span><span class="inferred1"><a name="line269"></a>269 
+</span><span class="marked0"><a name="line270"></a>270         def add_column_options!(sql, options)
+</span><span class="uncovered1"><a name="line271"></a>271           base.add_column_options!(sql, options.merge(:column =&gt; self))
+</span><span class="uncovered0"><a name="line272"></a>272         end
+</span><span class="uncovered1"><a name="line273"></a>273     end
+</span><span class="inferred0"><a name="line274"></a>274 
+</span><span class="inferred1"><a name="line275"></a>275     # Represents a SQL table in an abstract way.
+</span><span class="inferred0"><a name="line276"></a>276     # Columns are stored as a ColumnDefinition in the +columns+ attribute.
+</span><span class="marked1"><a name="line277"></a>277     class TableDefinition
+</span><span class="marked0"><a name="line278"></a>278       attr_accessor :columns
+</span><span class="inferred1"><a name="line279"></a>279 
+</span><span class="marked0"><a name="line280"></a>280       def initialize(base)
+</span><span class="uncovered1"><a name="line281"></a>281         @columns = []
+</span><span class="uncovered0"><a name="line282"></a>282         @base = base
+</span><span class="uncovered1"><a name="line283"></a>283       end
+</span><span class="inferred0"><a name="line284"></a>284 
+</span><span class="inferred1"><a name="line285"></a>285       # Appends a primary key definition to the table definition.
+</span><span class="inferred0"><a name="line286"></a>286       # Can be called multiple times, but this is probably not a good idea.
+</span><span class="marked1"><a name="line287"></a>287       def primary_key(name)
+</span><span class="uncovered0"><a name="line288"></a>288         column(name, :primary_key)
+</span><span class="uncovered1"><a name="line289"></a>289       end
+</span><span class="inferred0"><a name="line290"></a>290 
+</span><span class="inferred1"><a name="line291"></a>291       # Returns a ColumnDefinition for the column with name +name+.
+</span><span class="marked0"><a name="line292"></a>292       def [](name)
+</span><span class="uncovered1"><a name="line293"></a>293         @columns.find {|column| column.name.to_s == name.to_s}
+</span><span class="uncovered0"><a name="line294"></a>294       end
+</span><span class="inferred1"><a name="line295"></a>295 
+</span><span class="inferred0"><a name="line296"></a>296       # Instantiates a new column for the table.
+</span><span class="inferred1"><a name="line297"></a>297       # The +type+ parameter is normally one of the migrations native types,
+</span><span class="inferred0"><a name="line298"></a>298       # which is one of the following:
+</span><span class="inferred1"><a name="line299"></a>299       # &lt;tt&gt;:primary_key&lt;/tt&gt;, &lt;tt&gt;:string&lt;/tt&gt;, &lt;tt&gt;:text&lt;/tt&gt;,
+</span><span class="inferred0"><a name="line300"></a>300       # &lt;tt&gt;:integer&lt;/tt&gt;, &lt;tt&gt;:float&lt;/tt&gt;, &lt;tt&gt;:decimal&lt;/tt&gt;,
+</span><span class="inferred1"><a name="line301"></a>301       # &lt;tt&gt;:datetime&lt;/tt&gt;, &lt;tt&gt;:timestamp&lt;/tt&gt;, &lt;tt&gt;:time&lt;/tt&gt;,
+</span><span class="inferred0"><a name="line302"></a>302       # &lt;tt&gt;:date&lt;/tt&gt;, &lt;tt&gt;:binary&lt;/tt&gt;, &lt;tt&gt;:boolean&lt;/tt&gt;.
+</span><span class="inferred1"><a name="line303"></a>303       #
+</span><span class="inferred0"><a name="line304"></a>304       # You may use a type not in this list as long as it is supported by your
+</span><span class="inferred1"><a name="line305"></a>305       # database (for example, &quot;polygon&quot; in MySQL), but this will not be database
+</span><span class="inferred0"><a name="line306"></a>306       # agnostic and should usually be avoided.
+</span><span class="inferred1"><a name="line307"></a>307       #
+</span><span class="inferred0"><a name="line308"></a>308       # Available options are (none of these exists by default):
+</span><span class="inferred1"><a name="line309"></a>309       # * &lt;tt&gt;:limit&lt;/tt&gt; -
+</span><span class="inferred0"><a name="line310"></a>310       #   Requests a maximum column length. This is number of characters for &lt;tt&gt;:string&lt;/tt&gt; and &lt;tt&gt;:text&lt;/tt&gt; columns and number of bytes for :binary and :integer columns.
+</span><span class="inferred1"><a name="line311"></a>311       # * &lt;tt&gt;:default&lt;/tt&gt; -
+</span><span class="inferred0"><a name="line312"></a>312       #   The column's default value. Use nil for NULL.
+</span><span class="inferred1"><a name="line313"></a>313       # * &lt;tt&gt;:null&lt;/tt&gt; -
+</span><span class="inferred0"><a name="line314"></a>314       #   Allows or disallows +NULL+ values in the column. This option could
+</span><span class="inferred1"><a name="line315"></a>315       #   have been named &lt;tt&gt;:null_allowed&lt;/tt&gt;.
+</span><span class="inferred0"><a name="line316"></a>316       # * &lt;tt&gt;:precision&lt;/tt&gt; -
+</span><span class="inferred1"><a name="line317"></a>317       #   Specifies the precision for a &lt;tt&gt;:decimal&lt;/tt&gt; column.
+</span><span class="inferred0"><a name="line318"></a>318       # * &lt;tt&gt;:scale&lt;/tt&gt; -
+</span><span class="inferred1"><a name="line319"></a>319       #   Specifies the scale for a &lt;tt&gt;:decimal&lt;/tt&gt; column.
+</span><span class="inferred0"><a name="line320"></a>320       #
+</span><span class="inferred1"><a name="line321"></a>321       # Please be aware of different RDBMS implementations behavior with
+</span><span class="inferred0"><a name="line322"></a>322       # &lt;tt&gt;:decimal&lt;/tt&gt; columns:
+</span><span class="inferred1"><a name="line323"></a>323       # * The SQL standard says the default scale should be 0, &lt;tt&gt;:scale&lt;/tt&gt; &lt;=
+</span><span class="inferred0"><a name="line324"></a>324       #   &lt;tt&gt;:precision&lt;/tt&gt;, and makes no comments about the requirements of
+</span><span class="inferred1"><a name="line325"></a>325       #   &lt;tt&gt;:precision&lt;/tt&gt;.
+</span><span class="inferred0"><a name="line326"></a>326       # * MySQL: &lt;tt&gt;:precision&lt;/tt&gt; [1..63], &lt;tt&gt;:scale&lt;/tt&gt; [0..30].
+</span><span class="inferred1"><a name="line327"></a>327       #   Default is (10,0).
+</span><span class="inferred0"><a name="line328"></a>328       # * PostgreSQL: &lt;tt&gt;:precision&lt;/tt&gt; [1..infinity],
+</span><span class="inferred1"><a name="line329"></a>329       #   &lt;tt&gt;:scale&lt;/tt&gt; [0..infinity]. No default.
+</span><span class="inferred0"><a name="line330"></a>330       # * SQLite2: Any &lt;tt&gt;:precision&lt;/tt&gt; and &lt;tt&gt;:scale&lt;/tt&gt; may be used.
+</span><span class="inferred1"><a name="line331"></a>331       #   Internal storage as strings. No default.
+</span><span class="inferred0"><a name="line332"></a>332       # * SQLite3: No restrictions on &lt;tt&gt;:precision&lt;/tt&gt; and &lt;tt&gt;:scale&lt;/tt&gt;,
+</span><span class="inferred1"><a name="line333"></a>333       #   but the maximum supported &lt;tt&gt;:precision&lt;/tt&gt; is 16. No default.
+</span><span class="inferred0"><a name="line334"></a>334       # * Oracle: &lt;tt&gt;:precision&lt;/tt&gt; [1..38], &lt;tt&gt;:scale&lt;/tt&gt; [-84..127].
+</span><span class="inferred1"><a name="line335"></a>335       #   Default is (38,0).
+</span><span class="inferred0"><a name="line336"></a>336       # * DB2: &lt;tt&gt;:precision&lt;/tt&gt; [1..63], &lt;tt&gt;:scale&lt;/tt&gt; [0..62].
+</span><span class="inferred1"><a name="line337"></a>337       #   Default unknown.
+</span><span class="inferred0"><a name="line338"></a>338       # * Firebird: &lt;tt&gt;:precision&lt;/tt&gt; [1..18], &lt;tt&gt;:scale&lt;/tt&gt; [0..18].
+</span><span class="inferred1"><a name="line339"></a>339       #   Default (9,0). Internal types NUMERIC and DECIMAL have different
+</span><span class="inferred0"><a name="line340"></a>340       #   storage rules, decimal being better.
+</span><span class="inferred1"><a name="line341"></a>341       # * FrontBase?: &lt;tt&gt;:precision&lt;/tt&gt; [1..38], &lt;tt&gt;:scale&lt;/tt&gt; [0..38].
+</span><span class="inferred0"><a name="line342"></a>342       #   Default (38,0). WARNING Max &lt;tt&gt;:precision&lt;/tt&gt;/&lt;tt&gt;:scale&lt;/tt&gt; for
+</span><span class="inferred1"><a name="line343"></a>343       #   NUMERIC is 19, and DECIMAL is 38.
+</span><span class="inferred0"><a name="line344"></a>344       # * SqlServer?: &lt;tt&gt;:precision&lt;/tt&gt; [1..38], &lt;tt&gt;:scale&lt;/tt&gt; [0..38].
+</span><span class="inferred1"><a name="line345"></a>345       #   Default (38,0).
+</span><span class="inferred0"><a name="line346"></a>346       # * Sybase: &lt;tt&gt;:precision&lt;/tt&gt; [1..38], &lt;tt&gt;:scale&lt;/tt&gt; [0..38].
+</span><span class="inferred1"><a name="line347"></a>347       #   Default (38,0).
+</span><span class="inferred0"><a name="line348"></a>348       # * OpenBase?: Documentation unclear. Claims storage in &lt;tt&gt;double&lt;/tt&gt;.
+</span><span class="inferred1"><a name="line349"></a>349       #
+</span><span class="inferred0"><a name="line350"></a>350       # This method returns &lt;tt&gt;self&lt;/tt&gt;.
+</span><span class="inferred1"><a name="line351"></a>351       #
+</span><span class="inferred0"><a name="line352"></a>352       # == Examples
+</span><span class="inferred1"><a name="line353"></a>353       #  # Assuming td is an instance of TableDefinition
+</span><span class="inferred0"><a name="line354"></a>354       #  td.column(:granted, :boolean)
+</span><span class="inferred1"><a name="line355"></a>355       #  # granted BOOLEAN
+</span><span class="inferred0"><a name="line356"></a>356       #
+</span><span class="inferred1"><a name="line357"></a>357       #  td.column(:picture, :binary, :limit =&gt; 2.megabytes)
+</span><span class="inferred0"><a name="line358"></a>358       #  # =&gt; picture BLOB(2097152)
+</span><span class="inferred1"><a name="line359"></a>359       #
+</span><span class="inferred0"><a name="line360"></a>360       #  td.column(:sales_stage, :string, :limit =&gt; 20, :default =&gt; 'new', :null =&gt; false)
+</span><span class="inferred1"><a name="line361"></a>361       #  # =&gt; sales_stage VARCHAR(20) DEFAULT 'new' NOT NULL
+</span><span class="inferred0"><a name="line362"></a>362       #
+</span><span class="inferred1"><a name="line363"></a>363       #  td.column(:bill_gates_money, :decimal, :precision =&gt; 15, :scale =&gt; 2)
+</span><span class="inferred0"><a name="line364"></a>364       #  # =&gt; bill_gates_money DECIMAL(15,2)
+</span><span class="inferred1"><a name="line365"></a>365       #
+</span><span class="inferred0"><a name="line366"></a>366       #  td.column(:sensor_reading, :decimal, :precision =&gt; 30, :scale =&gt; 20)
+</span><span class="inferred1"><a name="line367"></a>367       #  # =&gt; sensor_reading DECIMAL(30,20)
+</span><span class="inferred0"><a name="line368"></a>368       #
+</span><span class="inferred1"><a name="line369"></a>369       #  # While &lt;tt&gt;:scale&lt;/tt&gt; defaults to zero on most databases, it
+</span><span class="inferred0"><a name="line370"></a>370       #  # probably wouldn't hurt to include it.
+</span><span class="inferred1"><a name="line371"></a>371       #  td.column(:huge_integer, :decimal, :precision =&gt; 30)
+</span><span class="inferred0"><a name="line372"></a>372       #  # =&gt; huge_integer DECIMAL(30)
+</span><span class="inferred1"><a name="line373"></a>373       #
+</span><span class="inferred0"><a name="line374"></a>374       # == Short-hand examples
+</span><span class="inferred1"><a name="line375"></a>375       #
+</span><span class="inferred0"><a name="line376"></a>376       # Instead of calling +column+ directly, you can also work with the short-hand definitions for the default types.
+</span><span class="inferred1"><a name="line377"></a>377       # They use the type as the method name instead of as a parameter and allow for multiple columns to be defined
+</span><span class="inferred0"><a name="line378"></a>378       # in a single statement.
+</span><span class="inferred1"><a name="line379"></a>379       #
+</span><span class="inferred0"><a name="line380"></a>380       # What can be written like this with the regular calls to column:
+</span><span class="inferred1"><a name="line381"></a>381       #
+</span><span class="inferred0"><a name="line382"></a>382       #   create_table &quot;products&quot;, :force =&gt; true do |t|
+</span><span class="inferred1"><a name="line383"></a>383       #     t.column &quot;shop_id&quot;,    :integer
+</span><span class="inferred0"><a name="line384"></a>384       #     t.column &quot;creator_id&quot;, :integer
+</span><span class="inferred1"><a name="line385"></a>385       #     t.column &quot;name&quot;,       :string,   :default =&gt; &quot;Untitled&quot;
+</span><span class="inferred0"><a name="line386"></a>386       #     t.column &quot;value&quot;,      :string,   :default =&gt; &quot;Untitled&quot;
+</span><span class="inferred1"><a name="line387"></a>387       #     t.column &quot;created_at&quot;, :datetime
+</span><span class="inferred0"><a name="line388"></a>388       #     t.column &quot;updated_at&quot;, :datetime
+</span><span class="inferred1"><a name="line389"></a>389       #   end
+</span><span class="inferred0"><a name="line390"></a>390       #
+</span><span class="inferred1"><a name="line391"></a>391       # Can also be written as follows using the short-hand:
+</span><span class="inferred0"><a name="line392"></a>392       #
+</span><span class="inferred1"><a name="line393"></a>393       #   create_table :products do |t|
+</span><span class="inferred0"><a name="line394"></a>394       #     t.integer :shop_id, :creator_id
+</span><span class="inferred1"><a name="line395"></a>395       #     t.string  :name, :value, :default =&gt; &quot;Untitled&quot;
+</span><span class="inferred0"><a name="line396"></a>396       #     t.timestamps
+</span><span class="inferred1"><a name="line397"></a>397       #   end
+</span><span class="inferred0"><a name="line398"></a>398       #
+</span><span class="inferred1"><a name="line399"></a>399       # There's a short-hand method for each of the type values declared at the top. And then there's
+</span><span class="inferred0"><a name="line400"></a>400       # TableDefinition#timestamps that'll add created_at and +updated_at+ as datetimes.
+</span><span class="inferred1"><a name="line401"></a>401       #
+</span><span class="inferred0"><a name="line402"></a>402       # TableDefinition#references will add an appropriately-named _id column, plus a corresponding _type
+</span><span class="inferred1"><a name="line403"></a>403       # column if the &lt;tt&gt;:polymorphic&lt;/tt&gt; option is supplied. If &lt;tt&gt;:polymorphic&lt;/tt&gt; is a hash of options, these will be
+</span><span class="inferred0"><a name="line404"></a>404       # used when creating the &lt;tt&gt;_type&lt;/tt&gt; column. So what can be written like this:
+</span><span class="inferred1"><a name="line405"></a>405       #
+</span><span class="inferred0"><a name="line406"></a>406       #   create_table :taggings do |t|
+</span><span class="inferred1"><a name="line407"></a>407       #     t.integer :tag_id, :tagger_id, :taggable_id
+</span><span class="inferred0"><a name="line408"></a>408       #     t.string  :tagger_type
+</span><span class="inferred1"><a name="line409"></a>409       #     t.string  :taggable_type, :default =&gt; 'Photo'
+</span><span class="inferred0"><a name="line410"></a>410       #   end
+</span><span class="inferred1"><a name="line411"></a>411       #
+</span><span class="inferred0"><a name="line412"></a>412       # Can also be written as follows using references:
+</span><span class="inferred1"><a name="line413"></a>413       #
+</span><span class="inferred0"><a name="line414"></a>414       #   create_table :taggings do |t|
+</span><span class="inferred1"><a name="line415"></a>415       #     t.references :tag
+</span><span class="inferred0"><a name="line416"></a>416       #     t.references :tagger, :polymorphic =&gt; true
+</span><span class="inferred1"><a name="line417"></a>417       #     t.references :taggable, :polymorphic =&gt; { :default =&gt; 'Photo' }
+</span><span class="inferred0"><a name="line418"></a>418       #   end
+</span><span class="marked1"><a name="line419"></a>419       def column(name, type, options = {})
+</span><span class="uncovered0"><a name="line420"></a>420         column = self[name] || ColumnDefinition.new(@base, name, type)
+</span><span class="uncovered1"><a name="line421"></a>421         if options[:limit]
+</span><span class="uncovered0"><a name="line422"></a>422           column.limit = options[:limit]
+</span><span class="uncovered1"><a name="line423"></a>423         elsif native[type.to_sym].is_a?(Hash)
+</span><span class="uncovered0"><a name="line424"></a>424           column.limit = native[type.to_sym][:limit]
+</span><span class="uncovered1"><a name="line425"></a>425         end
+</span><span class="uncovered0"><a name="line426"></a>426         column.precision = options[:precision]
+</span><span class="uncovered1"><a name="line427"></a>427         column.scale = options[:scale]
+</span><span class="uncovered0"><a name="line428"></a>428         column.default = options[:default]
+</span><span class="uncovered1"><a name="line429"></a>429         column.null = options[:null]
+</span><span class="uncovered0"><a name="line430"></a>430         @columns &lt;&lt; column unless @columns.include? column
+</span><span class="uncovered1"><a name="line431"></a>431         self
+</span><span class="uncovered0"><a name="line432"></a>432       end
+</span><span class="inferred1"><a name="line433"></a>433 
+</span><span class="marked0"><a name="line434"></a>434       %w( string text integer float decimal datetime timestamp time date binary boolean ).each do |column_type|
+</span><span class="marked1"><a name="line435"></a>435         class_eval &lt;&lt;-EOV
+</span><span class="inferred0"><a name="line436"></a>436           def #{column_type}(*args)
+</span><span class="inferred1"><a name="line437"></a>437             options = args.extract_options!
+</span><span class="inferred0"><a name="line438"></a>438             column_names = args
+</span><span class="inferred1"><a name="line439"></a>439 
+</span><span class="inferred0"><a name="line440"></a>440             column_names.each { |name| column(name, '#{column_type}', options) }
+</span><span class="inferred1"><a name="line441"></a>441           end
+</span><span class="inferred0"><a name="line442"></a>442         EOV
+</span><span class="inferred1"><a name="line443"></a>443       end
+</span><span class="inferred0"><a name="line444"></a>444 
+</span><span class="inferred1"><a name="line445"></a>445       # Appends &lt;tt&gt;:datetime&lt;/tt&gt; columns &lt;tt&gt;:created_at&lt;/tt&gt; and
+</span><span class="inferred0"><a name="line446"></a>446       # &lt;tt&gt;:updated_at&lt;/tt&gt; to the table.
+</span><span class="marked1"><a name="line447"></a>447       def timestamps(*args)
+</span><span class="inferred0"><a name="line448"></a>448         options = args.extract_options!
+</span><span class="inferred1"><a name="line449"></a>449         column(:created_at, :datetime, options)
+</span><span class="inferred0"><a name="line450"></a>450         column(:updated_at, :datetime, options)
+</span><span class="inferred1"><a name="line451"></a>451       end
+</span><span class="inferred0"><a name="line452"></a>452 
+</span><span class="marked1"><a name="line453"></a>453       def references(*args)
+</span><span class="inferred0"><a name="line454"></a>454         options = args.extract_options!
+</span><span class="inferred1"><a name="line455"></a>455         polymorphic = options.delete(:polymorphic)
+</span><span class="inferred0"><a name="line456"></a>456         args.each do |col|
+</span><span class="inferred1"><a name="line457"></a>457           column(&quot;#{col}_id&quot;, :integer, options)
+</span><span class="inferred0"><a name="line458"></a>458           column(&quot;#{col}_type&quot;, :string, polymorphic.is_a?(Hash) ? polymorphic : options) unless polymorphic.nil?
+</span><span class="inferred1"><a name="line459"></a>459         end
+</span><span class="inferred0"><a name="line460"></a>460       end
+</span><span class="marked1"><a name="line461"></a>461       alias :belongs_to :references
+</span><span class="inferred0"><a name="line462"></a>462 
+</span><span class="inferred1"><a name="line463"></a>463       # Returns a String whose contents are the column definitions
+</span><span class="inferred0"><a name="line464"></a>464       # concatenated together. This string can then be prepended and appended to
+</span><span class="inferred1"><a name="line465"></a>465       # to generate the final SQL to create the table.
+</span><span class="marked0"><a name="line466"></a>466       def to_sql
+</span><span class="uncovered1"><a name="line467"></a>467         @columns * ', '
+</span><span class="uncovered0"><a name="line468"></a>468       end
+</span><span class="inferred1"><a name="line469"></a>469 
+</span><span class="marked0"><a name="line470"></a>470       private
+</span><span class="marked1"><a name="line471"></a>471         def native
+</span><span class="uncovered0"><a name="line472"></a>472           @base.native_database_types
+</span><span class="uncovered1"><a name="line473"></a>473         end
+</span><span class="uncovered0"><a name="line474"></a>474     end
+</span><span class="inferred1"><a name="line475"></a>475 
+</span><span class="inferred0"><a name="line476"></a>476     # Represents a SQL table in an abstract way for updating a table.
+</span><span class="inferred1"><a name="line477"></a>477     # Also see TableDefinition and SchemaStatements#create_table
+</span><span class="inferred0"><a name="line478"></a>478     #
+</span><span class="inferred1"><a name="line479"></a>479     # Available transformations are:
+</span><span class="inferred0"><a name="line480"></a>480     #
+</span><span class="inferred1"><a name="line481"></a>481     #   change_table :table do |t|
+</span><span class="inferred0"><a name="line482"></a>482     #     t.column
+</span><span class="inferred1"><a name="line483"></a>483     #     t.index
+</span><span class="inferred0"><a name="line484"></a>484     #     t.timestamps
+</span><span class="inferred1"><a name="line485"></a>485     #     t.change
+</span><span class="inferred0"><a name="line486"></a>486     #     t.change_default
+</span><span class="inferred1"><a name="line487"></a>487     #     t.rename
+</span><span class="inferred0"><a name="line488"></a>488     #     t.references
+</span><span class="inferred1"><a name="line489"></a>489     #     t.belongs_to
+</span><span class="inferred0"><a name="line490"></a>490     #     t.string
+</span><span class="inferred1"><a name="line491"></a>491     #     t.text
+</span><span class="inferred0"><a name="line492"></a>492     #     t.integer
+</span><span class="inferred1"><a name="line493"></a>493     #     t.float
+</span><span class="inferred0"><a name="line494"></a>494     #     t.decimal
+</span><span class="inferred1"><a name="line495"></a>495     #     t.datetime
+</span><span class="inferred0"><a name="line496"></a>496     #     t.timestamp
+</span><span class="inferred1"><a name="line497"></a>497     #     t.time
+</span><span class="inferred0"><a name="line498"></a>498     #     t.date
+</span><span class="inferred1"><a name="line499"></a>499     #     t.binary
+</span><span class="inferred0"><a name="line500"></a>500     #     t.boolean
+</span><span class="inferred1"><a name="line501"></a>501     #     t.remove
+</span><span class="inferred0"><a name="line502"></a>502     #     t.remove_references
+</span><span class="inferred1"><a name="line503"></a>503     #     t.remove_belongs_to
+</span><span class="inferred0"><a name="line504"></a>504     #     t.remove_index
+</span><span class="inferred1"><a name="line505"></a>505     #     t.remove_timestamps
+</span><span class="inferred0"><a name="line506"></a>506     #   end
+</span><span class="inferred1"><a name="line507"></a>507     #
+</span><span class="marked0"><a name="line508"></a>508     class Table
+</span><span class="marked1"><a name="line509"></a>509       def initialize(table_name, base)
+</span><span class="uncovered0"><a name="line510"></a>510         @table_name = table_name
+</span><span class="uncovered1"><a name="line511"></a>511         @base = base
+</span><span class="uncovered0"><a name="line512"></a>512       end
+</span><span class="inferred1"><a name="line513"></a>513 
+</span><span class="inferred0"><a name="line514"></a>514       # Adds a new column to the named table.
+</span><span class="inferred1"><a name="line515"></a>515       # See TableDefinition#column for details of the options you can use.
+</span><span class="inferred0"><a name="line516"></a>516       # ===== Example
+</span><span class="inferred1"><a name="line517"></a>517       # ====== Creating a simple column
+</span><span class="inferred0"><a name="line518"></a>518       #  t.column(:name, :string)
+</span><span class="marked1"><a name="line519"></a>519       def column(column_name, type, options = {})
+</span><span class="uncovered0"><a name="line520"></a>520         @base.add_column(@table_name, column_name, type, options)
+</span><span class="uncovered1"><a name="line521"></a>521       end
+</span><span class="inferred0"><a name="line522"></a>522 
+</span><span class="inferred1"><a name="line523"></a>523       # Adds a new index to the table. +column_name+ can be a single Symbol, or
+</span><span class="inferred0"><a name="line524"></a>524       # an Array of Symbols. See SchemaStatements#add_index
+</span><span class="inferred1"><a name="line525"></a>525       #
+</span><span class="inferred0"><a name="line526"></a>526       # ===== Examples
+</span><span class="inferred1"><a name="line527"></a>527       # ====== Creating a simple index
+</span><span class="inferred0"><a name="line528"></a>528       #  t.index(:name)
+</span><span class="inferred1"><a name="line529"></a>529       # ====== Creating a unique index
+</span><span class="inferred0"><a name="line530"></a>530       #  t.index([:branch_id, :party_id], :unique =&gt; true)
+</span><span class="inferred1"><a name="line531"></a>531       # ====== Creating a named index
+</span><span class="inferred0"><a name="line532"></a>532       #  t.index([:branch_id, :party_id], :unique =&gt; true, :name =&gt; 'by_branch_party')
+</span><span class="marked1"><a name="line533"></a>533       def index(column_name, options = {})
+</span><span class="uncovered0"><a name="line534"></a>534         @base.add_index(@table_name, column_name, options)
+</span><span class="uncovered1"><a name="line535"></a>535       end
+</span><span class="inferred0"><a name="line536"></a>536 
+</span><span class="inferred1"><a name="line537"></a>537       # Adds timestamps (created_at and updated_at) columns to the table. See SchemaStatements#add_timestamps
+</span><span class="inferred0"><a name="line538"></a>538       # ===== Example
+</span><span class="inferred1"><a name="line539"></a>539       #  t.timestamps
+</span><span class="marked0"><a name="line540"></a>540       def timestamps
+</span><span class="uncovered1"><a name="line541"></a>541         @base.add_timestamps(@table_name)
+</span><span class="uncovered0"><a name="line542"></a>542       end
+</span><span class="inferred1"><a name="line543"></a>543 
+</span><span class="inferred0"><a name="line544"></a>544       # Changes the column's definition according to the new options.
+</span><span class="inferred1"><a name="line545"></a>545       # See TableDefinition#column for details of the options you can use.
+</span><span class="inferred0"><a name="line546"></a>546       # ===== Examples
+</span><span class="inferred1"><a name="line547"></a>547       #  t.change(:name, :string, :limit =&gt; 80)
+</span><span class="inferred0"><a name="line548"></a>548       #  t.change(:description, :text)
+</span><span class="marked1"><a name="line549"></a>549       def change(column_name, type, options = {})
+</span><span class="uncovered0"><a name="line550"></a>550         @base.change_column(@table_name, column_name, type, options)
+</span><span class="uncovered1"><a name="line551"></a>551       end
+</span><span class="inferred0"><a name="line552"></a>552 
+</span><span class="inferred1"><a name="line553"></a>553       # Sets a new default value for a column. See SchemaStatements#change_column_default
+</span><span class="inferred0"><a name="line554"></a>554       # ===== Examples
+</span><span class="inferred1"><a name="line555"></a>555       #  t.change_default(:qualification, 'new')
+</span><span class="inferred0"><a name="line556"></a>556       #  t.change_default(:authorized, 1)
+</span><span class="marked1"><a name="line557"></a>557       def change_default(column_name, default)
+</span><span class="uncovered0"><a name="line558"></a>558         @base.change_column_default(@table_name, column_name, default)
+</span><span class="uncovered1"><a name="line559"></a>559       end
+</span><span class="inferred0"><a name="line560"></a>560 
+</span><span class="inferred1"><a name="line561"></a>561       # Removes the column(s) from the table definition.
+</span><span class="inferred0"><a name="line562"></a>562       # ===== Examples
+</span><span class="inferred1"><a name="line563"></a>563       #  t.remove(:qualification)
+</span><span class="inferred0"><a name="line564"></a>564       #  t.remove(:qualification, :experience)
+</span><span class="marked1"><a name="line565"></a>565       def remove(*column_names)
+</span><span class="uncovered0"><a name="line566"></a>566         @base.remove_column(@table_name, column_names)
+</span><span class="uncovered1"><a name="line567"></a>567       end
+</span><span class="inferred0"><a name="line568"></a>568 
+</span><span class="inferred1"><a name="line569"></a>569       # Removes the given index from the table.
+</span><span class="inferred0"><a name="line570"></a>570       #
+</span><span class="inferred1"><a name="line571"></a>571       # ===== Examples
+</span><span class="inferred0"><a name="line572"></a>572       # ====== Remove the suppliers_name_index in the suppliers table
+</span><span class="inferred1"><a name="line573"></a>573       #   t.remove_index :name
+</span><span class="inferred0"><a name="line574"></a>574       # ====== Remove the index named accounts_branch_id_index in the accounts table
+</span><span class="inferred1"><a name="line575"></a>575       #   t.remove_index :column =&gt; :branch_id
+</span><span class="inferred0"><a name="line576"></a>576       # ====== Remove the index named accounts_branch_id_party_id_index in the accounts table
+</span><span class="inferred1"><a name="line577"></a>577       #   t.remove_index :column =&gt; [:branch_id, :party_id]
+</span><span class="inferred0"><a name="line578"></a>578       # ====== Remove the index named by_branch_party in the accounts table
+</span><span class="inferred1"><a name="line579"></a>579       #   t.remove_index :name =&gt; :by_branch_party
+</span><span class="marked0"><a name="line580"></a>580       def remove_index(options = {})
+</span><span class="uncovered1"><a name="line581"></a>581         @base.remove_index(@table_name, options)
+</span><span class="uncovered0"><a name="line582"></a>582       end
+</span><span class="inferred1"><a name="line583"></a>583 
+</span><span class="inferred0"><a name="line584"></a>584       # Removes the timestamp columns (created_at and updated_at) from the table.
+</span><span class="inferred1"><a name="line585"></a>585       # ===== Example
+</span><span class="inferred0"><a name="line586"></a>586       #  t.remove_timestamps
+</span><span class="marked1"><a name="line587"></a>587       def remove_timestamps
+</span><span class="uncovered0"><a name="line588"></a>588         @base.remove_timestamps(@table_name)
+</span><span class="uncovered1"><a name="line589"></a>589       end
+</span><span class="inferred0"><a name="line590"></a>590 
+</span><span class="inferred1"><a name="line591"></a>591       # Renames a column.
+</span><span class="inferred0"><a name="line592"></a>592       # ===== Example
+</span><span class="inferred1"><a name="line593"></a>593       #  t.rename(:description, :name)
+</span><span class="marked0"><a name="line594"></a>594       def rename(column_name, new_column_name)
+</span><span class="uncovered1"><a name="line595"></a>595         @base.rename_column(@table_name, column_name, new_column_name)
+</span><span class="uncovered0"><a name="line596"></a>596       end
+</span><span class="inferred1"><a name="line597"></a>597 
+</span><span class="inferred0"><a name="line598"></a>598       # Adds a reference. Optionally adds a +type+ column.
+</span><span class="inferred1"><a name="line599"></a>599       # &lt;tt&gt;references&lt;/tt&gt; and &lt;tt&gt;belongs_to&lt;/tt&gt; are acceptable.
+</span><span class="inferred0"><a name="line600"></a>600       # ===== Examples
+</span><span class="inferred1"><a name="line601"></a>601       #  t.references(:goat)
+</span><span class="inferred0"><a name="line602"></a>602       #  t.references(:goat, :polymorphic =&gt; true)
+</span><span class="inferred1"><a name="line603"></a>603       #  t.belongs_to(:goat)
+</span><span class="marked0"><a name="line604"></a>604       def references(*args)
+</span><span class="uncovered1"><a name="line605"></a>605         options = args.extract_options!
+</span><span class="uncovered0"><a name="line606"></a>606         polymorphic = options.delete(:polymorphic)
+</span><span class="uncovered1"><a name="line607"></a>607         args.each do |col|
+</span><span class="uncovered0"><a name="line608"></a>608           @base.add_column(@table_name, &quot;#{col}_id&quot;, :integer, options)
+</span><span class="uncovered1"><a name="line609"></a>609           @base.add_column(@table_name, &quot;#{col}_type&quot;, :string, polymorphic.is_a?(Hash) ? polymorphic : options) unless polymorphic.nil?
+</span><span class="uncovered0"><a name="line610"></a>610         end
+</span><span class="uncovered1"><a name="line611"></a>611       end
+</span><span class="marked0"><a name="line612"></a>612       alias :belongs_to :references
+</span><span class="inferred1"><a name="line613"></a>613 
+</span><span class="inferred0"><a name="line614"></a>614       # Removes a reference. Optionally removes a +type+ column.
+</span><span class="inferred1"><a name="line615"></a>615       # &lt;tt&gt;remove_references&lt;/tt&gt; and &lt;tt&gt;remove_belongs_to&lt;/tt&gt; are acceptable.
+</span><span class="inferred0"><a name="line616"></a>616       # ===== Examples
+</span><span class="inferred1"><a name="line617"></a>617       #  t.remove_references(:goat)
+</span><span class="inferred0"><a name="line618"></a>618       #  t.remove_references(:goat, :polymorphic =&gt; true)
+</span><span class="inferred1"><a name="line619"></a>619       #  t.remove_belongs_to(:goat)
+</span><span class="marked0"><a name="line620"></a>620       def remove_references(*args)
+</span><span class="uncovered1"><a name="line621"></a>621         options = args.extract_options!
+</span><span class="uncovered0"><a name="line622"></a>622         polymorphic = options.delete(:polymorphic)
+</span><span class="uncovered1"><a name="line623"></a>623         args.each do |col|
+</span><span class="uncovered0"><a name="line624"></a>624           @base.remove_column(@table_name, &quot;#{col}_id&quot;)
+</span><span class="uncovered1"><a name="line625"></a>625           @base.remove_column(@table_name, &quot;#{col}_type&quot;) unless polymorphic.nil?
+</span><span class="uncovered0"><a name="line626"></a>626         end
+</span><span class="uncovered1"><a name="line627"></a>627       end
+</span><span class="marked0"><a name="line628"></a>628       alias :remove_belongs_to  :remove_references
+</span><span class="inferred1"><a name="line629"></a>629 
+</span><span class="inferred0"><a name="line630"></a>630       # Adds a column or columns of a specified type
+</span><span class="inferred1"><a name="line631"></a>631       # ===== Examples
+</span><span class="inferred0"><a name="line632"></a>632       #  t.string(:goat)
+</span><span class="inferred1"><a name="line633"></a>633       #  t.string(:goat, :sheep)
+</span><span class="marked0"><a name="line634"></a>634       %w( string text integer float decimal datetime timestamp time date binary boolean ).each do |column_type|
+</span><span class="marked1"><a name="line635"></a>635         class_eval &lt;&lt;-EOV
+</span><span class="inferred0"><a name="line636"></a>636           def #{column_type}(*args)
+</span><span class="inferred1"><a name="line637"></a>637             options = args.extract_options!
+</span><span class="inferred0"><a name="line638"></a>638             column_names = args
+</span><span class="inferred1"><a name="line639"></a>639 
+</span><span class="inferred0"><a name="line640"></a>640             column_names.each do |name|
+</span><span class="inferred1"><a name="line641"></a>641               column = ColumnDefinition.new(@base, name, '#{column_type}')
+</span><span class="inferred0"><a name="line642"></a>642               if options[:limit]
+</span><span class="inferred1"><a name="line643"></a>643                 column.limit = options[:limit]
+</span><span class="inferred0"><a name="line644"></a>644               elsif native['#{column_type}'.to_sym].is_a?(Hash)
+</span><span class="inferred1"><a name="line645"></a>645                 column.limit = native['#{column_type}'.to_sym][:limit]
+</span><span class="inferred0"><a name="line646"></a>646               end
+</span><span class="inferred1"><a name="line647"></a>647               column.precision = options[:precision]
+</span><span class="inferred0"><a name="line648"></a>648               column.scale = options[:scale]
+</span><span class="inferred1"><a name="line649"></a>649               column.default = options[:default]
+</span><span class="inferred0"><a name="line650"></a>650               column.null = options[:null]
+</span><span class="inferred1"><a name="line651"></a>651               @base.add_column(@table_name, name, column.sql_type, options)
+</span><span class="inferred0"><a name="line652"></a>652             end
+</span><span class="inferred1"><a name="line653"></a>653           end
+</span><span class="inferred0"><a name="line654"></a>654         EOV
+</span><span class="inferred1"><a name="line655"></a>655       end
+</span><span class="inferred0"><a name="line656"></a>656 
+</span><span class="marked1"><a name="line657"></a>657       private
+</span><span class="marked0"><a name="line658"></a>658         def native
+</span><span class="uncovered1"><a name="line659"></a>659           @base.native_database_types
+</span><span class="uncovered0"><a name="line660"></a>660         end
+</span><span class="uncovered1"><a name="line661"></a>661     end
+</span><span class="uncovered0"><a name="line662"></a>662 
+</span><span class="uncovered1"><a name="line663"></a>663   end
+</span><span class="uncovered0"><a name="line664"></a>664 end
+</span></pre><hr/>
+    <p>Generated using the <a href='http://eigenclass.org/hiki.rb?rcov'>rcov code coverage analysis tool for Ruby</a>
+   version 0.8.1.2.</p>
+<p><a href='http://validator.w3.org/check/referer'><img src='http://www.w3.org/Icons/valid-xhtml10' height='31' alt='Valid XHTML 1.0!' width='88'/>
+        </a>
+      <a href='http://jigsaw.w3.org/css-validator/check/referer'><img src='http://jigsaw.w3.org/css-validator/images/vcss' alt='Valid CSS!' style='border:0;width:88px;height:31px'/>
+        </a>
+      </p>
+    </body>
+  </html>

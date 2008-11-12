@@ -6,6 +6,8 @@ body, p, ol, ul, td {
   line-height: 18px;
 }
 
+h1 {text-align:center;}
+
 pre {
   background-color: #eee;
   padding: 10px;
