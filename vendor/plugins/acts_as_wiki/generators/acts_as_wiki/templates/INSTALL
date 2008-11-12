@@ -1,0 +1,9 @@
+
+Acts As Wiki
+============
+
+To finish the installation run the migration using
+
+rake db:migrate
+
+This will create the necessary 'revisions' table in the database.

@@ -1,0 +1,29 @@
+.revision-header {
+    font-size: 84%;
+    line-height: 1.2em;
+    margin: 0 0 1.4em 1em;
+}
+
+.revision-content {
+    margin-top: 1em;
+}
+
+.history-link {
+    font-size: 75%;
+}
+
+.revision-list {
+    list-style: none;
+}
+
+.revision-list .user {
+    margin-left: 2em;
+}
+
+.diff del {
+    background-color: #FFAAAD;
+}
+
+.diff ins {
+    background-color: #ADFFAD;
+}

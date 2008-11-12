@@ -1,0 +1,20 @@
+<%= stylesheet_link_tag 'revision' %>
+
+<div class="revision-header">
+<%
+prev_rev = @revision.prev_rev
+next_rev = @revision.next_rev
+last_rev = @revision.last_rev
+%>
+Revision as of <%= @revision.revised_at.strftime("%H:%M,%d %b %Y") %>; 
+<%= link_to_if @revision != last_rev, 'show current', :action => 'show', :id => last_rev.id %><br />
+<%= link_to_if prev_rev, "&larr; Older revision", {:action => 'show', :id => prev_rev && prev_rev.id} %> 
+|
+<%= link_to 'revert', :action => 'revert', :id => @revision %> 
+|
+<%= link_to_if next_rev, 'Newer revision &rarr;', :action => 'show', :id => next_rev && next_rev.id %>
+</div>
+<div class="revision-content">
+<%#= @revision.obj.filter_for(@revision.field_name).call(@revision.content) %>
+<%= @revision.content%>
+</div>

@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag 'revision' %>
+
+<h2><%= Inflector::humanize(@revision.field_name) %> Changes</h2>
+<div class="revision-header">
+Showing changes between <%= link_to "revision #{@revision.id}", :action => 'show', :id => @revision.id %> (<%= @revision.revised_at.strftime("%H:%M, %d %b %Y") %>)
+and <%= link_to "revision #{@current.id}", :action => 'show', :id => @current.id%> (<%= @current.revised_at.strftime("%H:%M, %d %b %Y") %>).
+<br />
+<%= link_to "Revert", :action => 'revert', :id => @revision %> 
+back to revision <%= @revision.id %>
+</div>
+<div class='diff'>
+<% diff = do_diff(markdown(@revision.content), markdown(@current.content))%>
+<%= diff%>
+</div>

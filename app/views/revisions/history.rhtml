@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag 'revision' %>
+
+<h1>History for <%= Inflector::humanize(@field_name) %></h1>
+<script>
+function toggle_radios(which, id) {
+    class = 'input.' + which;
+    radios = $$(class);
+    radios.each(function(radio) {
+        if (radio.id >= (which + id))
+            radio.style.visibility = 'hidden';
+        else
+            radio.style.visibility = 'visible';        
+    });
+} 
+</script>
+
+<%= form_tag :action => 'diff' %>
+<%= submit_tag 'Compare Versions' %>
+<ul class="revision-list">
+<% i = 0
+   max = @revisions.size - 1 %>
+<% @revisions.each do |r| %>
+        <li id='rev<%= i%>'>
+            <%#= link_to 'changes', {:action => 'diff', :old_id => r.id}, {:class => 'nav'}  %>
+            <input type='radio' <%= "checked='checked'" if i==1 %> class="old" name='old_id' id='old<%= max-i%>' value='<%= r.id%>' onClick="toggle_radios('cur', '<%= i%>');" />
+            <input type='radio' <%= "checked='checked'" if i==0 %> class="cur" name='id' id='cur<%= i%>' value='<%= r.id%>' onClick="toggle_radios('old', '<%= max-i%>');" />
+            <span class='time'>
+            <%= link_to r.revised_at.strftime("%H:%M,%d %b %Y"), {:action => 'show', :id => r.id}, {:class => 'nav'} %> 
+            </span>
+            <span class='user'>
+                by <%= r.author%>
+            </span>
+        </li>
+        <% i += 1%>
+<% end %>
+</ul>
+</form>
+<script>
+toggle_radios('cur', 1);
+toggle_radios('old', <%= max%>);
+</script>

@@ -1,0 +1,13 @@
+<h1>Editing <%=h @function_1.name %> (<%=h @language_1.name %>) and <%=h @function_2.name %> (<%=h @language_2.name %>)</h1>
+
+<% form_for(@twin) do |f| %>
+  <%= f.error_messages %>
+    
+  <p>
+    <%= f.label :note %><br />
+    <%= f.text_area(:note, :size => "26x5") %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
