@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081112155144) do
+ActiveRecord::Schema.define(:version => 20081112172147) do
 
   create_table "notes", :force => true do |t|
     t.string   "title"
@@ -24,6 +24,18 @@ ActiveRecord::Schema.define(:version => 20081112155144) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "revisions", :force => true do |t|
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+    t.datetime "revised_at",               :null => false
+    t.text     "content",                  :null => false
+    t.string   "author",     :limit => 60
+    t.string   "ip",         :limit => 60
+    t.string   "obj_type"
+    t.integer  "obj_id",                   :null => false
+    t.string   "field_name", :limit => 20
   end
 
   create_table "twins", :force => true do |t|

@@ -7,6 +7,8 @@ ActionController::Routing::Routes.draw do |map|
     programming_language.resources :what_functions
   end  
   
+  map.resources :twins
+  
   map.equiv 'programming_languages/:id/what_functions/:function_id/and/:language_id2/:function_id2', :controller => "what_functions", :action => "equiv_info" 
 
   # The priority is based upon order of creation: first created -> highest priority.

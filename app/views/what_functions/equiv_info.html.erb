@@ -1,3 +1,8 @@
 <h1><%=h @function_1.name %> (<%=h @language_1.name %>) and <%=h @function_2.name %> (<%=h @language_2.name %>)</h1>
 
 <p><%=h "#{@twin.note}" unless !@twin %>
+
+<p>
+<%= link_to 'Edit', edit_twin_path(@twin) %> | 
+<%= link_to 'History', :controller => 'revisions', :action => 'history', :type => @twin.class, :obj_id => @twin.id, :title => :note %>
+</p>
