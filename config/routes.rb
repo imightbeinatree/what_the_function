@@ -1,6 +1,4 @@
-ActionController::Routing::Routes.draw do |map|
-  map.resources :notes
-  map.root :controller => "programming_languages", :action => "index"
+ActionController::Routing::Routes.draw do |map|  map.root :controller => "programming_languages", :action => "index"
 #  map.root  :controller => 'programming_languages'
   map.resources :what_functions
 
