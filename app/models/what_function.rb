@@ -5,7 +5,6 @@ class WhatFunction < ActiveRecord::Base
   
   has_many :left_twins, :class_name => "Twin", :foreign_key => "right_function_id"
   has_many :right_twins, :class_name => "Twin", :foreign_key => "left_function_id"
-
   
   validates_uniqueness_of :name, :scope => :programming_language_id
   
