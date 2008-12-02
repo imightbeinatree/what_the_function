@@ -1,6 +1,7 @@
 <h2><%= link_to 'All Languages', programming_languages_path %>: <%= link_to @programming_language.name, programming_language_path(@programming_language) %>: <%=h @what_function.name %></h2>
 <div id="right_inset_box">
-  <h3>Description: (<%= link_to "Edit", edit_programming_language_what_function_path(@programming_language, @what_function) %> | <%= link_to 'History', :controller => 'revisions', :action => 'history', :type => @what_function.class, :obj_id => @what_function.id, :title => :description %>)</h3>
+  <h3>Function Description</h3>
+  <h4 class="underline"><%=h @programming_language.name %>: <%=h @what_function.name %> (<%= link_to "Edit", edit_programming_language_what_function_path(@programming_language, @what_function) %> | <%= link_to 'History', :controller => 'revisions', :action => 'history', :type => @what_function.class, :obj_id => @what_function.id, :title => :description %>)</h4>
   <% unless @what_function.description.blank? %>
     <p><%=(h @what_function.description).gsub(/\n/,'<br />') %></p>
     <p><%= link_to "Edit", edit_programming_language_what_function_path(@programming_language, @what_function) %> | <%= link_to 'History', :controller => 'revisions', :action => 'history', :type => @what_function.class, :obj_id => @what_function.id, :title => :description %></p>
@@ -9,10 +10,10 @@
   <% end %>
 </div>
 <div id="main_inner_left">
-  <h3>Synonyms (<%= link_to "add another synonym", new_twin_path %>)</h3>
+  <h3>Functionl Synonyms (<%= link_to "add synonym", new_twin_path %>)</h3>
   <% unless twin_list.blank? %>
     <p><%= twin_list %></p>
   <% else %>
-    <p><em>No twins found, why don't you add one</em></p>
+    <p><em>No synonyms found, <%= link_to "add a synonym", new_twin_path %></em></p>
   <% end %>
 </div>  

@@ -24,3 +24,9 @@ Big TODOS
 - some content for those big blank empty spaces on some of those pages, like the list of functions for a language page
 - any features - hot language, function, a cloud of some sort (man i hate tag clouds, but boy do people seem to love 'em)
 - some kind of admin other than straight db access
+
+Known Bugs/Problems
+- - when editing a function from a synonym page you end up back on that function page instead of the synonym page you started on (such as editing substr when you are here http://0.0.0.0:3000/programming_languages/Javascript/what_functions/substring/and/PHP/substr by clicking edit in the right hand box and ending up here http://0.0.0.0:3000/programming_languages/PHP/what_functions/substr)
+- - select menus for choosing programming language do not lead with a blank choose one option and are not sorted in alpha order
+- - list of languages on home page is not sorted in alpha order
+- - there is an issue when you try to make a function have a name that contains a . because we are using the name field as a param for urls, and it thinks its a format, example: i want my Ruby functions to include the class they belong to, like I want an entry for String.slice and Array.slice but if I make the what_function[:name] value String.slice the routes don't work
