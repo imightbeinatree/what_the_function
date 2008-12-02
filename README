@@ -2,6 +2,25 @@
 
 a programmer's programming language thesaurus
 
-Say you know a programming language pretty well and are working on another project in a different language, what the 
-function is a resource to let you look up functions from a language you know and view equivalents in other languages... 
-then each relationship has a page with more info.
+There is a sample db file in the db folder, a .sql file for mysql called whatfunction_development.sql
+
+This is a wiki-style website where you can enter and find information about equivalent functions or methods between different programming languages that we call synonyms. So if you are working in an unfamiliar programming language but you know another language pretty well, look up the and methods you do know and find synonyms in the language you are working in. If you'd like to help out, just cruise around the site to your favorite programming languages and help us fill in any information we are missing
+
+What Function is super pre alpha
+There are lots of little issues with actually adding or editing information, but feel free to poke around.
+
+there is no login, just wiki style history of everything and no delete, i think this is a good way, people's ip addresses show, but thats it, and those are easy to fake for those that care, i dont think i want to add any form of login, lets just keep it open
+
+Big TODOS
+
+- fix whole area around adding synonyms - drop downs that you type into the box and select from the pop up that results from a search of function and language names, perhaps first x chars of description, theres a plugin or gem for this
+- make the history for anything just ajax in with a pop over div instead of going to a new page, maybe grey the screen maybe not
+   (this also solves problems with making the )
+- block all the unwanted routes like delete except give admins a way to do it (upgrade to rails 2.2 to get only and except routing)
+- check all forms for formatting and taking you back to the right places
+- check all form components for proper usability, select menus should have blank first option with choose one message
+- check all error handling
+- a design
+- some content for those big blank empty spaces on some of those pages, like the list of functions for a language page
+- any features - hot language, function, a cloud of some sort (man i hate tag clouds, but boy do people seem to love 'em)
+- some kind of admin other than straight db access
