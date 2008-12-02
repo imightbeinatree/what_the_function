@@ -1,8 +1,28 @@
-<h1><%=h @function_1.name %> (<%=h @language_1.name %>) and <%=h @function_2.name %> (<%=h @language_2.name %>)</h1>
+<h2><%= link_to 'All Languages', programming_languages_path %>: <%= link_to @language_1.name, programming_language_path(@language_1) %>: <%= link_to @function_1.name, programming_language_what_function_path(@language_1, @function_1) %> and <%= link_to @language_2.name, programming_language_path(@language_2) %>: <%= link_to @function_2.name, programming_language_what_function_path(@language_2, @function_2) %></h2>
 
-<p><%=h "#{@twin.note}" unless !@twin %>
+<div id="right_inset_box">
+  <h3>Function Descriptions</h3>
+  <h4><%=h @language_1.name %>: <%=h @function_1.name %> (<%= link_to "edit", edit_programming_language_what_function_path(@language_1, @function_1) %>)</h4>
+  <% unless @function_1.description.blank? %>
+    <p><%=(h @function_1.description).gsub(/\n/,'<br />') %></p>
+  <% else %>
+    <p><em>No description. <%= link_to "Please add one!", edit_programming_language_what_function_path(@language_1, @function_1) %></em></p>
+  <% end %>
+  <h4><%=h @language_2.name %>: <%=h @function_2.name %> (<%= link_to "edit", edit_programming_language_what_function_path(@language_2, @function_1) %>)</h4>
+  <% unless @function_2.description.blank? %>
+    <p><%=(h @function_2.description).gsub(/\n/,'<br />') %></p>
+  <% else %>
+    <p><em>No description. <%= link_to "Please add one!", edit_programming_language_what_function_path(@language_2, @function_2) %></em></p>
+  <% end %>
+</div>
 
-<p>
-<%= link_to 'Edit', edit_twin_path(@twin) %> | 
-<%= link_to 'History', :controller => 'revisions', :action => 'history', :type => @twin.class, :obj_id => @twin.id, :title => :note %>
-</p>
+<div id="main_inner_left">
+  <h3>Twin Information (<%= link_to 'Edit', edit_twin_path(@twin) %> | <%= link_to 'History', :controller => 'revisions', :action => 'history', :type => @twin.class, :obj_id => @twin.id, :title => :note %>)</h3>
+  
+  <p><%=h "#{@twin.note}" unless !@twin %>
+
+  <p>
+  <%= link_to 'Edit', edit_twin_path(@twin) %> | 
+  <%= link_to 'History', :controller => 'revisions', :action => 'history', :type => @twin.class, :obj_id => @twin.id, :title => :note %>
+  </p>
+</div>

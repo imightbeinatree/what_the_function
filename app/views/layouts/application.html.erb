@@ -5,24 +5,24 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>WhatFunction.com - A Programmer's Thesaurus</title>
-  <%= stylesheet_link_tag 'main' %>
+  <%= stylesheet_link_tag "main" %>
 </head>
 <body>
-  <div id='container'>
-    <div id='header'>
+  <div id="container">
+    <div id="header">
       <h1>What Function</h1>
       <h2>A Programmer's Thesaurus</h1>
     </div>
-    <div id='main'>
-      <div id='main_inner'>
+    <div id="main">
+      <div id="main_inner">
         <p style="color: green"><%= flash[:notice] %></p>
 
         <%= yield  :layout %>
         <div class="clear_both">&nbsp;</div>
       </div>
     </div>
-    <div id='footer'>
-      open source and creative commons share alike<br /><a href='http://www.cloudspace.com/?whatfunction'>cloudspace</a>
+    <div id="footer">
+      <p>open source and creative commons share alike<br />github: <a href="http://github.com/imightbeinatree">imightbeinatree</a>, <a href="http://github.com/corey">corey</a>, <a href="http://github.com/timrosenblatt">timrosenblatt</a><br />corporate: <a href="http://www.cloudspace.com/?whatfunction">cloudspace</a></p> 
     </div>  
   </div>
 </body>

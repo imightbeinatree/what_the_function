@@ -1,5 +1,5 @@
 <h2><%= link_to 'All Languages', programming_languages_path %>: <%= link_to @programming_language.name, programming_language_path(@programming_language) %>: <%=h @what_function.name %></h2>
-<div id="function_description">
+<div id="right_inset_box">
   <h3>Description: (<%= link_to "edit", edit_programming_language_what_function_path(@programming_language, @what_function) %>)</h3>
   <% unless @what_function.description.blank? %>
     <p><%=(h @what_function.description).gsub(/\n/,'<br />') %></p>
