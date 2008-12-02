@@ -6,9 +6,11 @@ body{ font-size:80%; font-family:arial, verdana, sans-serif; background-color:#f
 #main ul {font-size:115%;}
 #main h2 {background-color:#ffd; padding:10px; margin-bottom:0px;}
 #footer {clear:both;text-align:center; border-top:1px solid #000; margin-top:0px; font-size:80%;}
-#main h3 {margin-top:10px; }
-#main_inner_left {margin:20px;}
-#right_inset_box {background-color:#efefef; margin:10px; padding:20px; float:right; width:60%; margin-left:10px;}
+#main h3 {margin-top:10px; border-bottom:1px solid #000;}
+#main h3 a {text-decoration:none;}
+#main_inner_left {margin:20px; width:32%;}
+#right_inset_box {background-color:#efefef; margin:10px; padding:20px; float:right; width:60%; }
 #right_inset_box h3 {margin-top:-10px;}
 .clear_both {clear:both; height:1px; line-height:1px;}
 .flash_notice { text-align:center; padding:10px;}
+.underline {border-bottom:1px solid #000;}
