@@ -14,9 +14,12 @@
       <h2>A Programmer's Thesaurus</h1>
     </div>
     <div id='main'>
-      <p style="color: green"><%= flash[:notice] %></p>
+      <div id='main_inner'>
+        <p style="color: green"><%= flash[:notice] %></p>
 
-      <%= yield  :layout %>
+        <%= yield  :layout %>
+        <div class="clear_both">&nbsp;</div>
+      </div>
     </div>
     <div id='footer'>
       open source and creative commons share alike<br /><a href='http://www.cloudspace.com/?whatfunction'>cloudspace</a>

@@ -1,6 +1,13 @@
 body{ font-size:80%; font-family:arial, verdana, sans-serif; background-color:#fff; color:#000;}
-#container {width:80%; margin:10px auto;}
-#header h1 { float:left; }
-#header h2 { float:right; }
-#main {clear:both;}
-#footer {text-align:center; border-top:1px solid #000; margin-top:20px; font-size:80%;}
+#container { width:80%; margin:10px auto;}
+#header h1 {  float:left; margin-left:10px; }
+#header h2 { float:right; margin-right:10px; }
+#main {clear:both; background-color:#dedede;}
+#main ul {font-size:115%;}
+#main h2 {background-color:#ffd; padding:10px; margin-bottom:0px;}
+#footer {clear:both;text-align:center; border-top:1px solid #000; margin-top:0px; font-size:80%;}
+#main h3 {margin-top:10px; }
+#main_inner_left {margin:20px;}
+#function_description {background-color:#efefef; margin:10px; padding:20px; float:right; width:60%; margin-left:10px;}
+#function_description h3 {margin-top:-10px;}
+.clear_both {clear:both; height:1px; line-height:1px;}

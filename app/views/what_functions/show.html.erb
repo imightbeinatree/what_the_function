@@ -1,17 +1,17 @@
-<h2>Function: <%=h @what_function.name %> (<%= @what_function.programming_language.name %>)</h2>
-<% unless @what_function.description.blank? %>
-  <p>
-    <b>Description:</b>
-    <%=h @what_function.description %>
-  </p>
-<% end %>
-<h3>Twins</h3>
-<% unless twin_list.blank? %>
-  <p><%= twin_list %></p>
-<% else %>
-  <p><em>No twins found, why don't you add one</em></p>
-<% end %>
-
-
-<%= link_to "Edit #{@what_function.name}", edit_programming_language_what_function_path(@programming_language, @what_function) %> |
-<%= link_to "Back to All #{@programming_language.name} Functions", programming_language_what_functions_path(@programming_language) %>
+<h2><%= link_to 'All Languages', programming_languages_path %>: <%= link_to @programming_language.name, programming_language_path(@programming_language) %>: <%=h @what_function.name %></h2>
+<div id="function_description">
+  <h3>Description: (<%= link_to "edit", edit_programming_language_what_function_path(@programming_language, @what_function) %>)</h3>
+  <% unless @what_function.description.blank? %>
+    <p><%=(h @what_function.description).gsub(/\n/,'<br />') %></p>
+  <% else %>
+    <p><em>No description. <%= link_to "Please add one!", edit_programming_language_what_function_path(@programming_language, @what_function) %></em></p>
+  <% end %>
+</div>
+<div id="main_inner_left">
+  <h3>Twins (<%= link_to "add another twin", new_twin_path %>)</h3>
+  <% unless twin_list.blank? %>
+    <p><%= twin_list %></p>
+  <% else %>
+    <p><em>No twins found, why don't you add one</em></p>
+  <% end %>
+</div>  

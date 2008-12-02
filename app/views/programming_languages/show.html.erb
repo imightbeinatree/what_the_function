@@ -1,11 +1,16 @@
-<h2><%= link_to 'All Programming Languages', programming_languages_path %>: <%=h @programming_language.name %></h2>
+<h2><%= link_to 'All Languages', programming_languages_path %>: <%=h @programming_language.name %></h2>
+
+<div id="main_inner_left">
+  <h3>Functions (<%= link_to 'Add New', new_what_function_path %>)</h3>
 
 
-<h3>Functions (<%= link_to 'Add New', new_what_function_path %>)</h3>
+  <% unless function_list.blank? %>
+    <ul>
+      <li><%= function_list %></li>
+    </ul>
+  <% else %>
+    <p><em>No functions found, why don't you add one?</em></p>
+  <% end %>
 
-
-<% unless function_list.blank? %>
-  <p><%= function_list %></p>
-<% else %>
-  <p><em>No functions found, why don't you add one?</em></p>
-<% end %>
+  <%= link_to '+ Add New Function +', new_what_function_path %>
+</div>
