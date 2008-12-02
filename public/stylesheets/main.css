@@ -3,3 +3,4 @@ body{ font-size:80%; font-family:arial, verdana, sans-serif; background-color:#f
 #header h1 { float:left; }
 #header h2 { float:right; }
 #main {clear:both;}
+#footer {text-align:center; border-top:1px solid #000; margin-top:20px; font-size:80%;}

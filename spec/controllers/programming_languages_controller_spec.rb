@@ -1,11 +1,11 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe ProgrammingLanguagesController do
-  before(:each) do
-    @programming_language = mock_model(ProgrammingLanguage)
-    @programming_language.stub!(:new_record?).and_return(false)
-    @programming_language.stub!(:new).and_return(@programming_language)
-  end
+   before(:each) do
+     @programming_language = mock_model(ProgrammingLanguage)
+  #   @programming_language.stub!(:new_record?).and_return(false)
+  #   @programming_language.stub!(:new).and_return(@programming_language)
+   end
   
   describe "handling INDEX" do
     it "should render /programming_languages on GET to index" do
@@ -14,16 +14,16 @@ describe ProgrammingLanguagesController do
     end
   end
   
-  describe "handling SHOW /programming_languages/PHP" do
+  describe "handling SHOW /programming_languages/Ruby" do
     before(:each) do
-      @programming_language = mock_model(ProgrammingLanguage, {:name => "PHP"} )
-      @programming_language.stub!(:find).and_return @programming_language
+      ProgrammingLanguage.stub!(:find_by_name).and_return @programming_language
     end
     
-    it "should get programming_language with id => PHP from model" do
-        @programming_language.should_receive(:find).and_return(@programming_language)
-        get 'show', :id => "PHP"
-        assigns[:programming_language].should equal(@programming_language)
+    it "should get programming_language with id => Ruby from model" do
+        ProgrammingLanguage.should_receive(:find_by_name).and_return(@programming_language)
+        get 'show', :id => "Ruby"
+        assigns[:programming_language].should  == @programming_language
+
     end
     
     
@@ -31,8 +31,15 @@ describe ProgrammingLanguagesController do
   end
   
   describe "handling CREATE /programming_languages" do
+    
+    before(:each) do
+      @programming_language = mock_model(ProgrammingLanguage)
+      ProgrammingLanguage.stub!(:new_record?).and_return(false)
+      ProgrammingLanguage.stub!(:new).and_return(@programming_language)
+    end
+    
     it "should create a new, unsaved programming_language on GET to create" do
-      @programming_language.should_receive(:new).and_return(@programming_language)
+      ProgrammingLanguage.should_receive(:new).and_return(@programming_language)
       @programming_language.name = "PHP"
       get 'create'
     end
