@@ -29,7 +29,7 @@ class TwinsController < ApplicationController
     respond_to do |format|
       if @twin.save
         flash[:notice] = 'Twin was successfully created.'
-        format.html { redirect_to(@twin) }
+        format.html { redirect_to(edit_twin_path(@twin)) }
         format.xml  { render :xml => @twin, :status => :created, :location => @twin }
       else
         format.html { render :action => "new" }

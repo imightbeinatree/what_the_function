@@ -1,0 +1,18 @@
+<div id="main_inner_left">
+  <h3>New synonym</h3>
+
+  <% form_for(@twin) do |f| %>
+    <%= f.error_messages %>
+
+    <p>
+      <%= f.label :left_function_id %><br />
+      <%= f.text_field :left_function_id %>
+    </p>
+    <p>
+    <%= f.label :right_function_id %><br />
+    <%= f.text_field :right_function_id %>  </p>
+    <p>
+      <%= f.submit "Create" %>
+    </p>
+  <% end %>
+</div>

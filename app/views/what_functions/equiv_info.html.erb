@@ -8,7 +8,7 @@
   <% else %>
     <p><em>No description. <%= link_to "Please add one!", edit_programming_language_what_function_path(@language_1, @function_1) %></em></p>
   <% end %>
-  <h4 class="underline"><%=h @language_2.name %>: <%=h @function_2.name %> (<%= link_to "edit", edit_programming_language_what_function_path(@language_2, @function_1) %> | <%= link_to 'History', :controller => 'revisions', :action => 'history', :type => @function_2.class, :obj_id => @function_2.id, :title => :description %>)</h4>
+  <h4 class="underline"><%=h @language_2.name %>: <%=h @function_2.name %> (<%= link_to "edit", edit_programming_language_what_function_path(@language_2, @function_2) %> | <%= link_to 'History', :controller => 'revisions', :action => 'history', :type => @function_2.class, :obj_id => @function_2.id, :title => :description %>)</h4>
   <% unless @function_2.description.blank? %>
     <p><%=(h @function_2.description).gsub(/\n/,'<br />') %></p>
   <% else %>
