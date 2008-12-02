@@ -14,7 +14,6 @@ there is no login, just wiki style history of everything and no delete, i think 
 Big TODOS
 - fix whole area around adding synonyms - drop downs that you type into the box and select from the pop up that results from a search of function and language names, perhaps first x chars of description, theres a plugin or gem for this
 - make the history for anything just ajax in with a pop over div instead of going to a new page, maybe grey the screen maybe not
-   (this also solves problems with making the )
 - block all the unwanted routes like delete except give admins a way to do it (upgrade to rails 2.2 to get only and except routing)
 - check all forms for formatting, component usability, proper error handling, and taking you back to the right places
 - a design
