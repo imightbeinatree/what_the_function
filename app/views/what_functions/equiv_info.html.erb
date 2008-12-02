@@ -17,7 +17,7 @@
 </div>
 
 <div id="main_inner_left">
-  <h3>Twin Information (<%= link_to 'Edit', edit_twin_path(@twin) %> | <%= link_to 'History', :controller => 'revisions', :action => 'history', :type => @twin.class, :obj_id => @twin.id, :title => :note %>)</h3>
+  <h3>Synonym Information (<%= link_to 'Edit', edit_twin_path(@twin) %> | <%= link_to 'History', :controller => 'revisions', :action => 'history', :type => @twin.class, :obj_id => @twin.id, :title => :note %>)</h3>
   
   <p><%=h "#{@twin.note}" unless !@twin %>
 

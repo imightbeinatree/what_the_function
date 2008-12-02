@@ -80,7 +80,8 @@ class WhatFunctionsController < ApplicationController
     respond_to do |format|
       if @what_function.update_attributes(params[:what_function])
         flash[:notice] = 'WhatFunction was successfully updated.'
-        format.html { redirect_to(@what_function) }
+        #format.html { redirect_to(@what_function) }
+        format.html { redirect_to(programming_language_what_function_path(@what_function.programming_language,@what_function)) }
         format.xml  { head :ok }
       else
         format.html { redirect_to edit_programming_language_what_function_path(@programming_language, @what_function)  }

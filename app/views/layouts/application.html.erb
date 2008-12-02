@@ -15,8 +15,9 @@
     </div>
     <div id="main">
       <div id="main_inner">
-        <p style="color: green"><%= flash[:notice] %></p>
-
+        <% if flash[:notice] %>
+          <p class="flash_notice" style="color: green"><%= flash[:notice] %></p>
+        <% end %>
         <%= yield  :layout %>
         <div class="clear_both">&nbsp;</div>
       </div>

@@ -11,3 +11,4 @@ body{ font-size:80%; font-family:arial, verdana, sans-serif; background-color:#f
 #right_inset_box {background-color:#efefef; margin:10px; padding:20px; float:right; width:60%; margin-left:10px;}
 #right_inset_box h3 {margin-top:-10px;}
 .clear_both {clear:both; height:1px; line-height:1px;}
+.flash_notice { text-align:center; padding:10px;}
