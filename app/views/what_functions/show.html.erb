@@ -1,8 +1,9 @@
 <h2><%= link_to 'All Languages', programming_languages_path %>: <%= link_to @programming_language.name, programming_language_path(@programming_language) %>: <%=h @what_function.name %></h2>
 <div id="right_inset_box">
-  <h3>Description: (<%= link_to "edit", edit_programming_language_what_function_path(@programming_language, @what_function) %>)</h3>
+  <h3>Description: (<%= link_to "Edit", edit_programming_language_what_function_path(@programming_language, @what_function) %> | <%= link_to 'History', :controller => 'revisions', :action => 'history', :type => @what_function.class, :obj_id => @what_function.id, :title => :description %>)</h3>
   <% unless @what_function.description.blank? %>
     <p><%=(h @what_function.description).gsub(/\n/,'<br />') %></p>
+    <p><%= link_to "Edit", edit_programming_language_what_function_path(@programming_language, @what_function) %> | <%= link_to 'History', :controller => 'revisions', :action => 'history', :type => @what_function.class, :obj_id => @what_function.id, :title => :description %></p>
   <% else %>
     <p><em>No description. <%= link_to "Please add one!", edit_programming_language_what_function_path(@programming_language, @what_function) %></em></p>
   <% end %>

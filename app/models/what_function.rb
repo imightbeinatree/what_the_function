@@ -8,6 +8,8 @@ class WhatFunction < ActiveRecord::Base
   
   validates_uniqueness_of :name, :scope => :programming_language_id
   
+  acts_as_wiki :description
+        
   def to_param
     name
   end
