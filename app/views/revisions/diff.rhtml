@@ -11,5 +11,5 @@ back to revision <%= @revision.id %>
 <div class='diff'>
 <% #diff = do_diff(markdown(@revision.content), markdown(@current.content))%>
 <% diff = do_diff(@revision.content, @current.content)%>
-<%= diff%>
+<%= diff.gsub(/\n/,'<br />') %>
 </div>

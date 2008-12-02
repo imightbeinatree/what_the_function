@@ -16,5 +16,5 @@ Revision as of <%= @revision.revised_at.strftime("%H:%M,%d %b %Y") %>;
 </div>
 <div class="revision-content">
 <%#= @revision.obj.filter_for(@revision.field_name).call(@revision.content) %>
-<%= @revision.content%>
+<%= @revision.content.gsub(/\n/,'<br />') %>
 </div>
