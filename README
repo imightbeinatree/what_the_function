@@ -2,9 +2,9 @@
 
 a programmer's programming language thesaurus
 
-There is a sample db file in the db folder, a .sql file for mysql called whatfunction_development.sql
+There is a sample db file in the db folder, a .sql file for mysql called whatfunction_development.sql, you can use this file to get up and going pretty quick with a bit of sample data to see how it works.  There is a list of TODOS and bugs/problems below if you want to work on something, but send a message to me on github if you really do plan to work on something because right now we ain't got no trac and while do got some rspec, it all sucks, it sucks so bad we might as well not have any rspec at all.
 
-This is a wiki-style website where you can enter and find information about equivalent functions or methods between different programming languages that we call synonyms. So if you are working in an unfamiliar programming language but you know another language pretty well, look up the and methods you do know and find synonyms in the language you are working in. If you'd like to help out, just cruise around the site to your favorite programming languages and help us fill in any information we are missing
+This is a wiki-style website where you can enter and find information about equivalent functions or methods between different programming languages that we call synonyms. So if you are working in an unfamiliar programming language but you know another language pretty well, look up the and methods you do know and find synonyms in the language you are working in.
 
 What Function is super pre alpha
 There are lots of little issues and big issues, but feel free to poke around.
@@ -21,6 +21,7 @@ Big TODOS
 - any other features? - hot languages, hot functions, a cloud of some sort (man i hate tag clouds, but boy do people seem to love 'em)
 - some kind of admin other than straight db access
 - any way to just import a large number of functions from a wide array of languages?
+- tests! rspec, shoulda, whatever, just need some tests
 
 Known Bugs/Problems
 - - when editing a function from a synonym page you end up back on that function page instead of the synonym page you started on (such as editing substr when you are here http://0.0.0.0:3000/programming_languages/Javascript/what_functions/substring/and/PHP/substr by clicking edit in the right hand box and ending up here http://0.0.0.0:3000/programming_languages/PHP/what_functions/substr)
